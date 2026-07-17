@@ -1,0 +1,4 @@
+interface:
+  display_name: "ItPay Buyer"
+  short_description: "Discover and buy verified services with ItPay"
+  default_prompt: "Use $itpay-buyer to find and buy the best verified service for my request."
