@@ -1,4 +1,13 @@
 interface:
-  display_name: "ItPay Buyer"
-  short_description: "Discover and buy verified services with ItPay"
-  default_prompt: "Use $itpay-buyer to find and buy the best verified service for my request."
+  display_name: "ItPay MCP Buyer"
+  short_description: "Discover and buy verified services with ItPay MCP"
+  default_prompt: "Use $itpay-buyer to find and purchase the best verified service for my request through ItPay MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "itpay"
+      description: "ItPay verified-service discovery, Checkout, fulfillment, receipt, and refund tools"
+      transport: "streamable_http"
+      url: "https://app.itpay.ai/mcp"
+policy:
+  allow_implicit_invocation: true
