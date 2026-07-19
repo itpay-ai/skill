@@ -3,7 +3,7 @@
   "role": "buyer",
   "topic": "install-and-setup",
   "title": "Install And Identify The ItPay Agent Runtime",
-  "purpose": "Load the complete Buyer Skill through its bundled wrapper and select one stable Agent Type without confusing identity, Backend, Host, target, or chat window.",
+  "purpose": "Install the CLI, load the complete Buyer Skill, and select one stable Agent Type without confusing identity, Backend, Host, target, or chat window.",
   "when_to_use": [
     "The CLI is being installed or upgraded.",
     "The agent needs to confirm its stable runtime identity and default output Host."
@@ -22,7 +22,7 @@
     {
       "intent": "list supported Agent Types",
       "command": "itpay install --json",
-      "success_signal": "status is install_targets and exactly eight agent_type/default_host pairs are returned"
+      "success_signal": "status is install_targets and exactly five agent_type/default_host pairs are returned"
     },
     {
       "intent": "read setup for the real runtime",
@@ -31,9 +31,9 @@
     }
   ],
   "agent_rules": [
-    "When this CLI is bundled in itpay-buyer, keep using sh <skill-root>/bin/itpay and do not install or select a global CLI.",
-    "Use the default https://dev.itpay.ai beta API unless an environment override is deliberate.",
-    "Use one exact type: codex-desktop, codex-cli, claude-code-desktop, claude-code-cli, workbuddy, kimi-code, openclaw, or hermes.",
+    "Install with npm install -g @itpay/cli.",
+    "Use the default https://app.itpay.ai API unless an environment override is deliberate.",
+    "Use one exact type: codex-desktop, codex-cli, claude-code-desktop, claude-code-cli, or workbuddy.",
     "One local private key is reused, but each exact Backend API base URL has its own server registration and quota lineage.",
     "Within one Backend registration, each Agent Type has one Agent Instance; all windows and chats of the same type reuse it.",
     "Agent Type identifies the runtime. Host controls rendering and target only identifies a presentation destination.",
@@ -48,5 +48,5 @@
   "next_docs": [
     { "condition": "Installation is verified", "topic": "quickstart" }
   ],
-  "search_terms": ["install", "agent type", "host", "target", "device", "session", "identity", "backend", "codex", "claude code", "workbuddy", "kimi code", "openclaw", "hermes"]
+  "search_terms": ["install", "agent type", "host", "target", "device", "session", "identity", "backend", "codex", "claude code", "workbuddy"]
 }

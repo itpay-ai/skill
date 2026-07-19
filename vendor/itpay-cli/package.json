@@ -1,6 +1,6 @@
 {
   "name": "@itpay/cli-vendored",
-  "version": "2.0.11",
+  "version": "2.0.12",
   "private": true,
   "type": "module",
   "bin": {
@@ -10,9 +10,9 @@
     "node": ">=18"
   },
   "itpaySource": {
-    "package": "@itpay/cli@2.0.11",
+    "package": "@itpay/cli@2.0.12",
     "repository": "https://github.com/itpay-ai/cli.git",
-    "commit": "53b072f572e9f9c1f3e23f86691aceeae0d7419d"
+    "commit": "7b8cc441cc47c04797adf2721e1e22d1f425b86d"
   },
   "itpaySkillPatches": [
     "load the canonical root SKILL.md and advertise its bundled wrapper through ITPAY_CLI_SKILL_FILE",

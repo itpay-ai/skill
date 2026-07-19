@@ -68,10 +68,10 @@ test("the repository exposes exactly one canonical SKILL.md", async () => {
 test("runtime metadata pins compatible Node and CLI versions", () => {
   assert.equal(packageJson.version, "2.2.0");
   assert.equal(packageJson.engines.node, ">=18");
-  assert.equal(vendorPackage.version, "2.0.11");
+  assert.equal(vendorPackage.version, "2.0.12");
   assert.equal(
     vendorPackage.itpaySource.commit,
-    "53b072f572e9f9c1f3e23f86691aceeae0d7419d",
+    "7b8cc441cc47c04797adf2721e1e22d1f425b86d",
   );
   assert.equal(vendorPackage.itpaySkillPatches.length, 2);
 });

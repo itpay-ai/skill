@@ -1,4 +1,4 @@
-import{createRequire as __cr}from'node:module';const require=__cr(import.meta.url);
+import { createRequire } from 'node:module'; const require = createRequire(import.meta.url);
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -12,11 +12,7 @@ var __require = /* @__PURE__ */ ((x) => typeof require !== "undefined" ? require
   throw Error('Dynamic require of "' + x + '" is not supported');
 });
 var __commonJS = (cb, mod) => function __require2() {
-  try {
-    return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
-  } catch (e) {
-    throw mod = 0, e;
-  }
+  return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 var __copyProps = (to, from, except, desc) => {
   if (from && typeof from === "object" || typeof from === "function") {
@@ -6014,7 +6010,7 @@ var require_bitpacker = __commonJS({
         options.colorType
       ) !== -1;
       if (options.colorType === options.inputColorType) {
-        let bigEndian = (function() {
+        let bigEndian = function() {
           let buffer = new ArrayBuffer(2);
           new DataView(buffer).setInt16(
             0,
@@ -6023,7 +6019,7 @@ var require_bitpacker = __commonJS({
             /* littleEndian */
           );
           return new Int16Array(buffer)[0] !== 256;
-        })();
+        }();
         if (options.bitDepth === 8 || options.bitDepth === 16 && bigEndian) {
           return dataIn;
         }
@@ -8274,9 +8270,9 @@ async function withFileLock2(path3, run) {
 }
 
 // dist/src/state/config.js
-var DEFAULT_BASE_URL = "https://dev.itpay.ai";
-var CLI_VERSION = "2.0.11";
-var API_CONTRACT_REVISION = "sha256:3779f5468ea2109d4134c4ace66258c9eabe82461fa86e83c84df8c860276886";
+var DEFAULT_BASE_URL = "https://app.itpay.ai";
+var CLI_VERSION = "2.0.12";
+var API_CONTRACT_REVISION = "sha256:ea7d716f444a01e9d0109f12a53b56ce16d5ab813795a18a7a63f24a8c752073";
 var CART_SESSION_DEFAULT_DIR = ".itpay-v3";
 var CART_SESSION_FILENAME = "cart.json";
 var OPERATION_JOURNAL_FILENAME = "operations.json";
@@ -10843,9 +10839,9 @@ var INSTRUCTIONS = {
   "claude-code-desktop": "\u5728 Claude Code Desktop \u4E2D\u59CB\u7EC8\u4F20\u8FD9\u4E2A Agent Type\uFF1B\u4ED8\u6B3E\u65F6\u628A\u8FD4\u56DE\u7684\u4E8C\u7EF4\u7801\u548C\u94FE\u63A5\u5B9E\u9645\u5C55\u793A\u5230\u5F53\u524D\u5BF9\u8BDD\u3002",
   "claude-code-cli": "\u5728 Claude Code CLI \u4E2D\u59CB\u7EC8\u4F20\u8FD9\u4E2A Agent Type\uFF1B\u4ED8\u6B3E\u4EA4\u63A5\u53EA\u5E94\u663E\u793A\u5728\u7528\u6237\u53EF\u89C1\u7EC8\u7AEF\u3002",
   workbuddy: "\u5728 WorkBuddy \u4E2D\u59CB\u7EC8\u4F20\u8FD9\u4E2A Agent Type\uFF1BCheckout \u8FD4\u56DE qr_image_url \u65F6\uFF0C\u5FC5\u987B\u6309\u5F53\u6B21 instruction \u8C03\u7528 present_files \u5728\u53F3\u4FA7\u6253\u5F00\u4E8C\u7EF4\u7801\uFF0C\u4E0D\u8981\u68C0\u67E5\u672C\u5730\u4E8C\u7EF4\u7801\u6587\u4EF6\u3002",
-  "kimi-code": "Keep the kimi-code Agent Type on every command and show Checkout handoff in the user-visible Kimi terminal or editor surface.",
-  openclaw: "Keep the openclaw Agent Type on every command and deliver Checkout handoff through the active OpenClaw user channel.",
-  hermes: "Keep the hermes Agent Type on every command and show Checkout handoff on the current user-visible Hermes surface."
+  "kimi-code": "\u5728 Kimi Code \u4E2D\u59CB\u7EC8\u4F20\u8FD9\u4E2A Agent Type\uFF1B\u4ED8\u6B3E\u4EA4\u63A5\u5E94\u663E\u793A\u5728\u5F53\u524D\u7528\u6237\u53EF\u89C1\u754C\u9762\u3002",
+  openclaw: "\u5728 OpenClaw \u4E2D\u59CB\u7EC8\u4F20\u8FD9\u4E2A Agent Type\uFF1B\u4ED8\u6B3E\u4EA4\u63A5\u5E94\u663E\u793A\u5728\u5F53\u524D\u7528\u6237\u53EF\u89C1\u754C\u9762\u3002",
+  hermes: "\u5728 Hermes \u4E2D\u59CB\u7EC8\u4F20\u8FD9\u4E2A Agent Type\uFF1B\u4ED8\u6B3E\u4EA4\u63A5\u5E94\u663E\u793A\u5728\u5F53\u524D\u7528\u6237\u53EF\u89C1\u754C\u9762\u3002"
 };
 function runInstall(target, options = {}) {
   if (!target || target === "list") {
@@ -10875,7 +10871,7 @@ function runInstall(target, options = {}) {
       agent_type: normalized,
       default_host: defaultHostForAgentType(normalized),
       default_api: DEFAULT_BASE_URL,
-      install_command: "sh <skill-root>/bin/itpay"
+      install_command: process.env.ITPAY_CLI_SKILL_FILE ? "sh <skill-root>/bin/itpay" : "npm install -g @itpay/cli"
     },
     instruction: INSTRUCTIONS[normalized],
     next: {
@@ -11100,7 +11096,7 @@ function invokedEnvelope(response, requestedCapability, capabilities, input) {
         delivery_email_required: checkoutCapability.delivery_email_required
       };
       const price = capabilityPrice(checkoutCapability);
-      instruction = purchaseConfirmationInstruction("quota_exhausted", price, checkoutCapability.delivery_email_required);
+      instruction = purchaseConfirmationInstruction("quota_exhausted", price, checkoutCapability.delivery_email_required, checkoutCapability.delivery_email_purpose);
       next = {
         command: checkoutCommand(response.execution.service_execution_id, checkoutCapability, input),
         reason: `\u4EC5\u5728\u7528\u6237\u660E\u786E\u540C\u610F\u652F\u4ED8 ${price} \u540E\u6267\u884C\uFF1B\u5426\u5219\u505C\u6B62`
@@ -11163,12 +11159,25 @@ function checkoutCommand(serviceExecutionID, capability, input, fillMissing = tr
 function capabilityPrice(capability) {
   return capability.price_amount_minor !== void 0 && capability.price_currency ? formatMoney3(capability.price_amount_minor, capability.price_currency) : "\u5F53\u524D\u53D1\u5E03\u4EF7\u683C";
 }
-function purchaseConfirmationInstruction(context, price, deliveryEmailRequired, candidateTitle = "") {
+function purchaseConfirmationInstruction(context, price, deliveryEmailRequired, deliveryEmailPurpose, candidateTitle = "") {
+  const emailPurpose = deliveryEmailPurposeText(deliveryEmailPurpose);
   if (context === "quota_exhausted") {
-    return deliveryEmailRequired ? `\u514D\u8D39\u989D\u5EA6\u5DF2\u7528\u5B8C\uFF0C\u672C\u6B21\u6CA1\u6709\u8C03\u7528 Provider\uFF0C\u4E5F\u5C1A\u672A\u521B\u5EFA Quote \u6216 Checkout\u3002\u73B0\u5728\u53EA\u5411\u7528\u6237\u8BF4\u660E\uFF1A\u7EE7\u7EED\u5F53\u524D\u8BF7\u6C42\u9700\u8981\u652F\u4ED8 ${price}\uFF0C\u4EA4\u4ED8\u8FD8\u9700\u8981\u7528\u6237\u90AE\u7BB1\uFF1B\u8BF7\u786E\u8BA4\u662F\u5426\u8D2D\u4E70\u5E76\u63D0\u4F9B\u90AE\u7BB1\u3002\u7136\u540E\u505C\u6B62\u5E76\u7B49\u5F85\u3002\u7528\u6237\u660E\u786E\u540C\u610F\u5E76\u63D0\u4F9B\u771F\u5B9E\u90AE\u7BB1\u524D\uFF0C\u4E0D\u8981\u6267\u884C next.command\uFF0C\u4E0D\u8981\u65B0\u5EFA Execution\uFF0C\u4E0D\u8981\u5C1D\u8BD5\u5176\u4ED6 capability\u3001quote\u3001cart\u3001buy\u3001checkout \u6216 pay \u547D\u4EE4\u3002` : `\u514D\u8D39\u989D\u5EA6\u5DF2\u7528\u5B8C\uFF0C\u672C\u6B21\u6CA1\u6709\u8C03\u7528 Provider\uFF0C\u4E5F\u5C1A\u672A\u521B\u5EFA Quote \u6216 Checkout\u3002\u73B0\u5728\u53EA\u5411\u7528\u6237\u8BF4\u660E\uFF1A\u201C\u7EE7\u7EED\u5F53\u524D\u8BF7\u6C42\u9700\u8981\u652F\u4ED8 ${price}\uFF0C\u662F\u5426\u8D2D\u4E70\uFF1F\u201D\u7136\u540E\u505C\u6B62\u5E76\u7B49\u5F85\u7528\u6237\u660E\u786E\u56DE\u590D\u3002\u7528\u6237\u660E\u786E\u540C\u610F\u524D\uFF0C\u4E0D\u8981\u6267\u884C next.command\uFF0C\u4E0D\u8981\u65B0\u5EFA Execution\uFF0C\u4E0D\u8981\u5C1D\u8BD5\u5176\u4ED6 capability\u3001quote\u3001cart\u3001buy\u3001checkout \u6216 pay \u547D\u4EE4\u3002`;
+    return deliveryEmailRequired ? `\u514D\u8D39\u989D\u5EA6\u5DF2\u7528\u5B8C\uFF0C\u672C\u6B21\u6CA1\u6709\u8C03\u7528 Provider\uFF0C\u4E5F\u5C1A\u672A\u521B\u5EFA Quote \u6216 Checkout\u3002\u73B0\u5728\u53EA\u5411\u7528\u6237\u8BF4\u660E\uFF1A\u7EE7\u7EED\u5F53\u524D\u8BF7\u6C42\u9700\u8981\u652F\u4ED8 ${price}\uFF0C\u5E76\u63D0\u4F9B${emailPurpose}\uFF1B\u8BF7\u786E\u8BA4\u662F\u5426\u8D2D\u4E70\u5E76\u63D0\u4F9B\u90AE\u7BB1\u3002\u7136\u540E\u505C\u6B62\u5E76\u7B49\u5F85\u3002\u7528\u6237\u660E\u786E\u540C\u610F\u5E76\u63D0\u4F9B\u771F\u5B9E\u90AE\u7BB1\u524D\uFF0C\u4E0D\u8981\u6267\u884C next.command\uFF0C\u4E0D\u8981\u65B0\u5EFA Execution\uFF0C\u4E0D\u8981\u5C1D\u8BD5\u5176\u4ED6 capability\u3001quote\u3001cart\u3001buy\u3001checkout \u6216 pay \u547D\u4EE4\u3002` : `\u514D\u8D39\u989D\u5EA6\u5DF2\u7528\u5B8C\uFF0C\u672C\u6B21\u6CA1\u6709\u8C03\u7528 Provider\uFF0C\u4E5F\u5C1A\u672A\u521B\u5EFA Quote \u6216 Checkout\u3002\u73B0\u5728\u53EA\u5411\u7528\u6237\u8BF4\u660E\uFF1A\u201C\u7EE7\u7EED\u5F53\u524D\u8BF7\u6C42\u9700\u8981\u652F\u4ED8 ${price}\uFF0C\u662F\u5426\u8D2D\u4E70\uFF1F\u201D\u7136\u540E\u505C\u6B62\u5E76\u7B49\u5F85\u7528\u6237\u660E\u786E\u56DE\u590D\u3002\u7528\u6237\u660E\u786E\u540C\u610F\u524D\uFF0C\u4E0D\u8981\u6267\u884C next.command\uFF0C\u4E0D\u8981\u65B0\u5EFA Execution\uFF0C\u4E0D\u8981\u5C1D\u8BD5\u5176\u4ED6 capability\u3001quote\u3001cart\u3001buy\u3001checkout \u6216 pay \u547D\u4EE4\u3002`;
   }
   const selected = candidateTitle ? `\u5DF2\u9009\u62E9 ${candidateTitle}\u3002` : "\u5F53\u524D\u5019\u9009\u5DF2\u7ECF\u786E\u8BA4\u3002";
-  return deliveryEmailRequired ? `${selected}\u5019\u9009\u5DF2\u7ED1\u5B9A\u5230\u5F53\u524D Execution\uFF0C\u4F46\u5C1A\u672A\u8D2D\u4E70\u540E\u7EED\u670D\u52A1\u3002\u73B0\u5728\u53EA\u5411\u7528\u6237\u8BF4\u660E\uFF1A\u7EE7\u7EED\u8D2D\u4E70\u540E\u7EED\u670D\u52A1\u9700\u8981\u652F\u4ED8 ${price}\uFF0C\u5E76\u63D0\u4F9B\u7528\u4E8E\u53D1\u9001\u4EA4\u4ED8\u8BA4\u9886\u94FE\u63A5\u7684\u90AE\u7BB1\uFF1B\u8BF7\u786E\u8BA4\u662F\u5426\u8D2D\u4E70\u5E76\u63D0\u4F9B\u90AE\u7BB1\u3002\u7136\u540E\u505C\u6B62\u3002\u7528\u6237\u660E\u786E\u540C\u610F\u5E76\u63D0\u4F9B\u771F\u5B9E\u90AE\u7BB1\u524D\uFF0C\u4E0D\u8981\u6267\u884C next.command\uFF0C\u4E0D\u8981\u521B\u5EFA\u65B0 Execution \u6216 Checkout\u3002` : `${selected}\u5019\u9009\u5DF2\u7ED1\u5B9A\u5230\u5F53\u524D Execution\uFF0C\u4F46\u5C1A\u672A\u8D2D\u4E70\u540E\u7EED\u670D\u52A1\u3002\u73B0\u5728\u53EA\u5411\u7528\u6237\u8BF4\u660E\uFF1A\u201C\u7EE7\u7EED\u8D2D\u4E70\u540E\u7EED\u670D\u52A1\u9700\u8981\u652F\u4ED8 ${price}\uFF0C\u662F\u5426\u8D2D\u4E70\uFF1F\u201D\u7136\u540E\u505C\u6B62\u3002\u7528\u6237\u660E\u786E\u540C\u610F\u524D\uFF0C\u4E0D\u8981\u6267\u884C next.command\uFF0C\u4E0D\u8981\u521B\u5EFA\u65B0 Execution \u6216 Checkout\u3002`;
+  return deliveryEmailRequired ? `${selected}\u5019\u9009\u5DF2\u7ED1\u5B9A\u5230\u5F53\u524D Execution\uFF0C\u4F46\u5C1A\u672A\u8D2D\u4E70\u540E\u7EED\u670D\u52A1\u3002\u73B0\u5728\u53EA\u5411\u7528\u6237\u8BF4\u660E\uFF1A\u7EE7\u7EED\u8D2D\u4E70\u540E\u7EED\u670D\u52A1\u9700\u8981\u652F\u4ED8 ${price}\uFF0C\u5E76\u63D0\u4F9B${emailPurpose}\uFF1B\u8BF7\u786E\u8BA4\u662F\u5426\u8D2D\u4E70\u5E76\u63D0\u4F9B\u90AE\u7BB1\u3002\u7136\u540E\u505C\u6B62\u3002\u7528\u6237\u660E\u786E\u540C\u610F\u5E76\u63D0\u4F9B\u771F\u5B9E\u90AE\u7BB1\u524D\uFF0C\u4E0D\u8981\u6267\u884C next.command\uFF0C\u4E0D\u8981\u521B\u5EFA\u65B0 Execution \u6216 Checkout\u3002` : `${selected}\u5019\u9009\u5DF2\u7ED1\u5B9A\u5230\u5F53\u524D Execution\uFF0C\u4F46\u5C1A\u672A\u8D2D\u4E70\u540E\u7EED\u670D\u52A1\u3002\u73B0\u5728\u53EA\u5411\u7528\u6237\u8BF4\u660E\uFF1A\u201C\u7EE7\u7EED\u8D2D\u4E70\u540E\u7EED\u670D\u52A1\u9700\u8981\u652F\u4ED8 ${price}\uFF0C\u662F\u5426\u8D2D\u4E70\uFF1F\u201D\u7136\u540E\u505C\u6B62\u3002\u7528\u6237\u660E\u786E\u540C\u610F\u524D\uFF0C\u4E0D\u8981\u6267\u884C next.command\uFF0C\u4E0D\u8981\u521B\u5EFA\u65B0 Execution \u6216 Checkout\u3002`;
+}
+function deliveryEmailPurposeText(purpose) {
+  switch (purpose) {
+    case "receipt":
+      return "\u7528\u4E8E\u53D1\u9001\u8BA2\u5355\u6536\u636E\u7684\u771F\u5B9E\u90AE\u7BB1";
+    case "claim":
+      return "\u7528\u4E8E\u53D1\u9001\u4EA4\u4ED8\u8BA4\u9886\u94FE\u63A5\u7684\u771F\u5B9E\u90AE\u7BB1";
+    case "receipt_and_claim":
+      return "\u7528\u4E8E\u53D1\u9001\u8BA2\u5355\u6536\u636E\u548C\u4EA4\u4ED8\u8BA4\u9886\u94FE\u63A5\u7684\u771F\u5B9E\u90AE\u7BB1";
+    default:
+      return "\u670D\u52A1\u7AEF\u58F0\u660E\u7528\u9014\u7684\u771F\u5B9E\u90AE\u7BB1";
+  }
 }
 function paidContinuation(model, action, input) {
   if (!action.capability_id)
@@ -11186,7 +11195,8 @@ function paidContinuation(model, action, input) {
       ...capability.price_amount_minor !== void 0 && capability.price_currency ? {
         price: { amount_minor: capability.price_amount_minor, currency: capability.price_currency }
       } : {},
-      delivery_email_required: capability.delivery_email_required
+      delivery_email_required: capability.delivery_email_required,
+      ...capability.delivery_email_purpose ? { delivery_email_purpose: capability.delivery_email_purpose } : {}
     },
     next: {
       command: checkoutCommand(model.execution.service_execution_id, capability, input, !stateBacked),
@@ -11241,7 +11251,7 @@ async function runServicesAction(backend, serviceExecutionID, actionType, input,
         candidate: { rank: selection.rank, title: selection.title },
         ...continuation ? { checkout: continuation.checkout } : {}
       },
-      instruction: continuation ? purchaseConfirmationInstruction("candidate_selected", continuation.price, continuation.capability.delivery_email_required, selection.title) : "\u5019\u9009\u5DF2\u7ED1\u5B9A\u5230\u6765\u6E90 Execution\uFF1B\u540E\u7EED\u52A8\u4F5C\u5FC5\u987B\u7EE7\u7EED\u4F7F\u7528\u8BE5 Execution\u3002",
+      instruction: continuation ? purchaseConfirmationInstruction("candidate_selected", continuation.price, continuation.capability.delivery_email_required, continuation.capability.delivery_email_purpose, selection.title) : "\u5019\u9009\u5DF2\u7ED1\u5B9A\u5230\u6765\u6E90 Execution\uFF1B\u540E\u7EED\u52A8\u4F5C\u5FC5\u987B\u7EE7\u7EED\u4F7F\u7528\u8BE5 Execution\u3002",
       next,
       recovery: [{
         command: `itpay services next ${response.service_execution_id} --json`,
@@ -11623,17 +11633,22 @@ function servicesNextEnvelope(model) {
   if (deliveryMode === "vault_artifact") {
     const grantStatus = normalizeGrantStatus(delivery?.grant_status);
     const grantActive = grantStatus === "active";
+    const grantPending = grantStatus === "pending";
     return {
-      status: grantActive ? "grant_active" : "human_authorization_required",
+      status: grantActive ? "grant_active" : grantPending ? "result_preparing" : "human_authorization_required",
       result: {
         service_execution_id: execution.service_execution_id,
         ...delivery?.capability_id ? { capability_id: delivery.capability_id } : {},
         delivery_mode: deliveryMode,
         grant_status: grantStatus,
+        ...delivery?.preparation ? { preparation: delivery.preparation } : {},
         ...grantActive && delivery?.grant_expires_at ? { grant_expires_at: delivery.grant_expires_at } : {}
       },
-      instruction: grantActive ? "\u8FD9\u662F\u5F53\u524D Graph \u6B65\u9AA4\u5BF9\u5E94\u7684\u4EA4\u4ED8\uFF1B\u7528\u6237\u6388\u6743\u6709\u6548\uFF0C\u7ACB\u5373\u8BFB\u53D6\u5E76\u9075\u5B88\u5B57\u6BB5\u8303\u56F4\u4E0E\u5230\u671F\u65F6\u95F4\u3002" : "\u8FD9\u662F\u5F53\u524D Graph \u6B65\u9AA4\u5BF9\u5E94\u7684\u4EA4\u4ED8\uFF1B\u8BF7\u7528\u6237\u5728\u8BA2\u5355\u9875\u9762\u6388\u6743\uFF0C\u672A\u6388\u6743\u524D\u4E0D\u8981\u8BFB\u53D6\u6216\u731C\u6D4B\u5185\u5BB9\u3002",
-      next: {
+      instruction: grantActive ? "\u8FD9\u662F\u5F53\u524D Graph \u6B65\u9AA4\u5BF9\u5E94\u7684\u4EA4\u4ED8\uFF1B\u7528\u6237\u6388\u6743\u6709\u6548\uFF0C\u7ACB\u5373\u8BFB\u53D6\u5E76\u9075\u5B88\u5B57\u6BB5\u8303\u56F4\u4E0E\u5230\u671F\u65F6\u95F4\u3002" : grantPending ? "\u7528\u6237\u5DF2\u7ECF\u5B8C\u6210\u6388\u6743\uFF0C\u670D\u52A1\u7AEF\u6B63\u5728\u6309\u5DF2\u53D1\u5E03\u6267\u884C\u56FE\u51C6\u5907\u4EA4\u4ED8\u5185\u5BB9\u3002\u4E0D\u8981\u518D\u6B21\u4ED8\u6B3E\u3001\u518D\u6B21\u6388\u6743\u3001\u65B0\u5EFA Execution \u6216\u8C03\u7528 read-result\uFF1B\u53EA\u6267\u884C next.command \u67E5\u8BE2\u540C\u4E00 Execution\u3002" : "\u8FD9\u662F\u5F53\u524D Graph \u6B65\u9AA4\u5BF9\u5E94\u7684\u4EA4\u4ED8\uFF1B\u8BF7\u7528\u6237\u5728\u8BA2\u5355\u9875\u9762\u6388\u6743\uFF0C\u672A\u6388\u6743\u524D\u4E0D\u8981\u8BFB\u53D6\u6216\u731C\u6D4B\u5185\u5BB9\u3002",
+      next: grantPending ? {
+        command: `itpay services next ${execution.service_execution_id} --json`,
+        reason: "\u7B49\u5F85\u540C\u4E00 Execution \u7684\u4EA4\u4ED8\u51C6\u5907\u5B8C\u6210"
+      } : {
         command: `itpay services read-result ${execution.service_execution_id} --json`,
         reason: grantActive ? "\u8BFB\u53D6\u5F53\u524D\u6709\u6548 grant \u7684\u7ED3\u679C" : "\u4EC5\u5728\u7528\u6237\u786E\u8BA4\u6388\u6743\u540E\u6267\u884C"
       },
@@ -11653,7 +11668,7 @@ function servicesNextEnvelope(model) {
           phase: execution.phase,
           checkout: continuation.checkout
         },
-        instruction: purchaseConfirmationInstruction(execution.status === "quota_exhausted" ? "quota_exhausted" : "candidate_selected", continuation.price, continuation.capability.delivery_email_required),
+        instruction: purchaseConfirmationInstruction(execution.status === "quota_exhausted" ? "quota_exhausted" : "candidate_selected", continuation.price, continuation.capability.delivery_email_required, continuation.capability.delivery_email_purpose),
         next: continuation.next,
         recovery: []
       };
@@ -11953,6 +11968,10 @@ function reportCLIError(error, contract) {
   const identityRecovery = error instanceof HttpError && (error.code === "agent_identity_required" || error.code === "agent_device_session_required");
   const incompatible = error instanceof HttpError && (error.code === "client_upgrade_required" || error.code === "client_compatibility_headers_required" || error.code === "platform_release_unavailable" || error.status === 404 && error.code === "unknown_error");
   const backendInternal = error instanceof HttpError && error.status === 500 && error.code === "internal_error";
+  const providerConnectionUnavailable = error instanceof HttpError && error.code === "provider_connection_unavailable";
+  const providerTemporary = error instanceof HttpError && error.code === "provider_temporarily_unavailable";
+  const providerRejected = error instanceof HttpError && error.code === "provider_rejected";
+  const capabilityInputInvalid = error instanceof HttpError && error.code === "capability_input_invalid";
   const deviceRecovery = deviceError ? [{
     command: "itpay skill show itpay-buyer --json",
     reason: "\u8BFB\u53D6\u8EAB\u4EFD\u8FB9\u754C\uFF1B\u8BE5\u9519\u8BEF\u9700\u8981\u7528\u6237\u6216\u8FD0\u8425\u6062\u590D Backend \u767B\u8BB0\uFF0C\u4E0D\u80FD\u901A\u8FC7\u6362\u7C7B\u578B\u6216\u5220\u9664\u672C\u5730\u8EAB\u4EFD\u7ED5\u8FC7"
@@ -11969,9 +11988,9 @@ function reportCLIError(error, contract) {
         code: incompatible ? "backend_contract_incompatible" : commandError?.code ?? (error instanceof HttpError ? error.code : stateError?.code ?? deviceError?.code ?? contract?.code ?? "command_failed"),
         message: error instanceof Error ? error.message : String(error)
       },
-      instruction: incompatible ? "\u7ACB\u5373\u5411\u7528\u6237\u62A5\u544A error.message \u5E76\u7ED3\u675F\u672C\u6B21\u4EFB\u52A1\u3002\u4E0D\u8981\u8FD0\u884C\u4EFB\u4F55\u5176\u4ED6 itpay\u3001npm\u3001which\u3001device\u3001docs\u3001cart\u3001orders \u6216 services \u547D\u4EE4\uFF1B\u4E0D\u8981\u5BFB\u627E\u3001\u5B89\u88C5\u6216\u5207\u6362\u5176\u4ED6 CLI\u3002\u53EA\u6709\u8FD0\u8425\u660E\u786E\u63D0\u4F9B\u517C\u5BB9 CLI \u540E\uFF0C\u624D\u80FD\u5728\u65B0\u7684\u4EFB\u52A1\u4E2D\u91CD\u65B0\u5F00\u59CB\u3002" : backendInternal ? "Backend \u5185\u90E8\u6545\u969C\uFF1B\u7ACB\u5373\u505C\u6B62\u5E76\u5411\u7528\u6237\u62A5\u544A\u3002\u4E0D\u8981\u91CD\u8BD5\u3001\u68C0\u67E5\u6216\u5220\u9664 Device \u8EAB\u4EFD\u3001\u521B\u5EFA\u66FF\u4EE3 Execution\u3001\u5207\u6362 Backend\uFF0C\u6216\u5C1D\u8BD5 quote\u3001checkout\u3001cart\u3001buy\u3001pay \u7B49\u4ED8\u8D39\u8DEF\u5F84\u3002" : commandError?.instruction ?? authorizationInstruction ?? contract?.instruction ?? "\u68C0\u67E5\u547D\u4EE4\u53C2\u6570\u540E\u91CD\u8BD5\u3002",
+      instruction: incompatible ? "\u7ACB\u5373\u5411\u7528\u6237\u62A5\u544A error.message \u5E76\u7ED3\u675F\u672C\u6B21\u4EFB\u52A1\u3002\u4E0D\u8981\u8FD0\u884C\u4EFB\u4F55\u5176\u4ED6 itpay\u3001npm\u3001which\u3001device\u3001docs\u3001cart\u3001orders \u6216 services \u547D\u4EE4\uFF1B\u4E0D\u8981\u5BFB\u627E\u3001\u5B89\u88C5\u6216\u5207\u6362\u5176\u4ED6 CLI\u3002\u53EA\u6709\u8FD0\u8425\u660E\u786E\u63D0\u4F9B\u517C\u5BB9 CLI \u540E\uFF0C\u624D\u80FD\u5728\u65B0\u7684\u4EFB\u52A1\u4E2D\u91CD\u65B0\u5F00\u59CB\u3002" : backendInternal ? "Backend \u5185\u90E8\u6545\u969C\uFF1B\u7ACB\u5373\u505C\u6B62\u5E76\u5411\u7528\u6237\u62A5\u544A\u3002\u4E0D\u8981\u91CD\u8BD5\u3001\u68C0\u67E5\u6216\u5220\u9664 Device \u8EAB\u4EFD\u3001\u521B\u5EFA\u66FF\u4EE3 Execution\u3001\u5207\u6362 Backend\uFF0C\u6216\u5C1D\u8BD5 quote\u3001checkout\u3001cart\u3001buy\u3001pay \u7B49\u4ED8\u8D39\u8DEF\u5F84\u3002" : providerConnectionUnavailable ? "Provider \u8BF7\u6C42\u672A\u53D1\u51FA\uFF0C\u9884\u7559\u514D\u8D39\u989D\u5EA6\u5DF2\u91CA\u653E\uFF1B\u5F53\u524D Execution \u5DF2\u5931\u8D25\u3002\u7ACB\u5373\u5411\u7528\u6237\u62A5\u544A error.message \u5E76\u505C\u6B62\uFF0C\u4E0D\u8981\u81EA\u52A8\u91CD\u8BD5\u3001\u4E0D\u8981\u7EE7\u7EED\u540C\u4E00 Execution\uFF0C\u4E5F\u4E0D\u8981\u8FDB\u5165\u4EFB\u4F55\u4ED8\u8D39\u8DEF\u5F84\u3002\u53EA\u6709\u8FD0\u8425\u786E\u8BA4\u8FDE\u63A5\u6062\u590D\u4E14\u7528\u6237\u660E\u786E\u8981\u6C42\u91CD\u65B0\u67E5\u8BE2\u540E\uFF0C\u624D\u542F\u52A8\u65B0\u7684 Service Execution\u3002" : providerTemporary ? "\u4E0A\u6E38\u670D\u52A1\u6682\u65F6\u4E0D\u53EF\u7528\uFF1B\u5411\u7528\u6237\u9010\u5B57\u62A5\u544A error.message \u5E76\u505C\u6B62\uFF0C\u4E0D\u8981\u81EA\u52A8\u91CD\u8BD5\u3002\u8BF7\u6C42\u662F\u5426\u53EF\u80FD\u8BA1\u8D39\u4EE5 Backend \u7684\u6D88\u8D39\u4E8B\u5B9E\u4E3A\u51C6\uFF1B\u53EA\u6709\u7528\u6237\u660E\u786E\u8981\u6C42\u518D\u6B21\u67E5\u8BE2\u540E\uFF0C\u624D\u53EF\u6309 next/recovery \u91CD\u65B0\u5F00\u59CB\u3002" : providerRejected ? "\u4E0A\u6E38\u62D2\u7EDD\u4E86\u672C\u6B21\u8F93\u5165\uFF1B\u5411\u7528\u6237\u9010\u5B57\u62A5\u544A error.message \u5E76\u505C\u6B62\uFF0C\u4E0D\u8981\u91CD\u8BD5\u540C\u4E00 Execution\u3002Provider \u5DF2\u6536\u5230\u54CD\u5E94\uFF0C\u672C\u6B21\u8BF7\u6C42\u53EF\u80FD\u8BA1\u8D39\uFF1B\u53EA\u6709\u7528\u6237\u63D0\u4F9B\u4FEE\u6B63\u540E\u7684\u8F93\u5165\u540E\uFF0C\u624D\u53EF\u6309 next/recovery \u7EE7\u7EED\u3002" : capabilityInputInvalid ? "\u8F93\u5165\u672A\u901A\u8FC7\u672C\u5730\u6821\u9A8C\uFF0C\u4E0A\u6E38\u5C1A\u672A\u88AB\u8C03\u7528\u4E14\u7528\u6237\u989D\u5EA6\u672A\u53D8\u5316\u3002\u5411\u7528\u6237\u9010\u5B57\u62A5\u544A error.message \u5E76\u505C\u6B62\uFF0C\u4E0D\u8981\u539F\u6837\u91CD\u8BD5\u6216\u8FD0\u884C\u5176\u4ED6\u6062\u590D\u547D\u4EE4\u3002\u7528\u6237\u63D0\u4F9B\u4FEE\u6B63\u540E\u7684\u8F93\u5165\u540E\uFF0C\u7EE7\u7EED\u4F7F\u7528\u5F53\u524D\u672A\u7ED3\u675F\u7684 Execution\u3002" : commandError?.instruction ?? authorizationInstruction ?? contract?.instruction ?? "\u68C0\u67E5\u547D\u4EE4\u53C2\u6570\u540E\u91CD\u8BD5\u3002",
       next: null,
-      recovery: incompatible || backendInternal ? [] : commandError?.recovery ?? (stateError ? stateRecovery : deviceError ? deviceRecovery : identityRecovery ? httpRecovery : contract?.recovery ?? [])
+      recovery: incompatible || backendInternal || providerConnectionUnavailable || providerTemporary || providerRejected || capabilityInputInvalid ? [] : commandError?.recovery ?? (stateError ? stateRecovery : deviceError ? deviceRecovery : identityRecovery ? httpRecovery : contract?.recovery ?? [])
     }, {
       ...contract?.jsonOutput !== void 0 ? { jsonOutput: contract.jsonOutput } : {},
       output: (text) => {

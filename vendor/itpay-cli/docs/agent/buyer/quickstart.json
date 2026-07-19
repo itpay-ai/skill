@@ -19,7 +19,7 @@
     {
       "intent": "verify compatibility",
       "command": "itpay --agent-type <agent_type> readyz --json",
-      "success_signal": "status is ready and next points to the canonical root Buyer Skill"
+      "success_signal": "status is ready and next points to the complete packaged Buyer Skill"
     },
     {
       "intent": "load the complete operating contract",
