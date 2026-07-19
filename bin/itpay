@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+set -eu
+
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+SKILL_ROOT=$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)
+BUNDLE="$SKILL_ROOT/vendor/itpay-cli/itpay-cli.bundle.mjs"
+
+if ! command -v node >/dev/null 2>&1; then
+  echo "ItPay bundled CLI requires Node.js 18 or newer." >&2
+  exit 127
+fi
+
+if ! node -e 'process.exit(Number(process.versions.node.split(".")[0]) >= 18 ? 0 : 1)'; then
+  echo "ItPay bundled CLI requires Node.js 18 or newer." >&2
+  exit 1
+fi
+
+if [ ! -f "$BUNDLE" ]; then
+  echo "ItPay bundled CLI is missing: $BUNDLE" >&2
+  exit 1
+fi
+
+export ITPAY_CLI_DOCS_DIR="$SKILL_ROOT/vendor/itpay-cli/docs/agent/buyer"
+export ITPAY_CLI_SKILL_FILE="$SKILL_ROOT/SKILL.md"
+
+exec node "$BUNDLE" "$@"
