@@ -80,6 +80,8 @@ Use $itpay-buyer to find a verified company-information service. Show me the pri
 
 Agent 会先锁定本 Skill 的 wrapper 和真实 Agent Type，然后通过 CLI 返回的 `next.command` 推进同一 Service Execution。候选选择、购买、Checkout、受保护结果授权和退款仍由人决定。
 
+若 Backend 报告 CLI 合约不兼容，应通过原 Git、SkillHub 或 Agent installer 渠道更新本 Skill，并确认 `sh <skill-root>/bin/itpay --version` 与 Backend 指定版本完全一致。不要安装全局 CLI，也不要改用 npm `latest`；二者都不会安全地更新当前 wrapper 使用的固定 bundle。
+
 ## 本地验证
 
 ```bash

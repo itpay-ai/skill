@@ -10,6 +10,7 @@ const invocation = await readFile(
   new URL("../references/itpay-cli-invocation.md", import.meta.url),
   "utf8",
 );
+const wrapper = await readFile(new URL("../bin/itpay", import.meta.url), "utf8");
 const packageJson = JSON.parse(
   await readFile(new URL("../package.json", import.meta.url), "utf8"),
 );
@@ -80,9 +81,11 @@ test("bundled compatibility recovery updates the Skill instead of a global CLI",
   assert.match(skill, /backend_contract_incompatible/);
   assert.match(skill, /result\.required_cli_version/);
   assert.match(skill, /do \*\*not\*\* execute the returned global npm recovery/i);
+  assert.match(skill, /result\.current_cli_version/);
   assert.match(skill, /sh <skill-root>\/bin\/itpay --version/);
   assert.match(invocation, /global `npm install` cannot change the CLI used by this wrapper/);
   assert.match(invocation, /never infer one from prose or substitute `latest`/i);
+  assert.doesNotMatch(wrapper, /npm|resolve-itpay-cli/);
 });
 
 test("Skill maps every Backend-supported Agent Type without impersonation", () => {

@@ -23,7 +23,7 @@ Replace only the leading launcher. Fill placeholders only with values supplied b
 
 The upstream CLI may mention `npm install -g @itpay/cli` when packaged assets are missing. In this bundled Skill, treat that as a damaged Skill installation and report it; do not install a second CLI.
 
-The same distribution boundary applies to compatibility recovery. A global `npm install` cannot change the CLI used by this wrapper. When `backend_contract_incompatible` supplies `result.required_cli_version`, update or reinstall this Skill through its existing Git, SkillHub, or Agent installer channel. Then run the wrapper's `--version` and require an exact match before retrying typed `readyz`. If the Backend supplies no valid required version, stop and report it; never infer one from prose or substitute `latest`.
+The same distribution boundary applies to compatibility recovery. A global `npm install` cannot change the CLI used by this wrapper. When `backend_contract_incompatible` supplies `result.required_cli_version`, report both `result.current_cli_version` and the required version, then ask the human to update or reinstall this Skill through its existing Git, SkillHub, or Agent installer channel. Run no other ItPay command until the wrapper's `--version` exactly matches; then retry typed `readyz`. If the Backend supplies no valid required version, stop and report it; never infer one from prose or substitute `latest`.
 
 ## Lock The Environment
 

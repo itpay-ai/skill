@@ -61,7 +61,7 @@ Keep the same Agent Type, wrapper, Node launcher, Backend URL, and Host-approved
 
 If the bundle, its offline docs, or the canonical root Skill is unavailable, report a damaged Skill installation. Do not recover by installing a second global CLI.
 
-If `backend_contract_incompatible` returns `result.required_cli_version`, stop every ItPay business command. This Skill runs a pinned bundle, so do **not** execute the returned global npm recovery: it would not update this wrapper. Update or reinstall `itpay-buyer` through the same Skill installation channel, then require `sh <skill-root>/bin/itpay --version` to equal `result.required_cli_version` exactly before rerunning typed `readyz`. Never use `latest`, guess a version, switch launchers, Agent Type, or Device identity.
+If `backend_contract_incompatible` returns `result.required_cli_version`, stop every ItPay business command. This Skill runs a pinned bundle, so do **not** execute the returned global npm recovery: it would not update this wrapper. Tell the human that the installed Skill bundles `result.current_cli_version`, Backend requires `result.required_cli_version`, and `itpay-buyer` must be updated through the same Skill installation channel. After that update, require `sh <skill-root>/bin/itpay --version` to equal the required version exactly before rerunning typed `readyz`. Never use `latest`, guess a version, switch launchers, Agent Type, or Device identity.
 
 ## Identity And Sessions
 
