@@ -1,6 +1,6 @@
 interface:
   display_name: "ItPay Buyer"
-  short_description: "Buy verified services with bundled ItPay"
+  short_description: "Buy verified services with latest ItPay CLI"
   default_prompt: "Use $itpay-buyer to find a verified service for my request, show its price, and wait for approval before Checkout."
 policy:
   allow_implicit_invocation: true

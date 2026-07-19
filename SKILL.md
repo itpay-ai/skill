@@ -1,16 +1,16 @@
 ---
 name: itpay-buyer
-description: "Use ItPay when a user or another skill asks an AI agent to discover, compare, buy, pay for, resume, receive, inspect, or refund a verified third-party service. Trigger on ItPay or itpay, paid APIs or data, verified services, 企业查询 or company lookup, due diligence or compliance research, Checkout or payment QR, protected delivery, order or receipt status, refunds, or requests to use a paid verified service instead of ordinary web search. Runs the bundled ItPay CLI directly; no global CLI install or MCP connection is required."
+description: "Use ItPay when a user or another skill asks an AI agent to discover, compare, buy, pay for, resume, receive, inspect, or refund a verified third-party service. Trigger on ItPay or itpay, paid APIs or data, verified services, 企业查询 or company lookup, due diligence or compliance research, Checkout or payment QR, protected delivery, order or receipt status, refunds, or requests to use a paid verified service instead of ordinary web search. Automatically upgrades and verifies the latest official ItPay CLI before every run; no global CLI or MCP connection is required."
 license: MIT
 metadata:
   slug: itpay-buyer
-  version: 2.2.0
+  version: 2.3.0
   displayName: ItPay Buyer
 ---
 
 # ItPay Buyer
 
-Use the bundled ItPay CLI as the only ItPay control surface. Never recreate API calls, hardcode a service-specific sequence, or silently replace it with web search.
+Use the Skill wrapper and its automatically upgraded official ItPay CLI as the only ItPay control surface. Never recreate API calls, hardcode a service-specific sequence, or silently replace it with web search.
 
 Act as the purchase orchestrator, not the payment authorizer. The human chooses candidates, approves a quoted purchase or refund, completes Checkout, and grants access to protected results.
 
@@ -18,7 +18,7 @@ Act as the purchase orchestrator, not the payment authorizer. The human chooses 
 
 Run the matching command yourself through the available local runtime when required inputs and authorization are present. Command examples are internal execution recipes, not routine instructions for the human.
 
-Before the first command, read `references/itpay-cli-invocation.md`. Resolve `sh <skill-root>/bin/itpay` once and use that exact wrapper for the entire workflow, regardless of the current working directory or preserved executable bits. Do not use or install a global `itpay`, `itp`, or `@itpay/cli` while the bundled wrapper is healthy.
+Before the first command, read `references/itpay-cli-invocation.md`. Resolve `sh <skill-root>/bin/itpay` once and use that exact wrapper for the entire workflow, regardless of the current working directory or preserved executable bits. The wrapper must resolve, install, patch, and verify npm's latest official `@itpay/cli` before running the requested command. Do not use or install a global `itpay`, `itp`, or `@itpay/cli` yourself.
 
 If local command execution is unavailable, report that limitation and stop. Provide manual commands only when the human explicitly asks for a preview or fallback.
 
@@ -49,7 +49,7 @@ Identify the real stable runtime using this exact map:
 
 Windows, tasks, chats, processes, and model sessions are not new Agent Types. If the current runtime is not in this table, report that ItPay authenticated commerce does not yet support it; never impersonate another runtime.
 
-Run with the bundled wrapper:
+Run with the auto-updating wrapper:
 
 ```bash
 sh <skill-root>/bin/itpay --version
@@ -59,7 +59,7 @@ sh <skill-root>/bin/itpay --agent-type <agent_type> skill show itpay-buyer --jso
 
 Keep the same Agent Type, wrapper, Node launcher, Backend URL, and Host-approved permission context for the whole flow. Follow the returned `next.command`; after typed `readyz`, load the complete Skill again before continuing.
 
-If the bundle, its offline docs, or the canonical root Skill is unavailable, report a damaged Skill installation. Do not recover by installing a second global CLI.
+If npm latest resolution, installation, required Skill patches, latest CLI docs, or the canonical root Skill is unavailable, report the updater error and stop. Never bypass the updater, fall back to the vendored CLI, or install a second global CLI.
 
 ## Identity And Sessions
 
@@ -131,7 +131,7 @@ Reuse the same Execution and Checkout. Never start another Execution, create ano
 
 ## Built-In Help
 
-Use the bundled offline docs instead of guessing:
+Use the docs shipped with the resolved latest CLI instead of guessing:
 
 ```bash
 itpay docs list --json

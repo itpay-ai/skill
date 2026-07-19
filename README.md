@@ -4,20 +4,21 @@
 [![Bundled CLI](https://img.shields.io/badge/%40itpay%2Fcli-2.0.12-6366f1)](https://www.npmjs.com/package/@itpay/cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
-ItPay 官方 Buyer Skill。Agent 安装一个目录后即可发现并调用固定版本的 ItPay CLI，用于发现、比较、购买、恢复、接收和退款经过验证的第三方服务。
+ItPay 官方 Buyer Skill。Agent 安装一个目录后即可发现，并在每次执行前自动升级、验证和调用最新官方 ItPay CLI，用于发现、比较、购买、恢复、接收和退款经过验证的第三方服务。
 
-The official ItPay buyer Skill. It ships a pinned CLI bundle so an Agent can discover and execute ItPay workflows without a global CLI installation or a separately configured MCP connector.
+The official ItPay buyer Skill. Its wrapper upgrades and verifies npm's latest official CLI before every run, without a global CLI installation or a separately configured MCP connector.
 
 ## 为什么这样打包
 
 - 根目录只有一份 `SKILL.md`，避免递归扫描时注册出两个同名 Skill。
 - description 把 ItPay、付费/验证服务、企业查询、Checkout、交付、订单和退款等触发语义放在最前面，便于 Agent 在 Skill 列表被截断时仍能匹配。
 - `agents/openai.yaml` 允许隐式调用，并提供显式 `$itpay-buyer` 启动提示。
-- `bin/itpay` 从 Skill 自身路径解析固定 CLI，不依赖当前工作目录或全局 `PATH`。
-- `vendor/itpay-cli` 内置 `@itpay/cli` 2.0.12 和离线 Agent docs；CLI 通过环境变量读取根 `SKILL.md`，不再携带第二份副本。
+- `bin/itpay` 每次先解析 npm latest；缺少该版本时安装到 Skill 专用用户缓存，补丁和完整性验证通过后才执行。
+- `bin/resolve-itpay-cli.mjs` 自动保留根 `SKILL.md`、全部 8 个 Agent Type 和 Skill wrapper 安装提示；任何补丁无法应用时 fail closed。
+- `vendor/itpay-cli` 保留可审计的 `2.0.12` 基线和许可证，但不会在升级失败时被静默执行。
 - 自动化测试检查发现元数据、唯一入口、wrapper、8 个 Agent Type、CLI command families 和离线 docs。
 
-本仓库采用单文件 bundle，而不是 Git submodule。普通 Git clone、SkillHub 导入及多数 Agent Skill 安装器不会递归拉取 submodule；bundle 能保证 Skill 被发现后立即有可执行入口。
+本仓库不使用 Git submodule。普通 Git clone、SkillHub 导入及多数 Agent Skill 安装器不会递归拉取 submodule；wrapper 使用 npm 官方包和独立缓存，使 Skill 被发现后能自动获得最新 CLI。
 
 ## 安装
 
@@ -60,7 +61,7 @@ openclaw skills install git:itpay-ai/skill --global
 skillhub install itpay-buyer --dir ~/.agents/skills
 ```
 
-重新启动 Agent 会话，使其重新扫描 Skills。Claude Code 在既有 Skills 目录中支持热更新；OpenClaw 通常会刷新快照。运行时只要求 Node.js 18 或更新版本，不需要执行 `npm install -g @itpay/cli`。
+重新启动 Agent 会话，使其重新扫描 Skills。Claude Code 在既有 Skills 目录中支持热更新；OpenClaw 通常会刷新快照。运行时要求 Node.js 18+、npm 和 registry 网络访问，不需要执行 `npm install -g @itpay/cli`。
 
 ItPay Backend 当前接受 8 个精确 Agent Type：`codex-desktop`、`codex-cli`、`claude-code-desktop`、`claude-code-cli`、`workbuddy`、`kimi-code`、`openclaw`、`hermes`。其他客户端即使能解析标准 `SKILL.md`，也不能冒充这些类型执行认证交易。
 
@@ -106,7 +107,7 @@ sh ./bin/itpay docs list --json
 
 ## 更新 vendored CLI
 
-当前 bundle 固定到 `@itpay/cli@2.0.12`、Git commit `7b8cc441cc47c04797adf2721e1e22d1f425b86d`，并带有两项可审计的 Skill 包装补丁：读取根 `SKILL.md`，以及公布 Backend 已支持的全部 8 个 Agent Type。升级时应从对应 CLI source build 生成 ESM bundle，同步 `docs/agent/buyer`，重新应用这两项补丁并运行全部测试。
+vendored 基线固定到 `@itpay/cli@2.0.12`、Git commit `7b8cc441cc47c04797adf2721e1e22d1f425b86d`。运行时 wrapper 每次查询 npm latest，在用户缓存中安装缺失版本，并自动应用根 `SKILL.md`、8 个 Agent Type 和 wrapper 安装提示补丁。若上游结构变化导致补丁无法精确应用，命令会停止，避免执行未经 Skill 集成验证的新版本。
 
 ## 安全边界
 

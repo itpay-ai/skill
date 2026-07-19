@@ -3,7 +3,7 @@ set -eu
 
 SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 SKILL_ROOT=$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)
-BUNDLE="$SKILL_ROOT/vendor/itpay-cli/itpay-cli.bundle.mjs"
+RESOLVER="$SKILL_ROOT/bin/resolve-itpay-cli.mjs"
 
 if ! command -v node >/dev/null 2>&1; then
   echo "ItPay bundled CLI requires Node.js 18 or newer." >&2
@@ -15,12 +15,28 @@ if ! node -e 'process.exit(Number(process.versions.node.split(".")[0]) >= 18 ? 0
   exit 1
 fi
 
-if [ ! -f "$BUNDLE" ]; then
-  echo "ItPay bundled CLI is missing: $BUNDLE" >&2
+if ! command -v npm >/dev/null 2>&1; then
+  echo "ItPay requires npm to resolve the latest official CLI before every run." >&2
+  exit 127
+fi
+
+if [ ! -f "$RESOLVER" ]; then
+  echo "ItPay CLI updater is missing: $RESOLVER" >&2
   exit 1
 fi
 
-export ITPAY_CLI_DOCS_DIR="$SKILL_ROOT/vendor/itpay-cli/docs/agent/buyer"
 export ITPAY_CLI_SKILL_FILE="$SKILL_ROOT/SKILL.md"
+RESOLVED=$(node "$RESOLVER") || {
+  echo "ItPay could not upgrade and verify the latest official CLI; command was not run." >&2
+  exit 1
+}
+CLI_ENTRY=$(printf '%s\n' "$RESOLVED" | sed -n '1p')
+ITPAY_CLI_DOCS_DIR=$(printf '%s\n' "$RESOLVED" | sed -n '2p')
+export ITPAY_CLI_DOCS_DIR
 
-exec node "$BUNDLE" "$@"
+if [ ! -f "$CLI_ENTRY" ] || [ ! -d "$ITPAY_CLI_DOCS_DIR" ]; then
+  echo "ItPay latest CLI installation is incomplete; command was not run." >&2
+  exit 1
+fi
+
+exec node "$CLI_ENTRY" "$@"
