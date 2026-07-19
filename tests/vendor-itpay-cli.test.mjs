@@ -12,45 +12,22 @@ const wrapper = fileURLToPath(new URL("../bin/itpay", import.meta.url));
 const vendorPackage = JSON.parse(
   await readFile(new URL("../vendor/itpay-cli/package.json", import.meta.url), "utf8"),
 );
-const cliCache = await mkdtemp(join(tmpdir(), "itpay-skill-cli-cache-"));
 
 async function run(args) {
   const home = await mkdtemp(join(tmpdir(), "itpay-skill-test-"));
   return execFileAsync("sh", [wrapper, ...args], {
     cwd: tmpdir(),
-    env: { ...process.env, HOME: home, ITPAY_CLI_CACHE_DIR: cliCache },
+    env: { ...process.env, HOME: home },
     encoding: "utf8",
     timeout: 10_000,
     maxBuffer: 1024 * 1024,
   });
 }
 
-test("shell wrapper upgrades and runs the latest CLI from outside the Skill directory", async () => {
+test("shell wrapper runs the pinned CLI from outside the Skill directory", async () => {
   const { stdout, stderr } = await run(["--version"]);
   assert.equal(stdout.trim(), vendorPackage.version);
   assert.equal(stderr, "");
-});
-
-test("wrapper fails closed when latest version resolution fails", async () => {
-  const home = await mkdtemp(join(tmpdir(), "itpay-skill-fail-test-"));
-  await assert.rejects(
-    execFileAsync("sh", [wrapper, "--version"], {
-      cwd: tmpdir(),
-      env: {
-        ...process.env,
-        HOME: home,
-        ITPAY_CLI_CACHE_DIR: cliCache,
-        ITPAY_NPM_COMMAND: "/usr/bin/false",
-      },
-      encoding: "utf8",
-      timeout: 10_000,
-    }),
-    (error) => {
-      assert.match(error.stderr, /could not upgrade and verify the latest official CLI/);
-      assert.equal(error.stdout, "");
-      return true;
-    },
-  );
 });
 
 test("vendored CLI exposes discovery, checkout, and refund command families", async () => {
@@ -61,7 +38,7 @@ test("vendored CLI exposes discovery, checkout, and refund command families", as
   assert.match(stdout, /refund \[options\]\s+Create a V3 refund request/);
 });
 
-test("canonical root Skill is available through the latest CLI and keeps Agent Type", async () => {
+test("canonical root Skill is available offline and keeps Agent Type", async () => {
   const { stdout } = await run([
     "--agent-type",
     "codex-desktop",
@@ -122,11 +99,11 @@ test("newly exposed Agent Types can load the canonical root Skill", async () => 
       envelope.next.command,
       `itpay --agent-type ${agentType} catalog list --json`,
     );
-    assert.match(envelope.result.content, /version: 2\.3\.0/);
+    assert.match(envelope.result.content, /version: 2\.2\.0/);
   }
 });
 
-test("progressive docs come from the resolved latest CLI", async () => {
+test("offline progressive docs are bundled", async () => {
   const { stdout } = await run(["docs", "list", "--json"]);
   const envelope = JSON.parse(stdout);
   const topics = envelope.result.topics.map((topic) => topic.topic);

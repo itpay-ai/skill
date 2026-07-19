@@ -37,7 +37,7 @@ test("Skill frontmatter supports Agent discovery and SkillHub publishing", () =>
   assert.match(frontmatter, /^metadata:$/m);
   assert.match(frontmatter, /^  slug: itpay-buyer$/m);
   assert.match(frontmatter, /^license: MIT$/m);
-  assert.match(frontmatter, /^  version: 2\.3\.0$/m);
+  assert.match(frontmatter, /^  version: 2\.2\.0$/m);
   assert.match(frontmatter, /^  displayName: ItPay Buyer$/m);
   assert.match(frontmatter, /ItPay/);
   assert.match(frontmatter, /company lookup|企业查询/);
@@ -51,11 +51,10 @@ test("implicit invocation and default prompt advertise the Skill", () => {
   assert.match(openai, /default_prompt: "Use \$itpay-buyer /);
 });
 
-test("auto-updating wrapper is the only normal control surface", () => {
+test("bundled command is the only normal control surface", () => {
   assert.match(skill, /references\/itpay-cli-invocation\.md/);
   assert.match(skill, /sh <skill-root>\/bin\/itpay/);
-  assert.match(skill, /Automatically upgrades and verifies the latest official ItPay CLI/i);
-  assert.match(skill, /Never bypass the updater/i);
+  assert.match(skill, /no global CLI install or MCP connection is required/i);
   assert.match(invocation, /Replace only the leading launcher/);
   assert.match(invocation, /archive-based installer.*executable bit/);
   assert.match(invocation, /Do not choose the launcher with `command -v`/);
@@ -67,7 +66,7 @@ test("the repository exposes exactly one canonical SKILL.md", async () => {
 });
 
 test("runtime metadata pins compatible Node and CLI versions", () => {
-  assert.equal(packageJson.version, "2.3.0");
+  assert.equal(packageJson.version, "2.2.0");
   assert.equal(packageJson.engines.node, ">=18");
   assert.equal(vendorPackage.version, "2.0.12");
   assert.equal(
