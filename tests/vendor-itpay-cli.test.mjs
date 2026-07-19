@@ -99,7 +99,7 @@ test("newly exposed Agent Types can load the canonical root Skill", async () => 
       envelope.next.command,
       `itpay --agent-type ${agentType} catalog list --json`,
     );
-    assert.match(envelope.result.content, /version: 2\.2\.0/);
+    assert.match(envelope.result.content, /version: 2\.2\.1/);
   }
 });
 

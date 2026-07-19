@@ -37,7 +37,7 @@ test("Skill frontmatter supports Agent discovery and SkillHub publishing", () =>
   assert.match(frontmatter, /^metadata:$/m);
   assert.match(frontmatter, /^  slug: itpay-buyer$/m);
   assert.match(frontmatter, /^license: MIT$/m);
-  assert.match(frontmatter, /^  version: 2\.2\.0$/m);
+  assert.match(frontmatter, /^  version: 2\.2\.1$/m);
   assert.match(frontmatter, /^  displayName: ItPay Buyer$/m);
   assert.match(frontmatter, /ItPay/);
   assert.match(frontmatter, /company lookup|企业查询/);
@@ -66,7 +66,7 @@ test("the repository exposes exactly one canonical SKILL.md", async () => {
 });
 
 test("runtime metadata pins compatible Node and CLI versions", () => {
-  assert.equal(packageJson.version, "2.2.0");
+  assert.equal(packageJson.version, "2.2.1");
   assert.equal(packageJson.engines.node, ">=18");
   assert.equal(vendorPackage.version, "2.0.12");
   assert.equal(
@@ -74,6 +74,15 @@ test("runtime metadata pins compatible Node and CLI versions", () => {
     "7b8cc441cc47c04797adf2721e1e22d1f425b86d",
   );
   assert.equal(vendorPackage.itpaySkillPatches.length, 2);
+});
+
+test("bundled compatibility recovery updates the Skill instead of a global CLI", () => {
+  assert.match(skill, /backend_contract_incompatible/);
+  assert.match(skill, /result\.required_cli_version/);
+  assert.match(skill, /do \*\*not\*\* execute the returned global npm recovery/i);
+  assert.match(skill, /sh <skill-root>\/bin\/itpay --version/);
+  assert.match(invocation, /global `npm install` cannot change the CLI used by this wrapper/);
+  assert.match(invocation, /never infer one from prose or substitute `latest`/i);
 });
 
 test("Skill maps every Backend-supported Agent Type without impersonation", () => {

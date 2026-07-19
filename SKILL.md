@@ -4,7 +4,7 @@ description: "Use ItPay when a user or another skill asks an AI agent to discove
 license: MIT
 metadata:
   slug: itpay-buyer
-  version: 2.2.0
+  version: 2.2.1
   displayName: ItPay Buyer
 ---
 
@@ -60,6 +60,8 @@ sh <skill-root>/bin/itpay --agent-type <agent_type> skill show itpay-buyer --jso
 Keep the same Agent Type, wrapper, Node launcher, Backend URL, and Host-approved permission context for the whole flow. Follow the returned `next.command`; after typed `readyz`, load the complete Skill again before continuing.
 
 If the bundle, its offline docs, or the canonical root Skill is unavailable, report a damaged Skill installation. Do not recover by installing a second global CLI.
+
+If `backend_contract_incompatible` returns `result.required_cli_version`, stop every ItPay business command. This Skill runs a pinned bundle, so do **not** execute the returned global npm recovery: it would not update this wrapper. Update or reinstall `itpay-buyer` through the same Skill installation channel, then require `sh <skill-root>/bin/itpay --version` to equal `result.required_cli_version` exactly before rerunning typed `readyz`. Never use `latest`, guess a version, switch launchers, Agent Type, or Device identity.
 
 ## Identity And Sessions
 

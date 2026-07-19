@@ -23,6 +23,8 @@ Replace only the leading launcher. Fill placeholders only with values supplied b
 
 The upstream CLI may mention `npm install -g @itpay/cli` when packaged assets are missing. In this bundled Skill, treat that as a damaged Skill installation and report it; do not install a second CLI.
 
+The same distribution boundary applies to compatibility recovery. A global `npm install` cannot change the CLI used by this wrapper. When `backend_contract_incompatible` supplies `result.required_cli_version`, update or reinstall this Skill through its existing Git, SkillHub, or Agent installer channel. Then run the wrapper's `--version` and require an exact match before retrying typed `readyz`. If the Backend supplies no valid required version, stop and report it; never infer one from prose or substitute `latest`.
+
 ## Lock The Environment
 
 Choose these once and preserve them across every continuation and recovery command:
@@ -52,7 +54,7 @@ Do not scrape terminal prose when JSON is available. Never print a complete enve
 ## Handle Failure
 
 - Validation or missing-input error: correct only the named input, or ask the human for it.
-- Compatibility or Backend contract error: stop and surface the message. Do not search for another CLI.
+- Compatibility or Backend contract error: stop business commands and surface the message. Update this Skill only when the CLI supplies an exact required version; verify the bundled wrapper version before typed `readyz`. Do not install or search for another CLI.
 - Network timeout during a state-changing operation: treat state as unknown and use the returned or documented read/resume path before retrying.
 - Device/session error after the CLI's one renewal attempt: stop. Do not switch Agent Type, delete local state, or rotate identity.
 - Bundled asset error: report that the Skill installation is incomplete or damaged.
