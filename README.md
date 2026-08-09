@@ -1,7 +1,7 @@
 # ItPay Buyer Skill
 
 [![Agent Skill](https://img.shields.io/badge/Agent%20Skill-itpay--buyer-111827)](./SKILL.md)
-[![Bundled CLI](https://img.shields.io/badge/%40itpay%2Fcli-2.0.12-6366f1)](https://www.npmjs.com/package/@itpay/cli)
+[![Bundled CLI](https://img.shields.io/badge/%40itpay%2Fcli-2.0.25-6366f1)](https://www.npmjs.com/package/@itpay/cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
 ItPay 官方 Buyer Skill。Agent 安装一个目录后即可发现并调用固定版本的 ItPay CLI，用于发现、比较、购买、恢复、接收和退款经过验证的第三方服务。
@@ -14,7 +14,7 @@ The official ItPay buyer Skill. It ships a pinned CLI bundle so an Agent can dis
 - description 把 ItPay、付费/验证服务、企业查询、Checkout、交付、订单和退款等触发语义放在最前面，便于 Agent 在 Skill 列表被截断时仍能匹配。
 - `agents/openai.yaml` 允许隐式调用，并提供显式 `$itpay-buyer` 启动提示。
 - `bin/itpay` 从 Skill 自身路径解析固定 CLI，不依赖当前工作目录或全局 `PATH`。
-- `vendor/itpay-cli` 内置 `@itpay/cli` 2.0.12 和离线 Agent docs；CLI 通过环境变量读取根 `SKILL.md`，不再携带第二份副本。
+- `vendor/itpay-cli` 内置 `@itpay/cli` 2.0.25 和离线 Agent docs；CLI 通过环境变量读取根 `SKILL.md`，不再携带第二份副本。
 - 自动化测试检查发现元数据、唯一入口、wrapper、8 个 Agent Type、CLI command families 和离线 docs。
 
 本仓库采用单文件 bundle，而不是 Git submodule。普通 Git clone、SkillHub 导入及多数 Agent Skill 安装器不会递归拉取 submodule；bundle 能保证 Skill 被发现后立即有可执行入口。
@@ -108,7 +108,7 @@ sh ./bin/itpay docs list --json
 
 ## 更新 vendored CLI
 
-当前 bundle 固定到 `@itpay/cli@2.0.12`、Git commit `7b8cc441cc47c04797adf2721e1e22d1f425b86d`，并带有两项可审计的 Skill 包装补丁：读取根 `SKILL.md`，以及公布 Backend 已支持的全部 8 个 Agent Type。升级时应从对应 CLI source build 生成 ESM bundle，同步 `docs/agent/buyer`，重新应用这两项补丁并运行全部测试。
+当前 bundle 固定到 `@itpay/cli@2.0.25`、Git commit `f8fd62a8707919da77e7a792103a23b40b0e252f`，并带有两项可审计的通用 Skill 适配：接受历史名称 `itpay-buyer` 作为 canonical `itpay` 的别名，以及在通用 onboarding 中公布 Backend 已支持的全部 8 个 Agent Type。升级时应从对应 CLI source build 生成 ESM bundle，同步 `docs/agent/buyer`，重新应用这两项适配并运行全部测试。
 
 ## 安全边界
 

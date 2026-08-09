@@ -44,17 +44,25 @@ test("canonical root Skill is available offline and keeps Agent Type", async () 
     "codex-desktop",
     "skill",
     "show",
-    "itpay-buyer",
+    "itpay",
     "--json",
   ]);
   const envelope = JSON.parse(stdout);
   assert.equal(envelope.status, "shown");
-  assert.equal(envelope.result.skill, "itpay-buyer");
+  assert.equal(envelope.result.skill, "itpay");
   assert.match(envelope.result.content, /# ItPay Buyer/);
   assert.equal(
     envelope.next.command,
     "itpay --agent-type codex-desktop catalog list --json",
   );
+});
+
+test("historical itpay-buyer skill name remains a compatible alias", async () => {
+  const { stdout } = await run(["skill", "show", "itpay-buyer", "--json"]);
+  const envelope = JSON.parse(stdout);
+  assert.equal(envelope.status, "shown");
+  assert.equal(envelope.result.skill, "itpay");
+  assert.match(envelope.result.content, /# ItPay Buyer/);
 });
 
 test("onboarding exposes all Backend-supported Agent Types", async () => {
@@ -76,7 +84,9 @@ test("onboarding exposes all Backend-supported Agent Types", async () => {
 
   const { stdout: targetStdout } = await run(["install", "kimi-code", "--json"]);
   const targetEnvelope = JSON.parse(targetStdout);
-  assert.equal(targetEnvelope.result.install_command, "sh <skill-root>/bin/itpay");
+  assert.equal(targetEnvelope.result.agent_type, "kimi-code");
+  assert.equal(targetEnvelope.result.default_api, "https://app.itpay.ai");
+  assert.equal(targetEnvelope.result.install_command, undefined);
   assert.equal(
     targetEnvelope.next.command,
     "itpay --agent-type kimi-code readyz --json",
@@ -90,7 +100,7 @@ test("newly exposed Agent Types can load the canonical root Skill", async () => 
       agentType,
       "skill",
       "show",
-      "itpay-buyer",
+      "itpay",
       "--json",
     ]);
     const envelope = JSON.parse(stdout);

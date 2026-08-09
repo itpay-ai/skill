@@ -54,7 +54,7 @@ Run with the bundled wrapper:
 ```bash
 sh <skill-root>/bin/itpay --version
 sh <skill-root>/bin/itpay --agent-type <agent_type> readyz --json
-sh <skill-root>/bin/itpay --agent-type <agent_type> skill show itpay-buyer --json
+sh <skill-root>/bin/itpay --agent-type <agent_type> skill show itpay --json
 ```
 
 Keep the same Agent Type, wrapper, Node launcher, Backend URL, and Host-approved permission context for the whole flow. Follow the returned `next.command`; after typed `readyz`, load the complete Skill again before continuing.
@@ -94,7 +94,7 @@ When `status` is `human_checkout_required`, make the amount, ItPay Checkout QR, 
 
 - Desktop Agents: send `handoff.markdown` unchanged; verify that the QR, amount, and link are visible.
 - CLI Agents: show the returned terminal QR, amount, and link in the watched terminal. Never claim a desktop image was shown.
-- WorkBuddy with `plain-chat`: when `handoff.qr_image_url` exists, use its complete value as the only `files` element in `present_files`; also show the amount and `handoff.url`.
+- WorkBuddy with `plain-chat`: `handoff.url` is the fully rendered ItPay Card Link. Show the amount, send/open that link, then stop. Never call `present_files`, inspect files, download or rebuild a QR, call `pay`, or create another Checkout.
 - If the preferred renderer is unavailable, show the returned `handoff.url`, report the presentation limitation, and stop. Never rebuild a QR, call `pay`, or create another Checkout as presentation recovery.
 
 Run `next.command` only after the human says they acted or asks for status. QR display, page opening, redirects, and user claims are not payment proof. Only canonical Backend Checkout or Order state proves payment. Normal payment uses Checkout; `pay` and `buy --pay` are operator escape hatches.
@@ -139,7 +139,7 @@ Use the bundled offline docs instead of guessing:
 itpay docs list --json
 itpay docs search <term> --json
 itpay docs show <topic> --json
-itpay skill show itpay-buyer --json
+itpay skill show itpay --json
 ```
 
 Read only the topic needed for the current state. The CLI's server-returned current state and next action remain authoritative.
