@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import{createRequire as __cr}from'node:module';const require=__cr(import.meta.url);
 var __create = Object.create;
 var __defProp = Object.defineProperty;
@@ -35,9 +36,9 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 ));
 
-// node_modules/commander/lib/error.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/commander/lib/error.js
 var require_error = __commonJS({
-  "node_modules/commander/lib/error.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/commander/lib/error.js"(exports) {
     var CommanderError2 = class extends Error {
       /**
        * Constructs the CommanderError class
@@ -70,9 +71,9 @@ var require_error = __commonJS({
   }
 });
 
-// node_modules/commander/lib/argument.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/commander/lib/argument.js
 var require_argument = __commonJS({
-  "node_modules/commander/lib/argument.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/commander/lib/argument.js"(exports) {
     var { InvalidArgumentError: InvalidArgumentError2 } = require_error();
     var Argument2 = class {
       /**
@@ -197,9 +198,9 @@ var require_argument = __commonJS({
   }
 });
 
-// node_modules/commander/lib/help.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/commander/lib/help.js
 var require_help = __commonJS({
-  "node_modules/commander/lib/help.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/commander/lib/help.js"(exports) {
     var { humanReadableArgName } = require_argument();
     var Help2 = class {
       constructor() {
@@ -611,9 +612,9 @@ var require_help = __commonJS({
   }
 });
 
-// node_modules/commander/lib/option.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/commander/lib/option.js
 var require_option = __commonJS({
-  "node_modules/commander/lib/option.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/commander/lib/option.js"(exports) {
     var { InvalidArgumentError: InvalidArgumentError2 } = require_error();
     var Option2 = class {
       /**
@@ -883,9 +884,9 @@ var require_option = __commonJS({
   }
 });
 
-// node_modules/commander/lib/suggestSimilar.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/commander/lib/suggestSimilar.js
 var require_suggestSimilar = __commonJS({
-  "node_modules/commander/lib/suggestSimilar.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/commander/lib/suggestSimilar.js"(exports) {
     var maxDistance = 3;
     function editDistance(a, b) {
       if (Math.abs(a.length - b.length) > maxDistance)
@@ -963,9 +964,9 @@ var require_suggestSimilar = __commonJS({
   }
 });
 
-// node_modules/commander/lib/command.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/commander/lib/command.js
 var require_command = __commonJS({
-  "node_modules/commander/lib/command.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/commander/lib/command.js"(exports) {
     var EventEmitter = __require("node:events").EventEmitter;
     var childProcess = __require("node:child_process");
     var path3 = __require("node:path");
@@ -3006,9 +3007,9 @@ Expecting one of '${allowedValues.join("', '")}'`);
   }
 });
 
-// node_modules/commander/index.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/commander/index.js
 var require_commander = __commonJS({
-  "node_modules/commander/index.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/commander/index.js"(exports) {
     var { Argument: Argument2 } = require_argument();
     var { Command: Command2 } = require_command();
     var { CommanderError: CommanderError2, InvalidArgumentError: InvalidArgumentError2 } = require_error();
@@ -3028,18 +3029,18 @@ var require_commander = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/can-promise.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/can-promise.js
 var require_can_promise = __commonJS({
-  "node_modules/qrcode/lib/can-promise.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/can-promise.js"(exports, module) {
     module.exports = function() {
       return typeof Promise === "function" && Promise.prototype && Promise.prototype.then;
     };
   }
 });
 
-// node_modules/qrcode/lib/core/utils.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/utils.js
 var require_utils = __commonJS({
-  "node_modules/qrcode/lib/core/utils.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/utils.js"(exports) {
     var toSJISFunction;
     var CODEWORDS_COUNT = [
       0,
@@ -3116,9 +3117,9 @@ var require_utils = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/error-correction-level.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/error-correction-level.js
 var require_error_correction_level = __commonJS({
-  "node_modules/qrcode/lib/core/error-correction-level.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/error-correction-level.js"(exports) {
     exports.L = { bit: 1 };
     exports.M = { bit: 0 };
     exports.Q = { bit: 3 };
@@ -3161,9 +3162,9 @@ var require_error_correction_level = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/bit-buffer.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/bit-buffer.js
 var require_bit_buffer = __commonJS({
-  "node_modules/qrcode/lib/core/bit-buffer.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/bit-buffer.js"(exports, module) {
     function BitBuffer() {
       this.buffer = [];
       this.length = 0;
@@ -3196,9 +3197,9 @@ var require_bit_buffer = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/bit-matrix.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/bit-matrix.js
 var require_bit_matrix = __commonJS({
-  "node_modules/qrcode/lib/core/bit-matrix.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/bit-matrix.js"(exports, module) {
     function BitMatrix(size) {
       if (!size || size < 1) {
         throw new Error("BitMatrix size must be defined and greater than 0");
@@ -3225,9 +3226,9 @@ var require_bit_matrix = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/alignment-pattern.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/alignment-pattern.js
 var require_alignment_pattern = __commonJS({
-  "node_modules/qrcode/lib/core/alignment-pattern.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/alignment-pattern.js"(exports) {
     var getSymbolSize = require_utils().getSymbolSize;
     exports.getRowColCoords = function getRowColCoords(version) {
       if (version === 1) return [];
@@ -3260,9 +3261,9 @@ var require_alignment_pattern = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/finder-pattern.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/finder-pattern.js
 var require_finder_pattern = __commonJS({
-  "node_modules/qrcode/lib/core/finder-pattern.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/finder-pattern.js"(exports) {
     var getSymbolSize = require_utils().getSymbolSize;
     var FINDER_PATTERN_SIZE = 7;
     exports.getPositions = function getPositions(version) {
@@ -3279,9 +3280,9 @@ var require_finder_pattern = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/mask-pattern.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/mask-pattern.js
 var require_mask_pattern = __commonJS({
-  "node_modules/qrcode/lib/core/mask-pattern.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/mask-pattern.js"(exports) {
     exports.Patterns = {
       PATTERN000: 0,
       PATTERN001: 1,
@@ -3421,9 +3422,9 @@ var require_mask_pattern = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/error-correction-code.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/error-correction-code.js
 var require_error_correction_code = __commonJS({
-  "node_modules/qrcode/lib/core/error-correction-code.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/error-correction-code.js"(exports) {
     var ECLevel = require_error_correction_level();
     var EC_BLOCKS_TABLE = [
       // L  M  Q  H
@@ -3782,9 +3783,9 @@ var require_error_correction_code = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/galois-field.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/galois-field.js
 var require_galois_field = __commonJS({
-  "node_modules/qrcode/lib/core/galois-field.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/galois-field.js"(exports) {
     var EXP_TABLE = new Uint8Array(512);
     var LOG_TABLE = new Uint8Array(256);
     (function initTables() {
@@ -3815,9 +3816,9 @@ var require_galois_field = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/polynomial.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/polynomial.js
 var require_polynomial = __commonJS({
-  "node_modules/qrcode/lib/core/polynomial.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/polynomial.js"(exports) {
     var GF = require_galois_field();
     exports.mul = function mul(p1, p2) {
       const coeff = new Uint8Array(p1.length + p2.length - 1);
@@ -3851,9 +3852,9 @@ var require_polynomial = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/reed-solomon-encoder.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/reed-solomon-encoder.js
 var require_reed_solomon_encoder = __commonJS({
-  "node_modules/qrcode/lib/core/reed-solomon-encoder.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/reed-solomon-encoder.js"(exports, module) {
     var Polynomial = require_polynomial();
     function ReedSolomonEncoder(degree) {
       this.genPoly = void 0;
@@ -3883,18 +3884,18 @@ var require_reed_solomon_encoder = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/version-check.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/version-check.js
 var require_version_check = __commonJS({
-  "node_modules/qrcode/lib/core/version-check.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/version-check.js"(exports) {
     exports.isValid = function isValid(version) {
       return !isNaN(version) && version >= 1 && version <= 40;
     };
   }
 });
 
-// node_modules/qrcode/lib/core/regex.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/regex.js
 var require_regex = __commonJS({
-  "node_modules/qrcode/lib/core/regex.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/regex.js"(exports) {
     var numeric = "[0-9]+";
     var alphanumeric = "[A-Z $%*+\\-./:]+";
     var kanji = "(?:[u3000-u303F]|[u3040-u309F]|[u30A0-u30FF]|[uFF00-uFFEF]|[u4E00-u9FAF]|[u2605-u2606]|[u2190-u2195]|u203B|[u2010u2015u2018u2019u2025u2026u201Cu201Du2225u2260]|[u0391-u0451]|[u00A7u00A8u00B1u00B4u00D7u00F7])+";
@@ -3920,9 +3921,9 @@ var require_regex = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/mode.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/mode.js
 var require_mode = __commonJS({
-  "node_modules/qrcode/lib/core/mode.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/mode.js"(exports) {
     var VersionCheck = require_version_check();
     var Regex = require_regex();
     exports.NUMERIC = {
@@ -4001,9 +4002,9 @@ var require_mode = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/version.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/version.js
 var require_version = __commonJS({
-  "node_modules/qrcode/lib/core/version.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/version.js"(exports) {
     var Utils = require_utils();
     var ECCode = require_error_correction_code();
     var ECLevel = require_error_correction_level();
@@ -4096,9 +4097,9 @@ var require_version = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/format-info.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/format-info.js
 var require_format_info = __commonJS({
-  "node_modules/qrcode/lib/core/format-info.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/format-info.js"(exports) {
     var Utils = require_utils();
     var G15 = 1 << 10 | 1 << 8 | 1 << 5 | 1 << 4 | 1 << 2 | 1 << 1 | 1 << 0;
     var G15_MASK = 1 << 14 | 1 << 12 | 1 << 10 | 1 << 4 | 1 << 1;
@@ -4114,9 +4115,9 @@ var require_format_info = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/numeric-data.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/numeric-data.js
 var require_numeric_data = __commonJS({
-  "node_modules/qrcode/lib/core/numeric-data.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/numeric-data.js"(exports, module) {
     var Mode = require_mode();
     function NumericData(data) {
       this.mode = Mode.NUMERIC;
@@ -4149,9 +4150,9 @@ var require_numeric_data = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/alphanumeric-data.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/alphanumeric-data.js
 var require_alphanumeric_data = __commonJS({
-  "node_modules/qrcode/lib/core/alphanumeric-data.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/alphanumeric-data.js"(exports, module) {
     var Mode = require_mode();
     var ALPHA_NUM_CHARS = [
       "0",
@@ -4228,9 +4229,9 @@ var require_alphanumeric_data = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/byte-data.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/byte-data.js
 var require_byte_data = __commonJS({
-  "node_modules/qrcode/lib/core/byte-data.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/byte-data.js"(exports, module) {
     var Mode = require_mode();
     function ByteData(data) {
       this.mode = Mode.BYTE;
@@ -4258,9 +4259,9 @@ var require_byte_data = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/kanji-data.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/kanji-data.js
 var require_kanji_data = __commonJS({
-  "node_modules/qrcode/lib/core/kanji-data.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/kanji-data.js"(exports, module) {
     var Mode = require_mode();
     var Utils = require_utils();
     function KanjiData(data) {
@@ -4297,9 +4298,9 @@ var require_kanji_data = __commonJS({
   }
 });
 
-// node_modules/dijkstrajs/dijkstra.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/dijkstrajs/dijkstra.js
 var require_dijkstra = __commonJS({
-  "node_modules/dijkstrajs/dijkstra.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/dijkstrajs/dijkstra.js"(exports, module) {
     "use strict";
     var dijkstra = {
       single_source_shortest_paths: function(graph, s, d) {
@@ -4398,9 +4399,9 @@ var require_dijkstra = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/segments.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/segments.js
 var require_segments = __commonJS({
-  "node_modules/qrcode/lib/core/segments.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/segments.js"(exports) {
     var Mode = require_mode();
     var NumericData = require_numeric_data();
     var AlphanumericData = require_alphanumeric_data();
@@ -4584,9 +4585,9 @@ var require_segments = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/core/qrcode.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/qrcode.js
 var require_qrcode = __commonJS({
-  "node_modules/qrcode/lib/core/qrcode.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/core/qrcode.js"(exports) {
     var Utils = require_utils();
     var ECLevel = require_error_correction_level();
     var BitBuffer = require_bit_buffer();
@@ -4845,9 +4846,9 @@ var require_qrcode = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/chunkstream.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/chunkstream.js
 var require_chunkstream = __commonJS({
-  "node_modules/pngjs/lib/chunkstream.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/chunkstream.js"(exports, module) {
     "use strict";
     var util = __require("util");
     var Stream = __require("stream");
@@ -4983,9 +4984,9 @@ var require_chunkstream = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/interlace.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/interlace.js
 var require_interlace = __commonJS({
-  "node_modules/pngjs/lib/interlace.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/interlace.js"(exports) {
     "use strict";
     var imagePasses = [
       {
@@ -5066,9 +5067,9 @@ var require_interlace = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/paeth-predictor.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/paeth-predictor.js
 var require_paeth_predictor = __commonJS({
-  "node_modules/pngjs/lib/paeth-predictor.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/paeth-predictor.js"(exports, module) {
     "use strict";
     module.exports = function paethPredictor(left, above, upLeft) {
       let paeth = left + above - upLeft;
@@ -5086,9 +5087,9 @@ var require_paeth_predictor = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/filter-parse.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/filter-parse.js
 var require_filter_parse = __commonJS({
-  "node_modules/pngjs/lib/filter-parse.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/filter-parse.js"(exports, module) {
     "use strict";
     var interlaceUtils = require_interlace();
     var paethPredictor = require_paeth_predictor();
@@ -5227,9 +5228,9 @@ var require_filter_parse = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/filter-parse-async.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/filter-parse-async.js
 var require_filter_parse_async = __commonJS({
-  "node_modules/pngjs/lib/filter-parse-async.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/filter-parse-async.js"(exports, module) {
     "use strict";
     var util = __require("util");
     var ChunkStream = require_chunkstream();
@@ -5253,9 +5254,9 @@ var require_filter_parse_async = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/constants.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/constants.js
 var require_constants = __commonJS({
-  "node_modules/pngjs/lib/constants.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/constants.js"(exports, module) {
     "use strict";
     module.exports = {
       PNG_SIGNATURE: [137, 80, 78, 71, 13, 10, 26, 10],
@@ -5288,9 +5289,9 @@ var require_constants = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/crc.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/crc.js
 var require_crc = __commonJS({
-  "node_modules/pngjs/lib/crc.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/crc.js"(exports, module) {
     "use strict";
     var crcTable = [];
     (function() {
@@ -5328,9 +5329,9 @@ var require_crc = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/parser.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/parser.js
 var require_parser = __commonJS({
-  "node_modules/pngjs/lib/parser.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/parser.js"(exports, module) {
     "use strict";
     var constants = require_constants();
     var CrcCalculator = require_crc();
@@ -5549,9 +5550,9 @@ var require_parser = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/bitmapper.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/bitmapper.js
 var require_bitmapper = __commonJS({
-  "node_modules/pngjs/lib/bitmapper.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/bitmapper.js"(exports) {
     "use strict";
     var interlaceUtils = require_interlace();
     var pixelBppMapper = [
@@ -5797,9 +5798,9 @@ var require_bitmapper = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/format-normaliser.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/format-normaliser.js
 var require_format_normaliser = __commonJS({
-  "node_modules/pngjs/lib/format-normaliser.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/format-normaliser.js"(exports, module) {
     "use strict";
     function dePalette(indata, outdata, width, height, palette) {
       let pxPos = 0;
@@ -5878,9 +5879,9 @@ var require_format_normaliser = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/parser-async.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/parser-async.js
 var require_parser_async = __commonJS({
-  "node_modules/pngjs/lib/parser-async.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/parser-async.js"(exports, module) {
     "use strict";
     var util = __require("util");
     var zlib = __require("zlib");
@@ -6004,9 +6005,9 @@ var require_parser_async = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/bitpacker.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/bitpacker.js
 var require_bitpacker = __commonJS({
-  "node_modules/pngjs/lib/bitpacker.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/bitpacker.js"(exports, module) {
     "use strict";
     var constants = require_constants();
     module.exports = function(dataIn, width, height, options) {
@@ -6154,9 +6155,9 @@ var require_bitpacker = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/filter-pack.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/filter-pack.js
 var require_filter_pack = __commonJS({
-  "node_modules/pngjs/lib/filter-pack.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/filter-pack.js"(exports, module) {
     "use strict";
     var paethPredictor = require_paeth_predictor();
     function filterNone(pxData, pxPos, byteWidth, rawData, rawPos) {
@@ -6296,9 +6297,9 @@ var require_filter_pack = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/packer.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/packer.js
 var require_packer = __commonJS({
-  "node_modules/pngjs/lib/packer.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/packer.js"(exports, module) {
     "use strict";
     var constants = require_constants();
     var CrcStream = require_crc();
@@ -6396,9 +6397,9 @@ var require_packer = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/packer-async.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/packer-async.js
 var require_packer_async = __commonJS({
-  "node_modules/pngjs/lib/packer-async.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/packer-async.js"(exports, module) {
     "use strict";
     var util = __require("util");
     var Stream = __require("stream");
@@ -6438,9 +6439,9 @@ var require_packer_async = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/sync-inflate.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/sync-inflate.js
 var require_sync_inflate = __commonJS({
-  "node_modules/pngjs/lib/sync-inflate.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/sync-inflate.js"(exports, module) {
     "use strict";
     var assert = __require("assert").ok;
     var zlib = __require("zlib");
@@ -6575,9 +6576,9 @@ var require_sync_inflate = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/sync-reader.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/sync-reader.js
 var require_sync_reader = __commonJS({
-  "node_modules/pngjs/lib/sync-reader.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/sync-reader.js"(exports, module) {
     "use strict";
     var SyncReader = module.exports = function(buffer) {
       this._buffer = buffer;
@@ -6613,9 +6614,9 @@ var require_sync_reader = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/filter-parse-sync.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/filter-parse-sync.js
 var require_filter_parse_sync = __commonJS({
-  "node_modules/pngjs/lib/filter-parse-sync.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/filter-parse-sync.js"(exports) {
     "use strict";
     var SyncReader = require_sync_reader();
     var Filter = require_filter_parse();
@@ -6637,9 +6638,9 @@ var require_filter_parse_sync = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/parser-sync.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/parser-sync.js
 var require_parser_sync = __commonJS({
-  "node_modules/pngjs/lib/parser-sync.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/parser-sync.js"(exports, module) {
     "use strict";
     var hasSyncZlib = true;
     var zlib = __require("zlib");
@@ -6728,9 +6729,9 @@ var require_parser_sync = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/packer-sync.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/packer-sync.js
 var require_packer_sync = __commonJS({
-  "node_modules/pngjs/lib/packer-sync.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/packer-sync.js"(exports, module) {
     "use strict";
     var hasSyncZlib = true;
     var zlib = __require("zlib");
@@ -6773,9 +6774,9 @@ var require_packer_sync = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/png-sync.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/png-sync.js
 var require_png_sync = __commonJS({
-  "node_modules/pngjs/lib/png-sync.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/png-sync.js"(exports) {
     "use strict";
     var parse = require_parser_sync();
     var pack = require_packer_sync();
@@ -6788,9 +6789,9 @@ var require_png_sync = __commonJS({
   }
 });
 
-// node_modules/pngjs/lib/png.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/png.js
 var require_png = __commonJS({
-  "node_modules/pngjs/lib/png.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/pngjs/lib/png.js"(exports) {
     "use strict";
     var util = __require("util");
     var Stream = __require("stream");
@@ -6925,9 +6926,9 @@ var require_png = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/renderer/utils.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/renderer/utils.js
 var require_utils2 = __commonJS({
-  "node_modules/qrcode/lib/renderer/utils.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/renderer/utils.js"(exports) {
     function hex2rgba(hex) {
       if (typeof hex === "number") {
         hex = hex.toString();
@@ -7005,9 +7006,9 @@ var require_utils2 = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/renderer/png.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/renderer/png.js
 var require_png2 = __commonJS({
-  "node_modules/qrcode/lib/renderer/png.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/renderer/png.js"(exports) {
     var fs2 = __require("fs");
     var PNG = require_png().PNG;
     var Utils = require_utils2();
@@ -7072,9 +7073,9 @@ var require_png2 = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/renderer/utf8.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/renderer/utf8.js
 var require_utf8 = __commonJS({
-  "node_modules/qrcode/lib/renderer/utf8.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/renderer/utf8.js"(exports) {
     var Utils = require_utils2();
     var BLOCK_CHAR = {
       WW: " ",
@@ -7134,9 +7135,9 @@ var require_utf8 = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/renderer/terminal/terminal.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/renderer/terminal/terminal.js
 var require_terminal = __commonJS({
-  "node_modules/qrcode/lib/renderer/terminal/terminal.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/renderer/terminal/terminal.js"(exports) {
     exports.render = function(qrData, options, cb) {
       const size = qrData.modules.size;
       const data = qrData.modules.data;
@@ -7162,9 +7163,9 @@ var require_terminal = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/renderer/terminal/terminal-small.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/renderer/terminal/terminal-small.js
 var require_terminal_small = __commonJS({
-  "node_modules/qrcode/lib/renderer/terminal/terminal-small.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/renderer/terminal/terminal-small.js"(exports) {
     var backgroundWhite = "\x1B[47m";
     var backgroundBlack = "\x1B[40m";
     var foregroundWhite = "\x1B[37m";
@@ -7221,9 +7222,9 @@ var require_terminal_small = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/renderer/terminal.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/renderer/terminal.js
 var require_terminal2 = __commonJS({
-  "node_modules/qrcode/lib/renderer/terminal.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/renderer/terminal.js"(exports) {
     var big = require_terminal();
     var small = require_terminal_small();
     exports.render = function(qrData, options, cb) {
@@ -7235,9 +7236,9 @@ var require_terminal2 = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/renderer/svg-tag.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/renderer/svg-tag.js
 var require_svg_tag = __commonJS({
-  "node_modules/qrcode/lib/renderer/svg-tag.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/renderer/svg-tag.js"(exports) {
     var Utils = require_utils2();
     function getColorAttrib(color, attrib) {
       const alpha = color.a / 255;
@@ -7293,9 +7294,9 @@ var require_svg_tag = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/renderer/svg.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/renderer/svg.js
 var require_svg = __commonJS({
-  "node_modules/qrcode/lib/renderer/svg.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/renderer/svg.js"(exports) {
     var svgTagRenderer = require_svg_tag();
     exports.render = svgTagRenderer.render;
     exports.renderToFile = function renderToFile(path3, qrData, options, cb) {
@@ -7311,9 +7312,9 @@ var require_svg = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/renderer/canvas.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/renderer/canvas.js
 var require_canvas = __commonJS({
-  "node_modules/qrcode/lib/renderer/canvas.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/renderer/canvas.js"(exports) {
     var Utils = require_utils2();
     function clearCanvas(ctx, canvas, size) {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -7364,9 +7365,9 @@ var require_canvas = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/browser.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/browser.js
 var require_browser = __commonJS({
-  "node_modules/qrcode/lib/browser.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/browser.js"(exports) {
     var canPromise = require_can_promise();
     var QRCode2 = require_qrcode();
     var CanvasRenderer = require_canvas();
@@ -7434,9 +7435,9 @@ var require_browser = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/server.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/server.js
 var require_server = __commonJS({
-  "node_modules/qrcode/lib/server.js"(exports) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/server.js"(exports) {
     var canPromise = require_can_promise();
     var QRCode2 = require_qrcode();
     var PngRenderer = require_png2();
@@ -7554,14 +7555,14 @@ var require_server = __commonJS({
   }
 });
 
-// node_modules/qrcode/lib/index.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/index.js
 var require_lib = __commonJS({
-  "node_modules/qrcode/lib/index.js"(exports, module) {
+  "../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/qrcode/lib/index.js"(exports, module) {
     module.exports = require_server();
   }
 });
 
-// node_modules/commander/esm.mjs
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/commander/esm.mjs
 var import_index = __toESM(require_commander(), 1);
 var {
   program,
@@ -7578,12 +7579,93 @@ var {
   Help
 } = import_index.default;
 
-// dist/src/state/config.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/state/config.js
 import { homedir as homedir2 } from "node:os";
 import { mkdirSync as mkdirSync3 } from "node:fs";
 import { resolve as resolve2 } from "node:path";
 
-// dist/src/client/http.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/client/transport.js
+var HttpTransportError = class extends Error {
+  code;
+  attempts;
+  causeCode;
+  retryable = true;
+  constructor(code, attempts, causeCode, cause) {
+    const suffix = attempts > 1 ? ` after ${attempts} attempts` : "";
+    super(`${transportMessage(code)} before a complete HTTP response was received${suffix}`, { cause });
+    this.code = code;
+    this.attempts = attempts;
+    this.causeCode = causeCode;
+    this.name = "HttpTransportError";
+  }
+};
+function asTransientTransportError(error, attempts) {
+  if (isAbort(error))
+    return void 0;
+  const causeCode = findCauseCode(error);
+  const code = causeCode ? classifyCauseCode(causeCode) : classifyFetchFailure(error);
+  return code ? new HttpTransportError(code, attempts, causeCode, error) : void 0;
+}
+function classifyCauseCode(code) {
+  switch (code) {
+    case "ECONNRESET":
+      return "network_connection_reset";
+    case "ETIMEDOUT":
+    case "UND_ERR_CONNECT_TIMEOUT":
+    case "UND_ERR_HEADERS_TIMEOUT":
+    case "UND_ERR_BODY_TIMEOUT":
+      return "network_timeout";
+    case "EAI_AGAIN":
+      return "network_dns_temporary";
+    case "ENETUNREACH":
+    case "EHOSTUNREACH":
+      return "network_unreachable";
+    case "ECONNREFUSED":
+      return "network_connection_refused";
+    case "UND_ERR_SOCKET":
+      return "network_socket_error";
+    default:
+      return void 0;
+  }
+}
+function classifyFetchFailure(error) {
+  return error instanceof TypeError && error.message === "fetch failed" ? "network_transport_failed" : void 0;
+}
+function findCauseCode(error) {
+  const seen = /* @__PURE__ */ new Set();
+  let current = error;
+  while (current && typeof current === "object" && !seen.has(current)) {
+    seen.add(current);
+    const code = current.code;
+    if (typeof code === "string" && code !== "")
+      return code;
+    current = current.cause;
+  }
+  return void 0;
+}
+function isAbort(error) {
+  return error instanceof Error && (error.name === "AbortError" || error.name === "TimeoutError");
+}
+function transportMessage(code) {
+  switch (code) {
+    case "network_connection_reset":
+      return "network connection was reset";
+    case "network_timeout":
+      return "network connection timed out";
+    case "network_dns_temporary":
+      return "DNS lookup was temporarily unavailable";
+    case "network_unreachable":
+      return "network was unreachable";
+    case "network_connection_refused":
+      return "network connection was refused";
+    case "network_socket_error":
+      return "network socket failed";
+    case "network_transport_failed":
+      return "network transport failed";
+  }
+}
+
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/client/http.js
 var HttpError = class extends Error {
   status;
   code;
@@ -7595,12 +7677,14 @@ var HttpError = class extends Error {
     this.payload = payload;
   }
 };
-var HttpClient = class {
+var HttpClient = class _HttpClient {
+  static MAX_TRANSPORT_RETRIES = 2;
   baseURL;
   fetchImpl;
   defaultHeaders;
   requestAuthorizer;
   recoverAuthorization;
+  transportRetryDelayMs;
   constructor(config) {
     this.baseURL = config.baseURL.replace(/\/$/, "");
     this.fetchImpl = config.fetchImpl ?? globalThis.fetch;
@@ -7611,39 +7695,65 @@ var HttpClient = class {
     };
     this.requestAuthorizer = config.requestAuthorizer;
     this.recoverAuthorization = config.recoverAuthorization;
+    this.transportRetryDelayMs = Math.max(0, config.transportRetryDelayMs ?? 200);
   }
   async request(path3, options = {}) {
     const url = path3.startsWith("http") ? path3 : this.baseURL + path3;
     const method = options.method ?? "GET";
     const body = options.body !== void 0 ? JSON.stringify(options.body) : "";
     const requestPath = new URL(url).pathname + new URL(url).search;
-    for (let attempt = 0; attempt < 2; attempt += 1) {
+    const replaySafe = method === "GET" || Boolean(options.idempotencyKey) || options.replaySafe === true;
+    let authorizationRecovered = false;
+    let transportRetries = 0;
+    for (; ; ) {
       const headers = { ...this.defaultHeaders };
-      if (this.requestAuthorizer) {
-        Object.assign(headers, await this.requestAuthorizer({ method, path: requestPath, body }));
+      try {
+        if (this.requestAuthorizer) {
+          Object.assign(headers, await this.requestAuthorizer({ method, path: requestPath, body }));
+        }
+      } catch (error2) {
+        if (error2 instanceof HttpTransportError)
+          throw error2;
+        throw asTransientTransportError(error2, 1) ?? error2;
       }
       if (options.bearer)
         headers.Authorization = `Bearer ${options.bearer}`;
       if (options.idempotencyKey)
         headers["Idempotency-Key"] = options.idempotencyKey;
-      const response = await this.fetchImpl(url, {
-        method,
-        headers,
-        ...options.body !== void 0 ? { body } : {},
-        ...options.signal ? { signal: options.signal } : {}
-      });
-      const text = await response.text();
+      let response;
+      let text;
+      try {
+        response = await this.fetchImpl(url, {
+          method,
+          headers,
+          ...options.body !== void 0 ? { body } : {},
+          ...options.signal ? { signal: options.signal } : {}
+        });
+        text = await response.text();
+      } catch (error2) {
+        if (options.signal?.aborted)
+          throw error2;
+        const transportError = asTransientTransportError(error2, transportRetries + 1);
+        if (!transportError)
+          throw error2;
+        if (replaySafe && transportRetries < _HttpClient.MAX_TRANSPORT_RETRIES) {
+          transportRetries += 1;
+          await delay(this.transportRetryDelayMs * 2 ** (transportRetries - 1));
+          continue;
+        }
+        throw asTransientTransportError(error2, transportRetries + 1) ?? error2;
+      }
       const parsed = text.length > 0 ? safeParseJson(text) : void 0;
       if (response.ok)
         return parsed;
       const error = new HttpError(response.status, parsed, `HTTP ${response.status}`);
-      if (attempt === 0 && error.status === 401 && error.code === "agent_device_session_required" && this.recoverAuthorization) {
+      if (!authorizationRecovered && error.status === 401 && error.code === "agent_device_session_required" && this.recoverAuthorization) {
+        authorizationRecovered = true;
         await this.recoverAuthorization();
         continue;
       }
       throw error;
     }
-    throw new Error("unreachable HTTP retry state");
   }
   get(path3, options = {}) {
     return this.request(path3, { ...options, method: "GET" });
@@ -7655,6 +7765,9 @@ var HttpClient = class {
     return this.request(path3, { ...options, method: "DELETE" });
   }
 };
+function delay(milliseconds) {
+  return milliseconds === 0 ? Promise.resolve() : new Promise((resolve5) => setTimeout(resolve5, milliseconds));
+}
 function safeParseJson(text) {
   try {
     return JSON.parse(text);
@@ -7663,7 +7776,7 @@ function safeParseJson(text) {
   }
 }
 
-// dist/src/client/backend.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/client/backend.js
 var BackendClient = class {
   http;
   constructor(http) {
@@ -7699,8 +7812,10 @@ var BackendClient = class {
   createCheckout(input, idempotencyKey) {
     return this.http.post("/v1/checkouts", input, idempotencyKey ? { idempotencyKey } : void 0);
   }
-  getCheckoutPresentation(checkoutID, displayToken) {
+  getCheckoutPresentation(checkoutID, displayToken, locale) {
     const qs = new URLSearchParams({ display_token: displayToken });
+    if (locale)
+      qs.set("locale", locale);
     return this.http.get(`/v1/checkouts/${encodeURIComponent(checkoutID)}/presentation?${qs}`);
   }
   // --- Payment intents ---
@@ -7746,16 +7861,16 @@ var BackendClient = class {
     return this.http.post("/v1/service-executions", input);
   }
   invokeServiceCapability(serviceExecutionID, capabilityID, input) {
-    return this.http.post(`/v1/service-executions/${encodeURIComponent(serviceExecutionID)}/capabilities/${encodeURIComponent(capabilityID)}/invoke`, input);
+    return this.http.post(`/v1/service-executions/${encodeURIComponent(serviceExecutionID)}/capabilities/${encodeURIComponent(capabilityID)}/invoke`, input, { replaySafe: Boolean(input.idempotency_key) });
   }
   recordServiceExecutionAction(serviceExecutionID, input) {
     return this.http.post(`/v1/service-executions/${encodeURIComponent(serviceExecutionID)}/actions`, input);
   }
   createServiceExecutionCheckout(serviceExecutionID, input) {
-    return this.http.post(`/v1/service-executions/${encodeURIComponent(serviceExecutionID)}/checkout`, input);
+    return this.http.post(`/v1/service-executions/${encodeURIComponent(serviceExecutionID)}/checkout`, input, { replaySafe: true });
   }
   prepareServiceQuote(serviceExecutionID, input) {
-    return this.http.post(`/v1/service-executions/${encodeURIComponent(serviceExecutionID)}/quotes`, input);
+    return this.http.post(`/v1/service-executions/${encodeURIComponent(serviceExecutionID)}/quotes`, input, { replaySafe: true });
   }
   getServiceExecution(serviceExecutionID) {
     return this.http.get(`/v1/service-executions/${encodeURIComponent(serviceExecutionID)}`);
@@ -7832,18 +7947,24 @@ async function streamSSE(url, onEvent, signal) {
   }
 }
 
-// dist/src/state/agent_type.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/state/agent_type.js
 function declaredAgentType(env = process.env, argv = process.argv) {
   if (env.ITPAY_AGENT_TYPE)
-    return env.ITPAY_AGENT_TYPE;
+    return canonicalAgentType(env.ITPAY_AGENT_TYPE);
   for (let index = 0; index < argv.length; index += 1) {
     const value = argv[index];
     if (value === "--agent-type")
-      return argv[index + 1];
+      return canonicalAgentType(argv[index + 1]);
     if (value?.startsWith("--agent-type="))
-      return value.slice("--agent-type=".length);
+      return canonicalAgentType(value.slice("--agent-type=".length));
   }
   return void 0;
+}
+function canonicalAgentType(value) {
+  const normalized = value?.trim().toLowerCase();
+  if (!normalized)
+    return void 0;
+  return normalized === "codex" ? "codex-desktop" : normalized;
 }
 function qualifyItPayCommand(command, agentType) {
   if (!agentType || !/^[a-z0-9-]+$/.test(agentType))
@@ -7853,7 +7974,7 @@ function qualifyItPayCommand(command, agentType) {
   return `itpay --agent-type ${agentType} ${command.slice("itpay ".length)}`;
 }
 
-// dist/src/state/device_authority.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/state/device_authority.js
 import { createHash, createPrivateKey, createPublicKey, generateKeyPairSync, randomUUID, sign } from "node:crypto";
 import { chmodSync, existsSync, mkdirSync, readFileSync, renameSync, rmdirSync, statSync, unlinkSync, writeFileSync } from "node:fs";
 import { homedir } from "node:os";
@@ -8197,7 +8318,7 @@ function asDeviceStatePathError(error, operation) {
   return code === "EEXIST" ? new DeviceStateError(operation, code) : asDeviceStateError(error, operation);
 }
 
-// dist/src/state/operation_journal.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/state/operation_journal.js
 import { chmodSync as chmodSync2, closeSync, existsSync as existsSync2, mkdirSync as mkdirSync2, openSync, readFileSync as readFileSync2, renameSync as renameSync2, statSync as statSync2, unlinkSync as unlinkSync2, writeFileSync as writeFileSync2 } from "node:fs";
 import { dirname as dirname2 } from "node:path";
 import { randomUUID as randomUUID2 } from "node:crypto";
@@ -8273,23 +8394,63 @@ async function withFileLock2(path3, run) {
   }
 }
 
-// dist/src/state/config.js
-var DEFAULT_BASE_URL = "https://dev.itpay.ai";
-var CLI_VERSION = "2.0.11";
-var API_CONTRACT_REVISION = "sha256:3779f5468ea2109d4134c4ace66258c9eabe82461fa86e83c84df8c860276886";
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/state/config.js
+var DEFAULT_BASE_URL = "https://app.itpay.ai";
+var DEV_BASE_URL = "https://dev.itpay.ai";
+var CLI_VERSION = "2.0.25";
+var API_CONTRACT_REVISION = "sha256:d4e94049c01b38bc77dce76bf4e49e8243adfc588541e33af6477cd5722a5bc4";
 var CART_SESSION_DEFAULT_DIR = ".itpay-v3";
 var CART_SESSION_FILENAME = "cart.json";
 var OPERATION_JOURNAL_FILENAME = "operations.json";
+function cliDistribution(env = process.env) {
+  if (env.ITPAY_DISTRIBUTION === "openclaw-skill-bundle")
+    return "openclaw-skill-bundle";
+  if (env.ITPAY_DISTRIBUTION === "kimi-plugin-bundle")
+    return "kimi-plugin-bundle";
+  return "npm";
+}
+var BackendOverrideError = class extends Error {
+  code = "backend_override_forbidden";
+  constructor() {
+    super(`ITPAY_BACKEND_URL only supports ${DEFAULT_BASE_URL} or ${DEV_BASE_URL}`);
+    this.name = "BackendOverrideError";
+  }
+};
+function resolveBackendURL(env = process.env) {
+  const requested = env.ITPAY_BACKEND_URL?.trim();
+  if (!requested || requested === DEFAULT_BASE_URL || requested === `${DEFAULT_BASE_URL}/`)
+    return DEFAULT_BASE_URL;
+  if (requested === DEV_BASE_URL || requested === `${DEV_BASE_URL}/`)
+    return DEV_BASE_URL;
+  throw new BackendOverrideError();
+}
+function qualifyBackendCommand(command, env = process.env) {
+  const requested = env.ITPAY_BACKEND_URL?.trim();
+  if (requested !== DEV_BASE_URL && requested !== `${DEV_BASE_URL}/`)
+    return command;
+  if (!command.startsWith("itpay ") || command.startsWith(`ITPAY_BACKEND_URL=${DEV_BASE_URL} `))
+    return command;
+  return `ITPAY_BACKEND_URL=${DEV_BASE_URL} ${command}`;
+}
+function stateFilename(filename, baseURL) {
+  if (baseURL !== DEV_BASE_URL)
+    return filename;
+  const dot = filename.lastIndexOf(".");
+  return dot < 0 ? `${filename}.dev` : `${filename.slice(0, dot)}.dev${filename.slice(dot)}`;
+}
+function stateDir(env) {
+  return resolve2(env.HOME || homedir2(), CART_SESSION_DEFAULT_DIR);
+}
 function cartSessionPath(env = process.env) {
   if (env.ITPAY_CART_SESSION_PATH) {
     return resolve2(env.ITPAY_CART_SESSION_PATH);
   }
-  const dir = resolve2(homedir2(), CART_SESSION_DEFAULT_DIR);
+  const dir = stateDir(env);
   mkdirSync3(dir, { recursive: true });
-  return resolve2(dir, CART_SESSION_FILENAME);
+  return resolve2(dir, stateFilename(CART_SESSION_FILENAME, resolveBackendURL(env)));
 }
 function loadConfig(env = process.env) {
-  const baseURL = env.ITPAY_BACKEND_URL || DEFAULT_BASE_URL;
+  const baseURL = resolveBackendURL(env);
   const bearerToken = env.ITPAY_BEARER_TOKEN || void 0;
   const agentType = declaredAgentType(env);
   const checkoutCurrency = env.ITPAY_CURRENCY || "CNY";
@@ -8298,10 +8459,11 @@ function loadConfig(env = process.env) {
   const ideImageDirOverride = env.ITPAY_IDE_IMAGE_DIR_OVERRIDE;
   return {
     baseURL,
+    environment: baseURL === DEV_BASE_URL ? "development" : "production",
     ...agentType ? { agentType } : {},
     checkoutCurrency,
     idempotencyKey,
-    ...!env.ITPAY_IDEMPOTENCY_KEY ? { operationJournal: new OperationJournal(resolve2(homedir2(), CART_SESSION_DEFAULT_DIR, OPERATION_JOURNAL_FILENAME)) } : {},
+    ...!env.ITPAY_IDEMPOTENCY_KEY ? { operationJournal: new OperationJournal(resolve2(stateDir(env), stateFilename(OPERATION_JOURNAL_FILENAME, baseURL))) } : {},
     ideImageAttach,
     ...ideImageDirOverride ? { ideImageDirOverride } : {},
     ...bearerToken ? { bearerToken } : {}
@@ -8336,7 +8498,7 @@ function shortRandom() {
   return Math.random().toString(36).slice(2, 10) + Math.random().toString(36).slice(2, 6);
 }
 
-// dist/src/state/cart_session.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/state/cart_session.js
 import { chmodSync as chmodSync3, existsSync as existsSync3, mkdirSync as mkdirSync4, readFileSync as readFileSync3, renameSync as renameSync3, writeFileSync as writeFileSync3 } from "node:fs";
 import { randomUUID as randomUUID3 } from "node:crypto";
 import { dirname as dirname3 } from "node:path";
@@ -8480,7 +8642,7 @@ var CartSession = class _CartSession {
   }
 };
 
-// dist/src/state/client_context.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/state/client_context.js
 var SUPPORTED_HOSTS = /* @__PURE__ */ new Set([
   "terminal",
   "codex",
@@ -8526,6 +8688,8 @@ function defaultHostForAgentType(agentType) {
     return "claude-code";
   if (normalized === "workbuddy")
     return "plain-chat";
+  if (normalized === "openclaw")
+    return void 0;
   return "terminal";
 }
 function validateContext(host, target) {
@@ -8538,13 +8702,13 @@ function validateContext(host, target) {
   return void 0;
 }
 
-// dist/src/render/sink.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/render/sink.js
 var defaultOutput = (line) => process.stdout.write(line);
 function resolveOutput(sink) {
   return sink ?? defaultOutput;
 }
 
-// dist/src/commands/guidance.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/commands/guidance.js
 function isTerminalServiceExecutionStatus(status) {
   return status === "failed" || status === "refunded" || status === "cancelled";
 }
@@ -8570,7 +8734,7 @@ function writeCommandEnvelope(value, options = {}) {
   }
   out(`${qualified.status}
 `);
-  const facts = "result" in qualified ? qualified.result : qualified.error;
+  const facts = "error" in qualified ? qualified.error : qualified.result;
   if (options.plainResult) {
     for (const line of options.plainResult)
       out(`${line}
@@ -8579,6 +8743,12 @@ function writeCommandEnvelope(value, options = {}) {
     for (const [key, fact] of Object.entries(facts)) {
       out(`${key}: ${typeof fact === "string" ? fact : JSON.stringify(fact)}
 `);
+    }
+    if ("error" in qualified && qualified.result) {
+      for (const [key, fact] of Object.entries(qualified.result)) {
+        out(`${key}: ${typeof fact === "string" ? fact : JSON.stringify(fact)}
+`);
+      }
     }
   }
   if ("handoff" in qualified && qualified.handoff) {
@@ -8605,10 +8775,10 @@ function writeCommandEnvelope(value, options = {}) {
 function qualifyEnvelope(value, agentType) {
   return {
     ...value,
-    next: value.next ? { ...value.next, command: qualifyItPayCommand(value.next.command, agentType) } : null,
+    next: value.next ? { ...value.next, command: qualifyBackendCommand(qualifyItPayCommand(value.next.command, agentType)) } : null,
     recovery: value.recovery.map((action) => ({
       ...action,
-      command: qualifyItPayCommand(action.command, agentType)
+      command: qualifyBackendCommand(qualifyItPayCommand(action.command, agentType))
     }))
   };
 }
@@ -8628,8 +8798,8 @@ function errorRecoveryActions(error) {
     return [
       {
         id: "read_agent_session_rules",
-        label: "Read identity and session recovery rules",
-        command: "itpay skill show itpay-buyer --json",
+        label: "Read ItPay identity and session recovery rules",
+        command: "itpay skill show itpay --json",
         reason: "The CLI already attempted one automatic session renewal; do not rotate identity or loop retries."
       }
     ];
@@ -8675,13 +8845,8 @@ function errorRecoveryActions(error) {
     return [
       {
         id: "retry_after_backend_recovers",
-        label: "Retry after the ItPay backend is reachable",
+        label: "Retry after the selected official Backend is reachable",
         command: "itpay readyz"
-      },
-      {
-        id: "check_backend_url",
-        label: "Check the configured backend URL",
-        command: "echo $ITPAY_BACKEND_URL"
       }
     ];
   }
@@ -8701,30 +8866,32 @@ function printErrorRecovery(error, output) {
   }
 }
 
-// dist/src/commands/readyz.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/commands/readyz.js
 async function runReadyz(backend, options = {}) {
   const response = await backend.readyz();
+  const backendURL = options.backendURL ?? "https://app.itpay.ai";
+  const environment = options.environment ?? "production";
   writeCommandEnvelope({
     status: response.status,
-    result: { backend: "available", ...options.agentType ? { agent_type: options.agentType } : {} },
-    instruction: "ItPay \u53EF\u7528\uFF1B\u5148\u5B8C\u6574\u8BFB\u53D6\u5185\u7F6E Buyer Skill\uFF0C\u518D\u5F00\u59CB\u670D\u52A1\u6D41\u7A0B\u3002",
-    next: { command: "itpay skill show itpay-buyer --json", reason: "\u52A0\u8F7D\u5B8C\u6574\u64CD\u4F5C\u4E0E\u5B89\u5168\u89C4\u5219" },
+    result: { backend: "available", backend_url: backendURL, environment, ...options.agentType ? { agent_type: options.agentType } : {} },
+    instruction: environment === "development" ? "ItPay dev \u53EF\u7528\uFF1B\u540E\u7EED\u5FC5\u987B\u6267\u884C\u8FD4\u56DE\u7684\u5B8C\u6574\u547D\u4EE4\uFF0C\u5E76\u7EE7\u7EED\u4F7F\u7528\u540C\u4E00\u4E2A dev Backend\u3002\u5148\u5B8C\u6574\u8BFB\u53D6\u5185\u7F6E ItPay Skill\uFF0C\u518D\u8FDB\u5165\u5F53\u524D\u5DF2\u652F\u6301\u7684 buy \u6D41\u7A0B\u3002" : "ItPay \u53EF\u7528\uFF1B\u5148\u5B8C\u6574\u8BFB\u53D6\u5185\u7F6E ItPay Skill\uFF0C\u518D\u8FDB\u5165\u5F53\u524D\u5DF2\u652F\u6301\u7684 buy \u6D41\u7A0B\u3002sell \u5C06\u6765\u4E5F\u4F7F\u7528\u540C\u4E00\u5165\u53E3\uFF0C\u4F46\u5F53\u524D\u5C1A\u672A\u5B9E\u73B0\u3002",
+    next: { command: "itpay skill show itpay --json", reason: "\u52A0\u8F7D\u5B8C\u6574\u64CD\u4F5C\u4E0E\u5B89\u5168\u89C4\u5219" },
     recovery: []
   }, options);
 }
 
-// dist/src/render/qr.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/render/qr.js
 var import_qrcode = __toESM(require_lib(), 1);
 import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { randomUUID as randomUUID4 } from "node:crypto";
-function terminalQRType(format2) {
-  return format2 === "utf8" ? "utf8" : "terminal";
+function terminalQRType(format) {
+  return format === "utf8" ? "utf8" : "terminal";
 }
-async function renderTerminalQR(url, format2) {
+async function renderTerminalQR(url, format) {
   return import_qrcode.default.toString(url, {
-    type: format2 === "unicode" ? "utf8" : terminalQRType(format2),
+    type: format === "unicode" ? "utf8" : terminalQRType(format),
     small: true,
     errorCorrectionLevel: "L"
   });
@@ -8741,7 +8908,7 @@ async function writeLocalPNG(url) {
   return { filePath, mimeType: "image/png" };
 }
 
-// dist/src/render/terminal_image.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/render/terminal_image.js
 import { readFileSync as readFileSync4 } from "node:fs";
 import path2 from "node:path";
 function supportsInlineTerminalImages() {
@@ -8762,7 +8929,7 @@ function renderInlineTerminalImage(filePath, out) {
   }
 }
 
-// dist/src/render/ide.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/render/ide.js
 import { mkdirSync as mkdirSync5, readFileSync as readFileSync5, renameSync as renameSync4, writeFileSync as writeFileSync4 } from "node:fs";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
@@ -8998,7 +9165,7 @@ function ideImageAttachBlock(attach) {
   return lines;
 }
 
-// dist/src/render/terminal.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/render/terminal.js
 import { copyFile } from "node:fs/promises";
 async function renderTerminal(plan, options) {
   const out = options.output ?? ((line) => process.stdout.write(line));
@@ -9159,7 +9326,7 @@ function fmtPrice(amountMinor, currency) {
   return `${(amountMinor / 100).toFixed(2)} ${currency}`;
 }
 
-// dist/src/render/markdown.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/render/markdown.js
 function renderMarkdown(plan, options = {}) {
   const out = options.output ?? ((line) => process.stdout.write(line + "\n"));
   const handoff = buildAgentChatHandoff(plan);
@@ -9198,9 +9365,15 @@ function formatPrice(amountMinor, currency) {
   return `${(amountMinor / 100).toFixed(2)} ${currency}`;
 }
 
-// dist/src/render/plain_chat.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/render/plain_chat.js
 function renderPlainChat(plan, options = {}) {
   const out = options.output ?? ((line) => process.stdout.write(line));
+  if (plan.linkOnlyURL) {
+    out(`${plan.summary}
+open: ${plan.linkOnlyURL}
+`);
+    return;
+  }
   const brand = plan.preferredQRSources.find((src) => src.length > 0);
   const lines = [];
   lines.push(plan.summary);
@@ -9250,7 +9423,7 @@ function renderInteractionText(request) {
   return lines.join("\n");
 }
 
-// dist/src/render/telegram.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/render/telegram.js
 function buttonsFor(plan) {
   if (plan.kind === "payment_qr" && plan.paymentIntentID) {
     return [
@@ -9265,45 +9438,23 @@ function buttonsFor(plan) {
     ];
   }
   return [
-    { label: "\u6253\u5F00 ItPay \u6536\u94F6\u53F0", kind: "url", url: plan.url },
-    ...plan.checkoutID ? [{ label: "\u67E5\u8BE2 Checkout \u72B6\u6001", kind: "callback", intent: "check_checkout_status", ref: plan.checkoutID }] : []
+    { label: "\u{1F4F1} \u624B\u673A\u70B9\u8FD9\u513F\u652F\u4ED8", kind: "url", url: plan.url },
+    ...plan.checkoutID ? [{ label: "\u{1F4CB} \u5DF2\u6388\u6743\u7ED9\u6211\u8BFB", kind: "callback", intent: "grant_confirmed", ref: plan.checkoutID }] : []
   ];
 }
-function format(plan) {
-  return plan.kind === "payment_qr" ? "photo_text_inline_buttons" : "text_inline_buttons";
+function nativeButton(button) {
+  if (button.kind === "url") {
+    return { label: button.label, url: button.url ?? "" };
+  }
+  const value = button.intent === "check_checkout_status" ? `itp:checkout:${button.ref ?? ""}` : `itp:${button.intent ?? "callback"}:${button.ref ?? ""}`;
+  return { label: button.label, value };
 }
 function renderTelegram(plan, options) {
   const out = options.output ?? ((line) => process.stdout.write(line));
-  const buttons = buttonsFor(plan);
+  const agentAction = buildOpenClawTelegramAction(plan, options.target);
+  const presentation = agentAction.arguments.presentation;
   const media = collectTelegramMedia(plan);
-  const text = plan.kind === "payment_qr" ? `ItPay payment QR \u2014 ${plan.summary}` : plan.kind === "auth_qr" ? `ItPay auth required \u2014 ${plan.summary}` : `ItPay checkout QR \u2014 ${plan.summary}`;
-  const presentation = {
-    format: format(plan),
-    media,
-    text,
-    links: plan.platform.links,
-    buttons,
-    interactions: plan.platform.interactions ?? [],
-    blocks: [
-      { type: "text", text },
-      ...media.length > 0 ? [{ type: "image", url: media[0].url }] : [],
-      { type: "buttons", buttons }
-    ],
-    ...plan.ideImageAttach ? {
-      ide_image_attach: {
-        status: plan.ideImageAttach.status,
-        local_path: plan.ideImageAttach.localPath,
-        mirrors: plan.ideImageAttach.mirrors,
-        mime_type: plan.ideImageAttach.mimeType,
-        source: plan.ideImageAttach.source,
-        ...plan.ideImageAttach.caption ? { caption: plan.ideImageAttach.caption } : {},
-        must_render_reason: plan.ideImageAttach.mustRenderReason,
-        ...plan.ideImageAttach.error ? { error: plan.ideImageAttach.error } : {},
-        action: "agent_must_render_into_ide_chat",
-        instructions: ideImageAttachBlock(plan.ideImageAttach).filter((l) => l.length > 0)
-      }
-    } : {}
-  };
+  const text = agentAction.arguments.message;
   const openclawMessage = {
     command: [
       "openclaw",
@@ -9319,11 +9470,30 @@ function renderTelegram(plan, options) {
       "--presentation",
       JSON.stringify(presentation)
     ],
-    // Hint: agents that cannot run openclaw must stop and tell the user
-    // they lack the native Telegram buttons tool — never downgrade.
-    if_unavailable: "Current agent cannot run `openclaw message send`. Stop and tell the user the native Telegram inline-button tool is missing; do not downgrade to a markdown table or plain link."
+    // Keep the same Checkout visible if native buttons are unavailable.
+    if_unavailable: "If `openclaw message send` is unavailable, send the same QR media and Checkout URL as ordinary Telegram content, report that inline buttons are unavailable, and stop. Do not create another Checkout."
   };
-  out(JSON.stringify({ presentation, openclaw_message: openclawMessage }, null, 2) + "\n");
+  out(JSON.stringify({ presentation, agent_action: agentAction, openclaw_message: openclawMessage }, null, 2) + "\n");
+}
+function buildOpenClawTelegramAction(plan, target) {
+  const buttons = buttonsFor(plan).map(nativeButton);
+  const media = collectTelegramMedia(plan);
+  const message = plan.kind === "payment_qr" ? `ItPay payment QR \u2014 ${plan.summary}` : plan.kind === "auth_qr" ? `ItPay auth required \u2014 ${plan.summary}` : `ItPay checkout QR \u2014 ${plan.summary}`;
+  const presentation = {
+    blocks: [{ type: "buttons", buttons }]
+  };
+  const nativeTarget = target.trim().replace(/^telegram:/i, "");
+  return {
+    tool: "message",
+    arguments: {
+      action: "send",
+      channel: "telegram",
+      target: nativeTarget,
+      message,
+      ...media[0]?.url ? { media: media[0].url } : {},
+      presentation
+    }
+  };
 }
 function collectTelegramMedia(plan) {
   const media = (plan.platform.media ?? []).map((item) => ({
@@ -9339,7 +9509,7 @@ function collectTelegramMedia(plan) {
   return media;
 }
 
-// dist/src/render/feishu.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/render/feishu.js
 function actionFor(plan, button) {
   if (button.kind === "url" && button.url) {
     return {
@@ -9452,7 +9622,7 @@ function collectFeishuMedia(plan) {
   return media;
 }
 
-// dist/src/render/plan.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/render/plan.js
 function platformKeyForHost(host) {
   switch (host) {
     case "terminal":
@@ -9474,7 +9644,7 @@ function platformKeyForHost(host) {
   }
 }
 
-// dist/src/render/index.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/render/index.js
 async function dispatchRender(plan, options) {
   const key = platformKeyForHost(plan.host);
   if (key === "markdown" || key === "terminal") {
@@ -9524,13 +9694,41 @@ async function dispatchRender(plan, options) {
   }
 }
 
-// dist/src/render/output.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/render/locale.js
+function normalizeCardLocale(value) {
+  switch (value?.trim().toLowerCase()) {
+    case void 0:
+    case "":
+    case "zh":
+    case "zh-cn":
+    case "zh_cn":
+    case "cn":
+      return "zh-CN";
+    case "en":
+    case "en-us":
+    case "en_us":
+      return "en";
+    default:
+      throw new Error(`unsupported card locale: ${value}; expected zh-CN or en`);
+  }
+}
+function localizeCardURL(value, locale) {
+  try {
+    const parsed = new URL(value);
+    parsed.searchParams.set("locale", locale);
+    return parsed.toString();
+  } catch {
+    return value;
+  }
+}
+
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/render/output.js
 function formatMoney(amountMinor, currency) {
   const major = (amountMinor / 100).toFixed(2);
   return `${major} ${currency}`;
 }
 
-// dist/src/commands/checkout_handoff.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/commands/checkout_handoff.js
 function shouldPrepareLocalCheckoutImage(platform) {
   return platform === "markdown";
 }
@@ -9539,25 +9737,28 @@ function isWorkBuddyPlainChat(agentType, platform) {
 }
 function buildCheckoutHandoff(input) {
   const handoff = { url: input.url };
+  const workBuddyLinkOnly = isWorkBuddyPlainChat(input.agentType, input.platform);
   if (input.platform === "markdown") {
     if (input.localPath)
       handoff.qr_local_path = input.localPath;
     if (input.markdown)
       handoff.markdown = input.markdown;
-  } else if (input.platform === "plain_chat" && input.qrImageURL) {
+  } else if (input.platform === "plain_chat" && input.qrImageURL && !workBuddyLinkOnly) {
     handoff.qr_image_url = input.qrImageURL;
+  } else if (input.platform === "telegram" && input.qrImageURL) {
+    handoff.qr_image_url = input.qrImageURL;
+  }
+  if (input.agentType?.trim().toLowerCase() === "openclaw" && input.platform === "telegram" && input.plan && input.target) {
+    handoff.agent_action = buildOpenClawTelegramAction(input.plan, input.target);
   }
   return {
     handoff,
-    instruction: checkoutHandoffInstruction(input.agentType, input.platform, input.amount, Boolean(input.qrImageURL))
+    instruction: checkoutHandoffInstruction(input.agentType, input.platform, input.amount)
   };
 }
-function checkoutHandoffInstruction(agentType, platform, amount, hasQRImage) {
+function checkoutHandoffInstruction(agentType, platform, amount) {
   if (isWorkBuddyPlainChat(agentType, platform)) {
-    if (!hasQRImage) {
-      return `Backend \u5C1A\u672A\u786E\u8BA4\u4ED8\u6B3E\uFF0C\u4E14\u672C\u6B21\u6CA1\u6709\u8FD4\u56DE\u53EF\u5C55\u793A\u7684\u4E8C\u7EF4\u7801\u3002\u5411\u7528\u6237\u8BF4\u660E\u91D1\u989D ${amount} \u5E76\u53D1\u9001 handoff.url\uFF0C\u7136\u540E\u505C\u6B62\u7B49\u5F85\u3002\u4E0D\u8981\u8C03\u7528 present_files\uFF0C\u4E0D\u8981\u68C0\u67E5\u672C\u5730\u6587\u4EF6\uFF0C\u4E0D\u8981\u4E0B\u8F7D\u6216\u91CD\u5EFA\u4E8C\u7EF4\u7801\uFF0C\u4E0D\u8981\u8C03\u7528 pay\uFF0C\u4E0D\u8981\u521B\u5EFA\u65B0 Checkout\u3001Payment Intent \u6216 Execution\u3002\u53EA\u6709\u7528\u6237\u660E\u786E\u8868\u793A\u5DF2\u4ED8\u6B3E\u6216\u8981\u6C42\u67E5\u8BE2\u72B6\u6001\u65F6\uFF0C\u624D\u6267\u884C next.command\uFF1B\u7528\u6237\u7684\u8BDD\u4E0D\u662F\u4ED8\u6B3E\u6210\u529F\u8BC1\u660E\u3002`;
-    }
-    return `Backend \u5C1A\u672A\u786E\u8BA4\u4ED8\u6B3E\u3002\u8BFB\u53D6 handoff.qr_image_url \u7684\u5B8C\u6574\u5B57\u7B26\u4E32\uFF0C\u539F\u6837\u4F5C\u4E3A files \u6570\u7EC4\u552F\u4E00\u5143\u7D20\u8C03\u7528 present_files({ files: ["<\u5B8C\u6574 qr_image_url>"] })\uFF1B\u786E\u8BA4\u53F3\u4FA7\u4E8C\u7EF4\u7801\u9884\u89C8\u5DF2\u6253\u5F00\u540E\uFF0C\u5411\u7528\u6237\u8BF4\u660E\u91D1\u989D ${amount} \u5E76\u53D1\u9001 handoff.url\uFF0C\u7136\u540E\u505C\u6B62\u7B49\u5F85\u3002\u5982\u679C present_files \u5931\u8D25\uFF0C\u53EA\u53D1\u9001 handoff.url \u5E76\u8BF4\u660E\u4E8C\u7EF4\u7801\u9884\u89C8\u672A\u6253\u5F00\uFF0C\u7136\u540E\u505C\u6B62\u3002\u4E0D\u8981\u68C0\u67E5\u672C\u5730\u6587\u4EF6\uFF0C\u4E0D\u8981\u4E0B\u8F7D\u6216\u91CD\u5EFA\u4E8C\u7EF4\u7801\uFF0C\u4E0D\u8981\u8C03\u7528 pay\uFF0C\u4E0D\u8981\u521B\u5EFA\u65B0 Checkout\u3001Payment Intent \u6216 Execution\u3002\u53EA\u6709\u7528\u6237\u660E\u786E\u8868\u793A\u5DF2\u4ED8\u6B3E\u6216\u8981\u6C42\u67E5\u8BE2\u72B6\u6001\u65F6\uFF0C\u624D\u6267\u884C next.command\uFF1B\u7528\u6237\u7684\u8BDD\u4E0D\u662F\u4ED8\u6B3E\u6210\u529F\u8BC1\u660E\u3002`;
+    return `Backend \u5C1A\u672A\u786E\u8BA4\u4ED8\u6B3E\u3002\u5411\u7528\u6237\u8BF4\u660E\u91D1\u989D ${amount}\uFF0C\u76F4\u63A5\u53D1\u9001\u5E76\u6253\u5F00 handoff.url\uFF0C\u7136\u540E\u505C\u6B62\u7B49\u5F85\u3002\u4E0D\u8981\u8C03\u7528 present_files\uFF0C\u4E0D\u8981\u68C0\u67E5\u672C\u5730\u6587\u4EF6\uFF0C\u4E0D\u8981\u4E0B\u8F7D\u6216\u91CD\u5EFA\u4E8C\u7EF4\u7801\uFF0C\u4E0D\u8981\u8C03\u7528 pay\uFF0C\u4E0D\u8981\u521B\u5EFA\u65B0 Checkout\u3001Payment Intent \u6216 Execution\u3002\u53EA\u6709\u7528\u6237\u660E\u786E\u8868\u793A\u5DF2\u4ED8\u6B3E\u6216\u8981\u6C42\u67E5\u8BE2\u72B6\u6001\u65F6\uFF0C\u624D\u6267\u884C next.command\uFF1B\u7528\u6237\u7684\u8BDD\u4E0D\u662F\u4ED8\u6B3E\u6210\u529F\u8BC1\u660E\u3002`;
   }
   if (platform === "markdown") {
     return `Backend \u5C1A\u672A\u786E\u8BA4\u4ED8\u6B3E\u3002\u628A handoff.markdown \u539F\u6837\u53D1\u9001\u5230\u5F53\u524D\u684C\u9762\u5BF9\u8BDD\uFF0C\u786E\u8BA4\u4E8C\u7EF4\u7801\u3001\u4ED8\u6B3E\u94FE\u63A5\u548C\u91D1\u989D ${amount} \u5747\u5DF2\u5B9E\u9645\u5BF9\u7528\u6237\u53EF\u89C1\uFF0C\u7136\u540E\u505C\u6B62\u7B49\u5F85\u3002\u4E0D\u8981\u521B\u5EFA\u65B0 Checkout\u3001Payment Intent \u6216 Execution\uFF1B\u53EA\u6709\u7528\u6237\u660E\u786E\u8868\u793A\u5DF2\u4ED8\u6B3E\u6216\u8981\u6C42\u67E5\u8BE2\u72B6\u6001\u65F6\uFF0C\u624D\u6267\u884C next.command\uFF1B\u7528\u6237\u7684\u8BDD\u4E0D\u662F\u4ED8\u6B3E\u6210\u529F\u8BC1\u660E\u3002`;
@@ -9565,10 +9766,13 @@ function checkoutHandoffInstruction(agentType, platform, amount, hasQRImage) {
   if (platform === "terminal") {
     return `Backend \u5C1A\u672A\u786E\u8BA4\u4ED8\u6B3E\u3002\u5728\u7528\u6237\u53EF\u89C1\u7EC8\u7AEF\u5C55\u793A\u5F53\u524D Checkout \u7684\u4E8C\u7EF4\u7801\u3001handoff.url \u548C\u91D1\u989D ${amount}\uFF0C\u7136\u540E\u505C\u6B62\u7B49\u5F85\u3002\u4E0D\u8981\u521B\u5EFA\u65B0 Checkout\u3001Payment Intent \u6216 Execution\uFF1B\u53EA\u6709\u7528\u6237\u660E\u786E\u8868\u793A\u5DF2\u4ED8\u6B3E\u6216\u8981\u6C42\u67E5\u8BE2\u72B6\u6001\u65F6\uFF0C\u624D\u6267\u884C next.command\uFF1B\u7528\u6237\u7684\u8BDD\u4E0D\u662F\u4ED8\u6B3E\u6210\u529F\u8BC1\u660E\u3002`;
   }
+  if (agentType?.trim().toLowerCase() === "openclaw" && platform === "telegram") {
+    return `Backend \u5C1A\u672A\u786E\u8BA4\u4ED8\u6B3E\u6216\u6388\u6743\u72B6\u6001\u3002\u7ACB\u5373\u4F7F\u7528 OpenClaw \u539F\u751F message tool\uFF0C\u4E25\u683C\u6309 handoff.agent_action.tool \u548C handoff.agent_action.arguments \u539F\u6837\u6267\u884C\uFF1B\u5B83\u4F1A\u53D1\u9001\u91D1\u989D ${amount}\u3001\u4E8C\u7EF4\u7801\u3001\u{1F4F1} \u624B\u673A\u70B9\u8FD9\u513F\u652F\u4ED8\u548C \u{1F4CB} \u5DF2\u6388\u6743\u7ED9\u6211\u8BFB\u3002\u4E0D\u5F97\u6539\u5199 presentation\u3001\u6362\u7528\u5176\u4ED6\u6D88\u606F\u5DE5\u5177\u3001\u62C6\u5F00\u6309\u94AE\u53D1\u9001\u6216\u7528\u666E\u901A\u56DE\u590D\u58F0\u79F0\u6309\u94AE\u5DF2\u7ECF\u53D1\u9001\u3002\u786E\u8BA4 message tool \u8C03\u7528\u6210\u529F\u540E\u505C\u6B62\u7B49\u5F85\u3002\u6536\u5230 callback_data "itp:grant_confirmed:<checkout_id>" \u65F6\uFF0C\u8868\u793A\u7528\u6237\u58F0\u660E\u5DF2\u5728\u6536\u94F6\u53F0\u6388\u6743\u8BFB\u53D6\uFF1B\u7ACB\u5373\u6267\u884C next.command \u67E5\u8BE2\u540C\u4E00 Checkout\uFF0C\u518D\u53EA\u6267\u884C Backend \u8FD4\u56DE\u7684 next.command \u8FDB\u5165\u540C\u4E00 Execution \u7684 grant \u6D41\u7A0B\u3002\u8BE5 callback \u4E0D\u8BC1\u660E\u4ED8\u6B3E\u6210\u529F\u6216 grant \u5DF2\u751F\u6548\uFF1BBackend \u672A\u8FD4\u56DE grant_active \u524D\u4E0D\u5F97\u8BFB\u53D6\u6216\u731C\u6D4B\u7ED3\u679C\u3002\u82E5\u539F\u751F message tool \u660E\u786E\u5931\u8D25\u6216\u5F53\u524D Telegram \u672A\u542F\u7528 inline buttons\uFF0C\u53EA\u53D1\u9001\u73B0\u6709 handoff.qr_image_url\u3001\u91D1\u989D\u548C handoff.url\uFF0C\u62A5\u544A\u6309\u94AE\u4E0D\u53EF\u7528\u5E76\u505C\u6B62\uFF1B\u4E0D\u8981\u521B\u5EFA\u65B0\u7684 Checkout\u3001Payment Intent \u6216 Execution\u3002`;
+  }
   return `Backend \u5C1A\u672A\u786E\u8BA4\u4ED8\u6B3E\u3002\u628A handoff.url \u548C\u53EF\u7528\u7684 handoff.qr_image_url \u5B9E\u9645\u53D1\u9001\u5230\u5F53\u524D\u4F1A\u8BDD\uFF0C\u8BF4\u660E\u91D1\u989D ${amount}\uFF0C\u7136\u540E\u505C\u6B62\u7B49\u5F85\u3002\u4E0D\u8981\u521B\u5EFA\u65B0 Checkout\u3001Payment Intent \u6216 Execution\uFF1B\u53EA\u6709\u7528\u6237\u660E\u786E\u8868\u793A\u5DF2\u4ED8\u6B3E\u6216\u8981\u6C42\u67E5\u8BE2\u72B6\u6001\u65F6\uFF0C\u624D\u6267\u884C next.command\uFF1B\u7528\u6237\u7684\u8BDD\u4E0D\u662F\u4ED8\u6B3E\u6210\u529F\u8BC1\u660E\u3002`;
 }
 
-// dist/src/commands/buy.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/commands/buy.js
 async function runBuy(backend, config, options) {
   const err = validateContext(options.host, options.target);
   if (err) {
@@ -9618,8 +9822,10 @@ async function runBuy(backend, config, options) {
   });
   const checkoutID = checkout.checkout.checkout_id;
   const displayToken = checkout.display_token;
+  const locale = normalizeCardLocale(options.locale);
   const checkoutURL = tokenizedCheckoutURL(checkout.checkout_url, displayToken, checkout.qr_payload);
-  const qrPNGURL = checkout.qr_png_url ? absolutePublicURL(config.baseURL, checkout.qr_png_url) : void 0;
+  const cardURL = localizeCardURL(absolutePublicURL(config.baseURL, checkout.card_url ?? fallbackCardURL(config.baseURL, checkoutID, displayToken)), locale);
+  const qrPNGURL = localizeCardURL(absolutePublicURL(config.baseURL, checkout.card_png_url ?? checkout.qr_png_url ?? fallbackCardPNGURL(config.baseURL, checkoutID, displayToken)), locale);
   const orderItems = cart2.items.map((item) => ({
     title: item.title,
     quantity: item.quantity,
@@ -9660,12 +9866,14 @@ async function runBuy(backend, config, options) {
     host: options.host,
     checkoutID,
     checkoutURL,
+    cardURL,
     displayToken,
     qrPayload: checkout.qr_payload,
     nextAction: checkout.checkout.next_action,
     orderItems,
     orderCurrency: checkout.checkout.currency,
-    ...options.agentType ? { agentType: options.agentType } : {}
+    ...options.agentType ? { agentType: options.agentType } : {},
+    locale
   };
   if (qrPNGURL)
     planInput.qrPNGURL = qrPNGURL;
@@ -9690,9 +9898,10 @@ async function runBuy(backend, config, options) {
       displayToken,
       plan,
       waitStatus,
-      ...qrPNGURL ? { qrPNGURL } : {},
+      qrPNGURL,
       ...paymentIntent ? { paymentIntent } : {},
-      ...options.agentType ? { agentType: options.agentType } : {}
+      ...options.agentType ? { agentType: options.agentType } : {},
+      ...options.target ? { target: options.target } : {}
     });
     writeCommandEnvelope(envelope, { jsonOutput: true, ...options.output ? { output: options.output } : {} });
     return {
@@ -9747,9 +9956,11 @@ function buildBuyEnvelope(input) {
   }
   const presentationHandoff = buildCheckoutHandoff({
     platform,
-    url: input.checkoutURL,
+    url: input.plan.linkOnlyURL ?? input.checkoutURL,
     amount,
+    plan: input.plan,
     ...input.agentType ? { agentType: input.agentType } : {},
+    ...input.target ? { target: input.target } : {},
     ...input.qrPNGURL ? { qrImageURL: input.qrPNGURL } : {},
     ...input.plan.ideImageAttach?.status === "downloaded" && input.plan.ideImageAttach.localPath ? { localPath: input.plan.ideImageAttach.localPath } : {},
     ...platform === "markdown" ? { markdown: buildAgentChatHandoff(input.plan).markdown } : {}
@@ -9759,7 +9970,7 @@ function buildBuyEnvelope(input) {
     result,
     handoff: presentationHandoff.handoff,
     instruction: presentationHandoff.instruction,
-    next: { command: `itpay checkout --id ${input.checkoutID} --token ${input.displayToken} --json`, reason: "\u7A0D\u540E\u67E5\u8BE2\u540C\u4E00\u7B14 Checkout \u72B6\u6001" },
+    next: { command: input.plan.afterActionCommand ?? `itpay checkout --id ${input.checkoutID} --token ${input.displayToken} --json`, reason: "\u7A0D\u540E\u67E5\u8BE2\u540C\u4E00\u7B14 Checkout \u72B6\u6001" },
     recovery: []
   };
 }
@@ -9785,7 +9996,7 @@ async function waitForPaymentSSE(backend, checkoutID, displayToken, timeoutSec) 
 function buildCheckoutQRPlan(input) {
   const summary = `Scan the QR or open ${input.checkoutURL} to start the human checkout flow.`;
   const isPayment = input.paymentIntentID != null;
-  const afterCommand = qualifyItPayCommand(`itpay checkout --id ${input.checkoutID} --token ${input.displayToken} --json`, input.agentType);
+  const afterCommand = qualifyItPayCommand(`itpay checkout --id ${input.checkoutID} --token ${input.displayToken}${input.locale === "en" ? " --locale en" : ""} --json`, input.agentType);
   const platform = {
     text: summary,
     links: [
@@ -9803,6 +10014,7 @@ function buildCheckoutQRPlan(input) {
     host: input.host,
     summary,
     url: input.qrPayload,
+    ...input.agentType?.trim().toLowerCase() === "workbuddy" && input.cardURL ? { linkOnlyURL: input.cardURL } : {},
     preferredQRSources: [input.qrPNGURL ?? input.qrPayload],
     checkoutID: input.checkoutID,
     platform,
@@ -9820,6 +10032,13 @@ function buildCheckoutQRPlan(input) {
   if (input.paymentIntentID)
     plan.paymentIntentID = input.paymentIntentID;
   return plan;
+}
+function fallbackCardURL(baseURL, checkoutID, displayToken) {
+  const root = baseURL.replace(/\/$/, "");
+  return `${root}/v1/checkouts/${encodeURIComponent(checkoutID)}/card?display_token=${encodeURIComponent(displayToken)}`;
+}
+function fallbackCardPNGURL(baseURL, checkoutID, displayToken) {
+  return `${fallbackCardURL(baseURL, checkoutID, displayToken)}.png`.replace("/card?", "/card.png?");
 }
 function findMissingContactFields(contact, fields) {
   return fields.filter((field) => {
@@ -9853,7 +10072,7 @@ function absolutePublicURL(baseURL, value) {
   }
 }
 
-// dist/src/commands/catalog.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/commands/catalog.js
 async function runCatalogList(backend, options = {}) {
   const manifest = await backend.getCatalogManifest();
   const services2 = manifest.manifest.items.map(summarizeService);
@@ -9928,7 +10147,7 @@ function formatProductMoney(amountMinor, currency) {
   }).format(amountMinor / 100);
 }
 
-// dist/src/commands/compatibility.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/commands/compatibility.js
 async function requirePlatformCompatibility(backend) {
   const platform = await backend.compatibility();
   const compatible = platform.api_contract_revision === API_CONTRACT_REVISION && compareVersions(CLI_VERSION, platform.minimum_cli_version) >= 0 && versionMajor(CLI_VERSION) <= platform.maximum_cli_major;
@@ -9936,7 +10155,11 @@ async function requirePlatformCompatibility(backend) {
     return;
   throw new HttpError(426, {
     code: "client_upgrade_required",
-    message: `CLI ${CLI_VERSION} contract ${API_CONTRACT_REVISION} is incompatible with platform ${platform.platform_revision} contract ${platform.api_contract_revision} (minimum CLI ${platform.minimum_cli_version}, maximum major ${platform.maximum_cli_major})`
+    message: `CLI ${CLI_VERSION} contract ${API_CONTRACT_REVISION} is incompatible with platform ${platform.platform_revision} contract ${platform.api_contract_revision} (minimum CLI ${platform.minimum_cli_version}, maximum major ${platform.maximum_cli_major})`,
+    minimum_cli_version: platform.minimum_cli_version,
+    maximum_cli_major: platform.maximum_cli_major,
+    platform_revision: platform.platform_revision,
+    api_contract_revision: platform.api_contract_revision
   }, "CLI is incompatible with the active ItPay platform release");
 }
 function compareVersions(left, right) {
@@ -9958,9 +10181,10 @@ function versionParts(version) {
   return match ? [Number(match[1]), Number(match[2]), Number(match[3])] : void 0;
 }
 
-// dist/src/commands/checkout.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/commands/checkout.js
 async function runCheckoutPresentation(backend, options) {
-  const presentation = await backend.getCheckoutPresentation(options.checkoutID, options.displayToken);
+  const locale = normalizeCardLocale(options.locale);
+  const presentation = await backend.getCheckoutPresentation(options.checkoutID, options.displayToken, locale === "en" ? locale : void 0);
   const host = options.host ?? "terminal";
   if (!checkoutNeedsHumanHandoff(presentation.checkout.status)) {
     const envelope2 = terminalCheckoutEnvelope(presentation);
@@ -9972,15 +10196,18 @@ async function runCheckoutPresentation(backend, options) {
     return;
   }
   const checkoutURL = checkoutPageURL(options.baseURL, options.checkoutID, options.displayToken);
-  const qrPNGURL = absolutePublicURL2(options.baseURL, presentation.qr_png_url ?? checkoutQRPNGURL(options.baseURL, options.checkoutID, options.displayToken));
-  const nextCommand = `itpay checkout --id ${options.checkoutID} --token ${options.displayToken} --json`;
+  const cardURL = localizeCardURL(absolutePublicURL2(options.baseURL, presentation.card_url ?? checkoutCardURL(options.baseURL, options.checkoutID, options.displayToken)), locale);
+  const qrPNGURL = absolutePublicURL2(options.baseURL, presentation.card_png_url ?? presentation.qr_png_url ?? checkoutCardPNGURL(options.baseURL, options.checkoutID, options.displayToken));
+  const localizedPNGURL = localizeCardURL(qrPNGURL, locale);
+  const nextCommand = `itpay checkout --id ${options.checkoutID} --token ${options.displayToken}${locale === "en" ? " --locale en" : ""} --json`;
   const plan = buildCheckoutQRPlan({
     host,
     checkoutID: options.checkoutID,
     checkoutURL,
+    cardURL,
     displayToken: options.displayToken,
     qrPayload: checkoutURL,
-    qrPNGURL,
+    qrPNGURL: localizedPNGURL,
     nextAction: presentation.checkout.next_action,
     orderItems: presentation.items.map((item) => ({
       title: item.title,
@@ -9997,7 +10224,7 @@ async function runCheckoutPresentation(backend, options) {
       ...options.baseURL ? { baseURL: options.baseURL } : {}
     });
   }
-  const envelope = pendingCheckoutEnvelope(presentation, checkoutURL, plan, nextCommand, options.agentType);
+  const envelope = pendingCheckoutEnvelope(presentation, checkoutURL, plan, nextCommand, options.agentType, options.target);
   const plainResult = checkoutPlainResult(envelope.result);
   if (!options.jsonOutput && platformKeyForHost(host) === "terminal") {
     plainResult.push("qr:", await renderTerminalQR(checkoutURL, "terminal"));
@@ -10008,14 +10235,16 @@ async function runCheckoutPresentation(backend, options) {
     plainResult
   });
 }
-function pendingCheckoutEnvelope(presentation, checkoutURL, plan, nextCommand, agentType) {
+function pendingCheckoutEnvelope(presentation, checkoutURL, plan, nextCommand, agentType, target) {
   const platform = platformKeyForHost(plan.host);
   const amount = formatMoney2(presentation.checkout.amount_minor, presentation.checkout.currency);
   const presentationHandoff = buildCheckoutHandoff({
     platform,
-    url: checkoutURL,
+    url: plan.linkOnlyURL ?? checkoutURL,
     amount,
+    plan,
     ...agentType ? { agentType } : {},
+    ...target ? { target } : {},
     ...plan.preferredQRSources[0] ? { qrImageURL: plan.preferredQRSources[0] } : {},
     ...plan.ideImageAttach?.status === "downloaded" && plan.ideImageAttach.localPath ? { localPath: plan.ideImageAttach.localPath } : {},
     ...platform === "markdown" ? { markdown: buildAgentChatHandoff(plan).markdown } : {}
@@ -10077,9 +10306,13 @@ function checkoutPageURL(baseURL, checkoutID, displayToken) {
   const root = publicRoot(baseURL);
   return `${root}/checkout/${encodeURIComponent(checkoutID)}?display_token=${encodeURIComponent(displayToken)}`;
 }
-function checkoutQRPNGURL(baseURL, checkoutID, displayToken) {
+function checkoutCardURL(baseURL, checkoutID, displayToken) {
   const root = publicRoot(baseURL);
-  return `${root}/v1/checkouts/${encodeURIComponent(checkoutID)}/qr.png?display_token=${encodeURIComponent(displayToken)}`;
+  return `${root}/v1/checkouts/${encodeURIComponent(checkoutID)}/card?display_token=${encodeURIComponent(displayToken)}`;
+}
+function checkoutCardPNGURL(baseURL, checkoutID, displayToken) {
+  const root = publicRoot(baseURL);
+  return `${root}/v1/checkouts/${encodeURIComponent(checkoutID)}/card.png?display_token=${encodeURIComponent(displayToken)}`;
 }
 function publicRoot(baseURL) {
   return (baseURL ?? DEFAULT_BASE_URL).replace(/\/$/, "");
@@ -10093,7 +10326,7 @@ function absolutePublicURL2(baseURL, value) {
   }
 }
 
-// dist/src/commands/pay.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/commands/pay.js
 async function runPay(backend, options) {
   const intent = await backend.createPaymentIntent(options.checkoutID, {
     payment_method_type: options.method,
@@ -10110,10 +10343,17 @@ function payEnvelope(intent, options) {
   const terminal = ["failed", "expired", "refunded"].includes(intent.status);
   const verified = intent.status === "verified" || intent.status === "partially_refunded";
   const handoff = {};
-  if (!terminal && !verified && intent.action?.qr_image_url)
-    handoff.qr_image_url = intent.action.qr_image_url;
-  if (!terminal && !verified && intent.action?.mobile_wallet_url)
-    handoff.mobile_wallet_url = intent.action.mobile_wallet_url;
+  const workBuddyLinkOnly = isWorkBuddyPlainChat(options.agentType, platformKeyForHost(options.host));
+  if (!terminal && !verified && workBuddyLinkOnly) {
+    const url = intent.action?.mobile_wallet_url ?? intent.action?.qr_image_url;
+    if (url)
+      handoff.url = url;
+  } else {
+    if (!terminal && !verified && intent.action?.qr_image_url)
+      handoff.qr_image_url = intent.action.qr_image_url;
+    if (!terminal && !verified && intent.action?.mobile_wallet_url)
+      handoff.mobile_wallet_url = intent.action.mobile_wallet_url;
+  }
   const hasAction = Object.keys(handoff).length > 0;
   const amount = formatMoney(intent.amount_minor, intent.currency);
   return {
@@ -10125,7 +10365,7 @@ function payEnvelope(intent, options) {
       amount
     },
     ...hasAction ? { handoff } : {},
-    instruction: payInstruction(options, verified, terminal, hasAction, Boolean(handoff.qr_image_url), Boolean(handoff.mobile_wallet_url), amount),
+    instruction: payInstruction(options, verified, terminal, hasAction, amount),
     next: {
       command: `itpay checkout --id ${options.checkoutID} --token ${options.displayToken} --json`,
       reason: verified ? "\u8BFB\u53D6\u6743\u5A01\u8BA2\u5355\u548C\u5C65\u7EA6\u72B6\u6001" : "\u8BFB\u53D6\u540C\u4E00 Checkout \u7684\u6743\u5A01\u4ED8\u6B3E\u72B6\u6001"
@@ -10133,7 +10373,7 @@ function payEnvelope(intent, options) {
     recovery: []
   };
 }
-function payInstruction(options, verified, terminal, hasAction, hasQR, hasWallet, amount) {
+function payInstruction(options, verified, terminal, hasAction, amount) {
   if (verified)
     return "\u4ED8\u6B3E\u5DF2\u786E\u8BA4\uFF1B\u4E0D\u8981\u518D\u6B21\u5C55\u793A\u4ED8\u6B3E\u52A8\u4F5C\uFF0C\u7EE7\u7EED\u8BFB\u53D6\u540C\u4E00 Checkout\u3002";
   if (terminal)
@@ -10142,11 +10382,7 @@ function payInstruction(options, verified, terminal, hasAction, hasQR, hasWallet
     return "Payment Intent \u5C1A\u672A\u8FD4\u56DE\u53EF\u5C55\u793A\u52A8\u4F5C\uFF1B\u4E0D\u8981\u731C\u6D4B\u6E20\u9053\u94FE\u63A5\uFF0C\u56DE\u5230\u540C\u4E00 Checkout \u67E5\u8BE2\u3002";
   const platform = platformKeyForHost(options.host);
   if (isWorkBuddyPlainChat(options.agentType, platform)) {
-    if (hasQR && hasWallet)
-      return `\u8FD9\u662F\u53D7\u63A7\u9003\u751F\u5165\u53E3\u3002\u8BFB\u53D6 handoff.qr_image_url \u7684\u5B8C\u6574\u5B57\u7B26\u4E32\uFF0C\u539F\u6837\u4F5C\u4E3A files \u6570\u7EC4\u552F\u4E00\u5143\u7D20\u8C03\u7528 present_files({ files: ["<\u5B8C\u6574 qr_image_url>"] })\uFF1B\u53F3\u4FA7\u9884\u89C8\u6253\u5F00\u540E\u8BF4\u660E\u91D1\u989D ${amount}\u3001\u53D1\u9001 handoff.mobile_wallet_url \u5E76\u505C\u6B62\u7B49\u5F85\u3002\u5982\u679C present_files \u5931\u8D25\uFF0C\u53D1\u9001 handoff.qr_image_url \u548C handoff.mobile_wallet_url \u5E76\u8BF4\u660E\u4E8C\u7EF4\u7801\u9884\u89C8\u672A\u6253\u5F00\uFF0C\u7136\u540E\u505C\u6B62\u3002\u4E0D\u8981\u7ACB\u5373\u67E5\u8BE2\u3001\u521B\u5EFA\u66FF\u4EE3 Checkout \u6216 Payment Intent\u3002`;
-    if (hasQR)
-      return `\u8FD9\u662F\u53D7\u63A7\u9003\u751F\u5165\u53E3\u3002\u8BFB\u53D6 handoff.qr_image_url \u7684\u5B8C\u6574\u5B57\u7B26\u4E32\uFF0C\u539F\u6837\u4F5C\u4E3A files \u6570\u7EC4\u552F\u4E00\u5143\u7D20\u8C03\u7528 present_files({ files: ["<\u5B8C\u6574 qr_image_url>"] })\uFF1B\u53F3\u4FA7\u9884\u89C8\u6253\u5F00\u540E\u8BF4\u660E\u91D1\u989D ${amount} \u5E76\u505C\u6B62\u7B49\u5F85\u3002\u5982\u679C present_files \u5931\u8D25\uFF0C\u628A handoff.qr_image_url \u4F5C\u4E3A\u53EF\u70B9\u51FB\u94FE\u63A5\u53D1\u9001\u7ED9\u7528\u6237\u5E76\u8BF4\u660E\u4E8C\u7EF4\u7801\u9884\u89C8\u672A\u6253\u5F00\uFF0C\u7136\u540E\u505C\u6B62\u3002\u4E0D\u8981\u7ACB\u5373\u67E5\u8BE2\u3001\u521B\u5EFA\u66FF\u4EE3 Checkout \u6216 Payment Intent\u3002`;
-    return `\u8FD9\u662F\u53D7\u63A7\u9003\u751F\u5165\u53E3\u3002\u8BF4\u660E\u91D1\u989D ${amount}\uFF0C\u628A handoff.mobile_wallet_url \u4F5C\u4E3A\u53EF\u70B9\u51FB\u94FE\u63A5\u53D1\u9001\u7ED9\u7528\u6237\uFF0C\u7136\u540E\u505C\u6B62\u7B49\u5F85\uFF1B\u4E0D\u8981\u7ACB\u5373\u67E5\u8BE2\u3001\u521B\u5EFA\u66FF\u4EE3 Checkout \u6216 Payment Intent\u3002`;
+    return `\u8FD9\u662F\u53D7\u63A7\u9003\u751F\u5165\u53E3\u3002\u8BF4\u660E\u91D1\u989D ${amount}\uFF0C\u628A handoff.url \u4F5C\u4E3A\u53EF\u70B9\u51FB\u94FE\u63A5\u53D1\u9001\u7ED9\u7528\u6237\uFF0C\u7136\u540E\u505C\u6B62\u7B49\u5F85\u3002\u4E0D\u8981\u8C03\u7528 present_files\uFF0C\u4E0D\u8981\u7ACB\u5373\u67E5\u8BE2\u3001\u521B\u5EFA\u66FF\u4EE3 Checkout \u6216 Payment Intent\u3002`;
   }
   if (options.host === "codex" || options.host === "claude-code")
     return "\u8FD9\u662F\u53D7\u63A7\u9003\u751F\u5165\u53E3\uFF1B\u628A handoff \u4E2D\u7684\u4E8C\u7EF4\u7801\u6216\u94B1\u5305\u94FE\u63A5\u5B9E\u9645\u53D1\u5230\u5F53\u524D\u684C\u9762\u5BF9\u8BDD\uFF0C\u7136\u540E\u505C\u6B62\u7B49\u5F85\u3002";
@@ -10155,7 +10391,7 @@ function payInstruction(options, verified, terminal, hasAction, hasQR, hasWallet
   return "\u8FD9\u662F\u53D7\u63A7\u9003\u751F\u5165\u53E3\uFF1B\u628A handoff \u4E2D\u7684\u4E8C\u7EF4\u7801\u6216\u94B1\u5305\u94FE\u63A5\u53D1\u9001\u5230\u5F53\u524D\u4F1A\u8BDD\uFF0C\u7136\u540E\u505C\u6B62\u7B49\u5F85\u3002";
 }
 
-// dist/src/commands/order.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/commands/order.js
 async function runOrder(backend, orderID, options = {}) {
   const order = await backend.getOrder(orderID);
   const [delivery, refundResponse] = await Promise.all([
@@ -10206,7 +10442,7 @@ function orderPlainResult(result) {
   return Object.entries(result).map(([key, value]) => `${key}: ${typeof value === "string" ? value : JSON.stringify(value)}`);
 }
 
-// dist/src/commands/orders.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/commands/orders.js
 var ORDER_STATUSES = /* @__PURE__ */ new Set([
   "pending_payment",
   "paid",
@@ -10251,7 +10487,7 @@ async function runListOrders(backend, config, options) {
   });
 }
 
-// dist/src/commands/refund.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/commands/refund.js
 async function runRefund(backend, config, options) {
   const reason = options.reason?.trim() || "buyer_requested";
   const refund2 = await backend.createRefund(options.orderID, { reason }, config.bearerToken, await operationID(config, `refund.create:${options.orderID}:${reason}`));
@@ -10273,6 +10509,18 @@ function refundStateEnvelope(refund2, status) {
     instruction = "\u9000\u6B3E\u5DF2\u6210\u529F\uFF1B\u4EA4\u4ED8\u6C38\u4E45\u5173\u95ED\u3002";
   if (refund2.status === "cancelled" || refund2.status === "rejected")
     instruction = "\u9000\u6B3E\u672A\u6267\u884C\uFF0C\u4EA4\u4ED8\u8D44\u683C\u53EF\u6062\u590D\uFF1B\u65E7 grant \u4E0D\u4F1A\u590D\u6D3B\uFF0C\u9700\u8981\u7528\u6237\u91CD\u65B0\u6388\u6743\u3002";
+  if (refund2.status === "failed") {
+    if (refund2.failure_class === "known_no_effect")
+      instruction = "\u9000\u6B3E\u6E20\u9053\u8BF7\u6C42\u786E\u8BA4\u672A\u53D1\u9001\uFF1B\u4E0D\u8981\u81EA\u884C\u91CD\u8BD5\u3002\u8BF7\u7528\u6237\u8054\u7CFB\u5E73\u53F0\u7BA1\u7406\u5458\u51B3\u5B9A\u662F\u5426\u91CD\u65B0\u6267\u884C\u3002";
+    else if (refund2.failure_class === "retryable")
+      instruction = "\u9000\u6B3E\u6E20\u9053\u660E\u786E\u8FD4\u56DE\u53EF\u91CD\u8BD5\u5931\u8D25\uFF1B\u4E0D\u8981\u81EA\u884C\u91CD\u8BD5\u3002\u8BF7\u7528\u6237\u7B49\u5F85\u5E73\u53F0\u7BA1\u7406\u5458\u5904\u7406\u3002";
+    else if (refund2.failure_class === "outcome_unknown")
+      instruction = "\u9000\u6B3E\u8BF7\u6C42\u7ED3\u679C\u672A\u77E5\uFF0C\u4EA4\u4ED8\u7EE7\u7EED\u9501\u5B9A\uFF1B\u5FC5\u987B\u5148\u7531\u5E73\u53F0\u5BF9\u8D26\uFF0C\u7981\u6B62\u91CD\u8BD5\u6216\u91CD\u590D\u7533\u8BF7\u3002";
+    else if (refund2.failure_class === "permanent")
+      instruction = "\u9000\u6B3E\u6E20\u9053\u660E\u786E\u62D2\u7EDD\u672C\u6B21\u9000\u6B3E\uFF1B\u4E0D\u8981\u91CD\u8BD5\u3002\u8BF7\u7528\u6237\u8054\u7CFB\u5E73\u53F0\u652F\u6301\u3002";
+    else
+      instruction = "\u9000\u6B3E\u6267\u884C\u5931\u8D25\uFF1B\u4E0D\u8981\u91CD\u8BD5\u6216\u91CD\u590D\u7533\u8BF7\uFF0C\u8BF7\u7528\u6237\u8054\u7CFB\u5E73\u53F0\u652F\u6301\u3002";
+  }
   return {
     status,
     result: {
@@ -10381,7 +10629,7 @@ function writeRefundEnvelope(envelope, options) {
   });
 }
 
-// dist/src/commands/cart.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/commands/cart.js
 function runCartAdd(session, options) {
   const out = resolveOutput(options.output);
   const item = {
@@ -10727,7 +10975,7 @@ function writeCartNextEnvelope(envelope, options) {
   });
 }
 
-// dist/src/commands/docs.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/commands/docs.js
 import { existsSync as existsSync4, readFileSync as readFileSync6, readdirSync } from "node:fs";
 import { dirname as dirname4, resolve as resolve3 } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -10814,7 +11062,7 @@ function findDocsDir() {
 }
 function parseDoc(raw, file) {
   const value = JSON.parse(raw);
-  if (typeof value.schema_version !== "string" || typeof value.topic !== "string" || typeof value.title !== "string" || typeof value.purpose !== "string") {
+  if (typeof value.schema_version !== "string" || typeof value.product_scope !== "string" || typeof value.topic !== "string" || typeof value.title !== "string" || typeof value.purpose !== "string") {
     throw new Error(`invalid agent doc: ${file}`);
   }
   return value;
@@ -10826,7 +11074,7 @@ function shellWord(value) {
   return /^[a-zA-Z0-9._-]+$/.test(value) ? value : JSON.stringify(value);
 }
 
-// dist/src/commands/install.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/commands/install.js
 var INSTALL_AGENT_TYPES = [
   "codex-desktop",
   "codex-cli",
@@ -10842,17 +11090,14 @@ var INSTRUCTIONS = {
   "codex-cli": "\u5728 Codex CLI \u4E2D\u59CB\u7EC8\u4F20\u8FD9\u4E2A Agent Type\uFF1B\u4ED8\u6B3E\u4EA4\u63A5\u53EA\u5E94\u663E\u793A\u5728\u7528\u6237\u53EF\u89C1\u7EC8\u7AEF\u3002",
   "claude-code-desktop": "\u5728 Claude Code Desktop \u4E2D\u59CB\u7EC8\u4F20\u8FD9\u4E2A Agent Type\uFF1B\u4ED8\u6B3E\u65F6\u628A\u8FD4\u56DE\u7684\u4E8C\u7EF4\u7801\u548C\u94FE\u63A5\u5B9E\u9645\u5C55\u793A\u5230\u5F53\u524D\u5BF9\u8BDD\u3002",
   "claude-code-cli": "\u5728 Claude Code CLI \u4E2D\u59CB\u7EC8\u4F20\u8FD9\u4E2A Agent Type\uFF1B\u4ED8\u6B3E\u4EA4\u63A5\u53EA\u5E94\u663E\u793A\u5728\u7528\u6237\u53EF\u89C1\u7EC8\u7AEF\u3002",
-  workbuddy: "\u5728 WorkBuddy \u4E2D\u59CB\u7EC8\u4F20\u8FD9\u4E2A Agent Type\uFF1BCheckout \u8FD4\u56DE qr_image_url \u65F6\uFF0C\u5FC5\u987B\u6309\u5F53\u6B21 instruction \u8C03\u7528 present_files \u5728\u53F3\u4FA7\u6253\u5F00\u4E8C\u7EF4\u7801\uFF0C\u4E0D\u8981\u68C0\u67E5\u672C\u5730\u4E8C\u7EF4\u7801\u6587\u4EF6\u3002",
-  "kimi-code": "Keep the kimi-code Agent Type on every command and show Checkout handoff in the user-visible Kimi terminal or editor surface.",
-  openclaw: "Keep the openclaw Agent Type on every command and deliver Checkout handoff through the active OpenClaw user channel.",
-  hermes: "Keep the hermes Agent Type on every command and show Checkout handoff on the current user-visible Hermes surface."
+  workbuddy: "\u5728 WorkBuddy \u4E2D\u59CB\u7EC8\u4F20\u8FD9\u4E2A Agent Type\u3002\u8FD0\u884C\u4F1A\u6301\u4E45\u5316 ~/.itpay-v3 \u7684 ItPay Bash \u547D\u4EE4\u524D\uFF0C\u628A Shell \u5DE5\u5177\u53C2\u6570 dangerouslyDisableSandbox \u8BBE\u4E3A true\uFF1B\u7528\u6237\u62D2\u7EDD\u6743\u9650\u65F6\u505C\u6B62\uFF0C\u4E0D\u8981\u5207\u6362 Node\u3001\u5220\u9664 identity \u6216\u5904\u7406 lock\u3002Checkout \u53EA\u8FD4\u56DE\u5DF2\u6E32\u67D3\u7684\u4ED8\u6B3E Card Link\uFF1B\u76F4\u63A5\u6253\u5F00 handoff.url\uFF0C\u4E0D\u8981\u8C03\u7528 present_files\uFF0C\u4E5F\u4E0D\u8981\u68C0\u67E5\u672C\u5730\u4E8C\u7EF4\u7801\u6587\u4EF6\u3002",
+  "kimi-code": "\u4FDD\u6301 kimi-code Agent Type\uFF0C\u4F7F\u7528\u6807\u51C6 CLI \u547D\u4EE4\u548C\u7EC8\u7AEF\u4ED8\u6B3E\u4EA4\u63A5\uFF1B\u4E0D\u8981\u5207\u6362\u5230\u5176\u4ED6\u5E73\u53F0\u8EAB\u4EFD\u3002",
+  openclaw: "\u4FDD\u6301 openclaw Agent Type\uFF1B\u6BCF\u4E2A\u5C55\u793A\u547D\u4EE4\u90FD\u4ECE\u5F53\u524D\u53EF\u4FE1\u4F1A\u8BDD\u4E0A\u4E0B\u6587\u663E\u5F0F\u4F20 --host\uFF0CIM \u5165\u53E3\u540C\u65F6\u4F20 --target\u3002Telegram \u4F7F\u7528\u8FD4\u56DE\u7684\u539F\u751F message action\uFF0C\u5176\u4ED6\u5165\u53E3\u5C55\u793A\u6807\u51C6\u4E8C\u7EF4\u7801\u548C\u4ED8\u6B3E\u94FE\u63A5\u3002",
+  hermes: "\u4FDD\u6301 hermes Agent Type\uFF0C\u4F7F\u7528\u6807\u51C6 CLI \u547D\u4EE4\u548C\u7EC8\u7AEF\u4ED8\u6B3E\u4EA4\u63A5\uFF1B\u4E0D\u8981\u5207\u6362\u5230\u5176\u4ED6\u5E73\u53F0\u8EAB\u4EFD\u3002"
 };
 function runInstall(target, options = {}) {
   if (!target || target === "list") {
-    const agentTypes = INSTALL_AGENT_TYPES.map((agentType) => ({
-      agent_type: agentType,
-      default_host: defaultHostForAgentType(agentType)
-    }));
+    const agentTypes = INSTALL_AGENT_TYPES.map(installDefinition);
     writeCommandEnvelope({
       status: "install_targets",
       result: { agent_types: agentTypes },
@@ -10861,7 +11106,7 @@ function runInstall(target, options = {}) {
       recovery: [{ command: "itpay docs show install-and-setup", reason: "\u67E5\u770B\u5B89\u88C5\u4E0E\u73AF\u5883\u8BF4\u660E" }]
     }, {
       ...options,
-      plainResult: agentTypes.map((item) => `${item.agent_type}: ${item.default_host}`)
+      plainResult: agentTypes.map((item) => `${item.agent_type}: ${item.default_host ?? "explicit --host required"}`)
     });
     return;
   }
@@ -10872,46 +11117,50 @@ function runInstall(target, options = {}) {
   writeCommandEnvelope({
     status: "instructions_ready",
     result: {
-      agent_type: normalized,
-      default_host: defaultHostForAgentType(normalized),
-      default_api: DEFAULT_BASE_URL,
-      install_command: "sh <skill-root>/bin/itpay"
+      ...installDefinition(normalized),
+      default_api: DEFAULT_BASE_URL
     },
     instruction: INSTRUCTIONS[normalized],
     next: {
       command: `itpay --agent-type ${normalized} readyz --json`,
-      reason: "\u9A8C\u8BC1 CLI \u4E0E\u9ED8\u8BA4 ItPay API \u7684\u517C\u5BB9\u6027"
+      reason: "\u9A8C\u8BC1\u5F53\u524D\u5B98\u65B9 ItPay API \u7684\u53EF\u7528\u6027"
     },
-    recovery: [{ command: "itpay docs show install-and-setup", reason: "\u67E5\u770B\u73AF\u5883\u8986\u76D6\u548C\u9996\u6B21\u4F7F\u7528\u8BF4\u660E" }]
+    recovery: [{ command: "itpay docs show install-and-setup", reason: "\u67E5\u770B\u5B98\u65B9 Backend \u548C\u9996\u6B21\u4F7F\u7528\u8BF4\u660E" }]
   }, options);
 }
 function isInstallAgentType(value) {
   return INSTALL_AGENT_TYPES.includes(value);
 }
+function installDefinition(agentType) {
+  if (agentType === "openclaw") {
+    return { agent_type: agentType, default_host: null, host_required: true, native_hosts: ["telegram"] };
+  }
+  return { agent_type: agentType, default_host: defaultHostForAgentType(agentType) ?? null };
+}
 
-// dist/src/commands/skill.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/commands/skill.js
 import { existsSync as existsSync5, readFileSync as readFileSync7 } from "node:fs";
 import { dirname as dirname5, resolve as resolve4 } from "node:path";
 import { fileURLToPath as fileURLToPath2 } from "node:url";
 var commandDir2 = dirname5(fileURLToPath2(import.meta.url));
-var BUYER_SKILL = "itpay-buyer";
+var ITPAY_SKILL = "itpay";
 function runSkillShow(name, options = {}) {
   const normalized = name.trim().toLowerCase();
-  if (normalized !== BUYER_SKILL) {
-    throw new CommandContractError("skill_not_found", `skill not found: ${name}`, `\u5F53\u524D CLI \u53EA\u5185\u7F6E ${BUYER_SKILL}\uFF1B\u4E0D\u8981\u731C\u6D4B Skill \u540D\u79F0\u3002`, [{ command: `itpay skill show ${BUYER_SKILL} --json`, reason: "\u8BFB\u53D6\u5B8C\u6574 Buyer Skill" }]);
+  if (normalized !== ITPAY_SKILL && normalized !== "itpay-buyer") {
+    throw new CommandContractError("skill_not_found", `skill not found: ${name}`, `\u5F53\u524D CLI \u53EA\u5185\u7F6E ${ITPAY_SKILL}\uFF1B\u4E0D\u8981\u731C\u6D4B Skill \u540D\u79F0\u3002`, [{ command: `itpay skill show ${ITPAY_SKILL} --json`, reason: "\u8BFB\u53D6\u5B8C\u6574 ItPay Skill" }]);
   }
   let content;
   try {
     content = readFileSync7(findSkillPath(), "utf8");
   } catch {
-    throw new Error("packaged skill is unavailable: itpay-buyer");
+    throw new Error("packaged skill is unavailable: itpay");
   }
   validateSkill(content);
   const agentType = options.agentType ?? declaredAgentType();
   const envelope = {
     status: "shown",
-    result: { skill: BUYER_SKILL, content },
-    instruction: agentType ? agentType === "workbuddy" ? "\u5B8C\u6574\u8BFB\u53D6\u5E76\u9075\u5B88 Skill\uFF1B\u4FDD\u6301 workbuddy\u3001\u540C\u4E00 Node/CLI launcher \u548C\u53EF\u6301\u4E45\u5199\u5165 Device \u72B6\u6001\u7684\u6267\u884C\u6743\u9650\u3002\u5185\u90E8\u8BCA\u65AD\u4E0D\u8981\u9010\u6B65\u8F6C\u8FF0\u7ED9\u7528\u6237\u3002" : `\u5B8C\u6574\u8BFB\u53D6\u5E76\u9075\u5B88 Skill\uFF1B\u5F53\u524D Agent Type \u662F ${agentType}\uFF0C\u540E\u7EED\u547D\u4EE4\u4FDD\u6301\u4E0D\u53D8\u3002` : "\u5B8C\u6574\u8BFB\u53D6\u5E76\u9075\u5B88 Skill\uFF1B\u5148\u5982\u5B9E\u9009\u62E9\u5F53\u524D\u8FD0\u884C\u73AF\u5883\u5BF9\u5E94\u7684 Agent Type\u3002",
+    result: { skill: ITPAY_SKILL, content },
+    instruction: agentType ? agentType === "workbuddy" ? "\u5B8C\u6574\u8BFB\u53D6\u5E76\u9075\u5B88 Skill\uFF1B\u4FDD\u6301 workbuddy \u548C\u540C\u4E00 Node/CLI launcher\u3002\u8FD0\u884C\u4F1A\u6301\u4E45\u5316 ~/.itpay-v3 \u7684 ItPay Bash \u547D\u4EE4\u524D\uFF0C\u628A Shell \u5DE5\u5177\u53C2\u6570 dangerouslyDisableSandbox \u8BBE\u4E3A true\uFF1B\u7528\u6237\u62D2\u7EDD\u6743\u9650\u65F6\u505C\u6B62\uFF0C\u4E0D\u8981\u5207\u6362 Node\u3001\u5220\u9664 identity \u6216\u5904\u7406 lock\u3002" : `\u5B8C\u6574\u8BFB\u53D6\u5E76\u9075\u5B88 Skill\uFF1B\u5F53\u524D Agent Type \u662F ${agentType}\uFF0C\u540E\u7EED\u547D\u4EE4\u4FDD\u6301\u4E0D\u53D8\u3002` : "\u5B8C\u6574\u8BFB\u53D6\u5E76\u9075\u5B88 Skill\uFF1B\u5148\u5982\u5B9E\u9009\u62E9\u5F53\u524D\u8FD0\u884C\u73AF\u5883\u5BF9\u5E94\u7684 Agent Type\u3002",
     next: agentType ? { command: "itpay catalog list --json", reason: "\u6309 Skill \u5F00\u59CB\u53D1\u73B0\u670D\u52A1" } : { command: "itpay install --json", reason: "\u9009\u62E9\u771F\u5B9E\u4E14\u7A33\u5B9A\u7684 Agent Type" },
     recovery: []
   };
@@ -10922,25 +11171,26 @@ function runSkillShow(name, options = {}) {
   });
 }
 function findSkillPath() {
-  if (process.env.ITPAY_CLI_SKILL_FILE) {
-    return resolve4(process.env.ITPAY_CLI_SKILL_FILE);
-  }
   if (process.env.ITPAY_CLI_SKILLS_DIR) {
-    return resolve4(process.env.ITPAY_CLI_SKILLS_DIR, BUYER_SKILL, "SKILL.md");
+    const configuredRoot = resolve4(process.env.ITPAY_CLI_SKILLS_DIR);
+    const directPath = resolve4(configuredRoot, "SKILL.md");
+    if (existsSync5(directPath))
+      return directPath;
+    return resolve4(configuredRoot, ITPAY_SKILL, "SKILL.md");
   }
-  const packagePath = resolve4(commandDir2, "..", "..", "..", "skills", BUYER_SKILL, "SKILL.md");
+  const packagePath = resolve4(commandDir2, "..", "..", "..", "skills", ITPAY_SKILL, "SKILL.md");
   if (existsSync5(packagePath))
     return packagePath;
-  return resolve4(commandDir2, "..", "..", "skills", BUYER_SKILL, "SKILL.md");
+  return resolve4(commandDir2, "..", "..", "skills", ITPAY_SKILL, "SKILL.md");
 }
 function validateSkill(content) {
   const frontmatter = content.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/)?.[1];
-  if (!frontmatter || !/^name:\s*itpay-buyer\s*$/m.test(frontmatter) || !/^description:\s*(?:>|\S)/m.test(frontmatter)) {
-    throw new Error("invalid packaged skill: itpay-buyer");
+  if (!frontmatter || !/^name:\s*(?:itpay|itpay-buyer)\s*$/m.test(frontmatter) || !/^description:\s*(?:>|\S)/m.test(frontmatter)) {
+    throw new Error("invalid packaged skill: itpay");
   }
 }
 
-// dist/src/commands/next.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/commands/next.js
 function runNext(session, options = {}) {
   const envelope = nextEnvelope(session);
   writeCommandEnvelope(envelope, {
@@ -10986,7 +11236,7 @@ function resumeEnvelope(resourceType, resourceID, command, reason) {
   };
 }
 
-// dist/src/commands/services.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/commands/services.js
 var serviceActionStatuses = /* @__PURE__ */ new Set(["pending", "approved", "rejected", "expired", "cancelled"]);
 async function runServicesStart(backend, serviceID, options = {}) {
   const host = options.host ?? "terminal";
@@ -11080,11 +11330,12 @@ function invokedEnvelope(response, requestedCapability, capabilities, input) {
   const baseResult = {
     service_execution_id: response.execution.service_execution_id,
     capability_id: requestedCapability.capability_id,
+    query: input,
     items,
     ...quota ? { quota } : {}
   };
   let status = items.length > 0 ? "result_ready" : "no_result";
-  let instruction = items.length > 0 ? "\u5411\u7528\u6237\u5C55\u793A\u7F16\u53F7\u548C safe_payload\uFF1B\u82E5\u5019\u9009\u5217\u8868\u5DF2\u6EE1\u8DB3\u7528\u6237\u76EE\u6807\uFF0C\u5728\u6B64\u505C\u6B62\u3002\u4EC5\u5728\u7528\u6237\u660E\u786E\u9009\u62E9\u5E76\u5E0C\u671B\u7EE7\u7EED\u65F6\uFF0C\u624D\u5728\u5F53\u524D Execution \u63D0\u4EA4\u5BF9\u5E94 rank\u3002" : "Provider \u5DF2\u8FD4\u56DE\u7A7A\u7ED3\u679C\uFF1B\u4E0D\u8981\u91CD\u653E\u5F53\u524D execution\uFF0C\u6309\u4E0B\u4E00\u6B65\u6062\u590D\u3002";
+  let instruction = items.length > 0 ? "\u5411\u7528\u6237\u5C55\u793A\u7F16\u53F7\u548C safe_payload\uFF1B\u82E5\u5019\u9009\u5217\u8868\u5DF2\u6EE1\u8DB3\u7528\u6237\u76EE\u6807\uFF0C\u5728\u6B64\u505C\u6B62\u3002\u4EC5\u5728\u7528\u6237\u660E\u786E\u9009\u62E9\u5E76\u5E0C\u671B\u7EE7\u7EED\u65F6\uFF0C\u624D\u5728\u5F53\u524D Execution \u63D0\u4EA4\u5BF9\u5E94 rank\u3002" : `\u6CA1\u6709\u627E\u5230\u4E0E\u201C${queryText(input)}\u201D\u5339\u914D\u7684\u7ED3\u679C\u3002\u5411\u7528\u6237\u5C55\u793A\u672C\u6B21\u4E3A 0 \u4E2A\u7ED3\u679C\u5E76\u505C\u6B62\u3002\u4E0D\u8981\u4FEE\u6539\u3001\u7F29\u77ED\u6216\u731C\u6D4B\u5176\u4ED6\u8F93\u5165\uFF1B\u53EA\u6709\u7528\u6237\u660E\u786E\u63D0\u4F9B\u65B0\u8F93\u5165\u540E\uFF0C\u624D\u80FD\u542F\u52A8\u65B0\u7684\u67E5\u8BE2\u3002`;
   let next = null;
   if (response.effective_quota?.exhausted) {
     status = "quota_exhausted";
@@ -11100,7 +11351,7 @@ function invokedEnvelope(response, requestedCapability, capabilities, input) {
         delivery_email_required: checkoutCapability.delivery_email_required
       };
       const price = capabilityPrice(checkoutCapability);
-      instruction = purchaseConfirmationInstruction("quota_exhausted", price, checkoutCapability.delivery_email_required);
+      instruction = purchaseConfirmationInstruction("quota_exhausted", price, checkoutCapability.delivery_email_required, checkoutCapability.delivery_email_purpose);
       next = {
         command: checkoutCommand(response.execution.service_execution_id, checkoutCapability, input),
         reason: `\u4EC5\u5728\u7528\u6237\u660E\u786E\u540C\u610F\u652F\u4ED8 ${price} \u540E\u6267\u884C\uFF1B\u5426\u5219\u505C\u6B62`
@@ -11117,7 +11368,7 @@ function invokedEnvelope(response, requestedCapability, capabilities, input) {
       reason: "\u5728\u5F53\u524D Execution \u8BB0\u5F55\u7528\u6237\u9009\u62E9"
     };
   } else if (items.length === 0) {
-    next = response.provider_called ? { command: `itpay services start ${response.execution.service_id}`, reason: "\u4E3A\u65B0\u7684\u670D\u52A1\u8F93\u5165\u542F\u52A8\u65B0 execution" } : { command: `itpay services next ${response.execution.service_execution_id} --json`, reason: "\u8BFB\u53D6\u670D\u52A1\u7AEF\u6062\u590D\u52A8\u4F5C" };
+    next = null;
   }
   return {
     value: { status, result: baseResult, instruction, next, recovery: [] },
@@ -11129,11 +11380,18 @@ function serviceResultPlainLines(result) {
     `service_execution_id: ${String(result.service_execution_id)}`,
     `capability_id: ${String(result.capability_id)}`
   ];
+  const items = result.items;
+  const query = result.query;
+  if (query) {
+    for (const [key, value] of Object.entries(query))
+      lines.push(`${key}: ${String(value)}`);
+  }
+  if (items.length === 0)
+    lines.push("results: 0");
   if (result.quota)
     lines.push(`quota: ${JSON.stringify(result.quota)}`);
   if (result.checkout)
     lines.push(`checkout: ${JSON.stringify(result.checkout)}`);
-  const items = result.items;
   if (items.length > 0) {
     lines.push("items:");
     for (const item of items) {
@@ -11144,6 +11402,10 @@ function serviceResultPlainLines(result) {
     }
   }
   return lines;
+}
+function queryText(input) {
+  const value = Object.values(input).find((item) => typeof item === "string" && item.trim() !== "");
+  return typeof value === "string" ? value : JSON.stringify(input);
 }
 function missingRequiredInput(schema, input) {
   return requiredInputFields(schema).filter((field) => {
@@ -11163,12 +11425,25 @@ function checkoutCommand(serviceExecutionID, capability, input, fillMissing = tr
 function capabilityPrice(capability) {
   return capability.price_amount_minor !== void 0 && capability.price_currency ? formatMoney3(capability.price_amount_minor, capability.price_currency) : "\u5F53\u524D\u53D1\u5E03\u4EF7\u683C";
 }
-function purchaseConfirmationInstruction(context, price, deliveryEmailRequired, candidateTitle = "") {
+function purchaseConfirmationInstruction(context, price, deliveryEmailRequired, deliveryEmailPurpose, candidateTitle = "") {
+  const emailPurpose = deliveryEmailPurposeText(deliveryEmailPurpose);
   if (context === "quota_exhausted") {
-    return deliveryEmailRequired ? `\u514D\u8D39\u989D\u5EA6\u5DF2\u7528\u5B8C\uFF0C\u672C\u6B21\u6CA1\u6709\u8C03\u7528 Provider\uFF0C\u4E5F\u5C1A\u672A\u521B\u5EFA Quote \u6216 Checkout\u3002\u73B0\u5728\u53EA\u5411\u7528\u6237\u8BF4\u660E\uFF1A\u7EE7\u7EED\u5F53\u524D\u8BF7\u6C42\u9700\u8981\u652F\u4ED8 ${price}\uFF0C\u4EA4\u4ED8\u8FD8\u9700\u8981\u7528\u6237\u90AE\u7BB1\uFF1B\u8BF7\u786E\u8BA4\u662F\u5426\u8D2D\u4E70\u5E76\u63D0\u4F9B\u90AE\u7BB1\u3002\u7136\u540E\u505C\u6B62\u5E76\u7B49\u5F85\u3002\u7528\u6237\u660E\u786E\u540C\u610F\u5E76\u63D0\u4F9B\u771F\u5B9E\u90AE\u7BB1\u524D\uFF0C\u4E0D\u8981\u6267\u884C next.command\uFF0C\u4E0D\u8981\u65B0\u5EFA Execution\uFF0C\u4E0D\u8981\u5C1D\u8BD5\u5176\u4ED6 capability\u3001quote\u3001cart\u3001buy\u3001checkout \u6216 pay \u547D\u4EE4\u3002` : `\u514D\u8D39\u989D\u5EA6\u5DF2\u7528\u5B8C\uFF0C\u672C\u6B21\u6CA1\u6709\u8C03\u7528 Provider\uFF0C\u4E5F\u5C1A\u672A\u521B\u5EFA Quote \u6216 Checkout\u3002\u73B0\u5728\u53EA\u5411\u7528\u6237\u8BF4\u660E\uFF1A\u201C\u7EE7\u7EED\u5F53\u524D\u8BF7\u6C42\u9700\u8981\u652F\u4ED8 ${price}\uFF0C\u662F\u5426\u8D2D\u4E70\uFF1F\u201D\u7136\u540E\u505C\u6B62\u5E76\u7B49\u5F85\u7528\u6237\u660E\u786E\u56DE\u590D\u3002\u7528\u6237\u660E\u786E\u540C\u610F\u524D\uFF0C\u4E0D\u8981\u6267\u884C next.command\uFF0C\u4E0D\u8981\u65B0\u5EFA Execution\uFF0C\u4E0D\u8981\u5C1D\u8BD5\u5176\u4ED6 capability\u3001quote\u3001cart\u3001buy\u3001checkout \u6216 pay \u547D\u4EE4\u3002`;
+    return deliveryEmailRequired ? `\u514D\u8D39\u989D\u5EA6\u5DF2\u7528\u5B8C\uFF0C\u672C\u6B21\u6CA1\u6709\u8C03\u7528 Provider\uFF0C\u4E5F\u5C1A\u672A\u521B\u5EFA Quote \u6216 Checkout\u3002\u73B0\u5728\u53EA\u5411\u7528\u6237\u8BF4\u660E\uFF1A\u7EE7\u7EED\u5F53\u524D\u8BF7\u6C42\u9700\u8981\u652F\u4ED8 ${price}\uFF0C\u5E76\u63D0\u4F9B${emailPurpose}\uFF1B\u8BF7\u786E\u8BA4\u662F\u5426\u8D2D\u4E70\u5E76\u63D0\u4F9B\u90AE\u7BB1\u3002\u7136\u540E\u505C\u6B62\u5E76\u7B49\u5F85\u3002\u7528\u6237\u660E\u786E\u540C\u610F\u5E76\u63D0\u4F9B\u771F\u5B9E\u90AE\u7BB1\u524D\uFF0C\u4E0D\u8981\u6267\u884C next.command\uFF0C\u4E0D\u8981\u65B0\u5EFA Execution\uFF0C\u4E0D\u8981\u5C1D\u8BD5\u5176\u4ED6 capability\u3001quote\u3001cart\u3001buy\u3001checkout \u6216 pay \u547D\u4EE4\u3002` : `\u514D\u8D39\u989D\u5EA6\u5DF2\u7528\u5B8C\uFF0C\u672C\u6B21\u6CA1\u6709\u8C03\u7528 Provider\uFF0C\u4E5F\u5C1A\u672A\u521B\u5EFA Quote \u6216 Checkout\u3002\u73B0\u5728\u53EA\u5411\u7528\u6237\u8BF4\u660E\uFF1A\u201C\u7EE7\u7EED\u5F53\u524D\u8BF7\u6C42\u9700\u8981\u652F\u4ED8 ${price}\uFF0C\u662F\u5426\u8D2D\u4E70\uFF1F\u201D\u7136\u540E\u505C\u6B62\u5E76\u7B49\u5F85\u7528\u6237\u660E\u786E\u56DE\u590D\u3002\u7528\u6237\u660E\u786E\u540C\u610F\u524D\uFF0C\u4E0D\u8981\u6267\u884C next.command\uFF0C\u4E0D\u8981\u65B0\u5EFA Execution\uFF0C\u4E0D\u8981\u5C1D\u8BD5\u5176\u4ED6 capability\u3001quote\u3001cart\u3001buy\u3001checkout \u6216 pay \u547D\u4EE4\u3002`;
   }
   const selected = candidateTitle ? `\u5DF2\u9009\u62E9 ${candidateTitle}\u3002` : "\u5F53\u524D\u5019\u9009\u5DF2\u7ECF\u786E\u8BA4\u3002";
-  return deliveryEmailRequired ? `${selected}\u5019\u9009\u5DF2\u7ED1\u5B9A\u5230\u5F53\u524D Execution\uFF0C\u4F46\u5C1A\u672A\u8D2D\u4E70\u540E\u7EED\u670D\u52A1\u3002\u73B0\u5728\u53EA\u5411\u7528\u6237\u8BF4\u660E\uFF1A\u7EE7\u7EED\u8D2D\u4E70\u540E\u7EED\u670D\u52A1\u9700\u8981\u652F\u4ED8 ${price}\uFF0C\u5E76\u63D0\u4F9B\u7528\u4E8E\u53D1\u9001\u4EA4\u4ED8\u8BA4\u9886\u94FE\u63A5\u7684\u90AE\u7BB1\uFF1B\u8BF7\u786E\u8BA4\u662F\u5426\u8D2D\u4E70\u5E76\u63D0\u4F9B\u90AE\u7BB1\u3002\u7136\u540E\u505C\u6B62\u3002\u7528\u6237\u660E\u786E\u540C\u610F\u5E76\u63D0\u4F9B\u771F\u5B9E\u90AE\u7BB1\u524D\uFF0C\u4E0D\u8981\u6267\u884C next.command\uFF0C\u4E0D\u8981\u521B\u5EFA\u65B0 Execution \u6216 Checkout\u3002` : `${selected}\u5019\u9009\u5DF2\u7ED1\u5B9A\u5230\u5F53\u524D Execution\uFF0C\u4F46\u5C1A\u672A\u8D2D\u4E70\u540E\u7EED\u670D\u52A1\u3002\u73B0\u5728\u53EA\u5411\u7528\u6237\u8BF4\u660E\uFF1A\u201C\u7EE7\u7EED\u8D2D\u4E70\u540E\u7EED\u670D\u52A1\u9700\u8981\u652F\u4ED8 ${price}\uFF0C\u662F\u5426\u8D2D\u4E70\uFF1F\u201D\u7136\u540E\u505C\u6B62\u3002\u7528\u6237\u660E\u786E\u540C\u610F\u524D\uFF0C\u4E0D\u8981\u6267\u884C next.command\uFF0C\u4E0D\u8981\u521B\u5EFA\u65B0 Execution \u6216 Checkout\u3002`;
+  return deliveryEmailRequired ? `${selected}\u5019\u9009\u5DF2\u7ED1\u5B9A\u5230\u5F53\u524D Execution\uFF0C\u4F46\u5C1A\u672A\u8D2D\u4E70\u540E\u7EED\u670D\u52A1\u3002\u73B0\u5728\u53EA\u5411\u7528\u6237\u8BF4\u660E\uFF1A\u7EE7\u7EED\u8D2D\u4E70\u540E\u7EED\u670D\u52A1\u9700\u8981\u652F\u4ED8 ${price}\uFF0C\u5E76\u63D0\u4F9B${emailPurpose}\uFF1B\u8BF7\u786E\u8BA4\u662F\u5426\u8D2D\u4E70\u5E76\u63D0\u4F9B\u90AE\u7BB1\u3002\u7136\u540E\u505C\u6B62\u3002\u7528\u6237\u660E\u786E\u540C\u610F\u5E76\u63D0\u4F9B\u771F\u5B9E\u90AE\u7BB1\u524D\uFF0C\u4E0D\u8981\u6267\u884C next.command\uFF0C\u4E0D\u8981\u521B\u5EFA\u65B0 Execution \u6216 Checkout\u3002` : `${selected}\u5019\u9009\u5DF2\u7ED1\u5B9A\u5230\u5F53\u524D Execution\uFF0C\u4F46\u5C1A\u672A\u8D2D\u4E70\u540E\u7EED\u670D\u52A1\u3002\u73B0\u5728\u53EA\u5411\u7528\u6237\u8BF4\u660E\uFF1A\u201C\u7EE7\u7EED\u8D2D\u4E70\u540E\u7EED\u670D\u52A1\u9700\u8981\u652F\u4ED8 ${price}\uFF0C\u662F\u5426\u8D2D\u4E70\uFF1F\u201D\u7136\u540E\u505C\u6B62\u3002\u7528\u6237\u660E\u786E\u540C\u610F\u524D\uFF0C\u4E0D\u8981\u6267\u884C next.command\uFF0C\u4E0D\u8981\u521B\u5EFA\u65B0 Execution \u6216 Checkout\u3002`;
+}
+function deliveryEmailPurposeText(purpose) {
+  switch (purpose) {
+    case "receipt":
+      return "\u7528\u4E8E\u53D1\u9001\u8BA2\u5355\u6536\u636E\u7684\u771F\u5B9E\u90AE\u7BB1";
+    case "claim":
+      return "\u7528\u4E8E\u53D1\u9001\u4EA4\u4ED8\u8BA4\u9886\u94FE\u63A5\u7684\u771F\u5B9E\u90AE\u7BB1";
+    case "receipt_and_claim":
+      return "\u7528\u4E8E\u53D1\u9001\u8BA2\u5355\u6536\u636E\u548C\u4EA4\u4ED8\u8BA4\u9886\u94FE\u63A5\u7684\u771F\u5B9E\u90AE\u7BB1";
+    default:
+      return "\u670D\u52A1\u7AEF\u58F0\u660E\u7528\u9014\u7684\u771F\u5B9E\u90AE\u7BB1";
+  }
 }
 function paidContinuation(model, action, input) {
   if (!action.capability_id)
@@ -11186,7 +11461,8 @@ function paidContinuation(model, action, input) {
       ...capability.price_amount_minor !== void 0 && capability.price_currency ? {
         price: { amount_minor: capability.price_amount_minor, currency: capability.price_currency }
       } : {},
-      delivery_email_required: capability.delivery_email_required
+      delivery_email_required: capability.delivery_email_required,
+      ...capability.delivery_email_purpose ? { delivery_email_purpose: capability.delivery_email_purpose } : {}
     },
     next: {
       command: checkoutCommand(model.execution.service_execution_id, capability, input, !stateBacked),
@@ -11241,7 +11517,7 @@ async function runServicesAction(backend, serviceExecutionID, actionType, input,
         candidate: { rank: selection.rank, title: selection.title },
         ...continuation ? { checkout: continuation.checkout } : {}
       },
-      instruction: continuation ? purchaseConfirmationInstruction("candidate_selected", continuation.price, continuation.capability.delivery_email_required, selection.title) : "\u5019\u9009\u5DF2\u7ED1\u5B9A\u5230\u6765\u6E90 Execution\uFF1B\u540E\u7EED\u52A8\u4F5C\u5FC5\u987B\u7EE7\u7EED\u4F7F\u7528\u8BE5 Execution\u3002",
+      instruction: continuation ? purchaseConfirmationInstruction("candidate_selected", continuation.price, continuation.capability.delivery_email_required, continuation.capability.delivery_email_purpose, selection.title) : "\u5019\u9009\u5DF2\u7ED1\u5B9A\u5230\u6765\u6E90 Execution\uFF1B\u540E\u7EED\u52A8\u4F5C\u5FC5\u987B\u7EE7\u7EED\u4F7F\u7528\u8BE5 Execution\u3002",
       next,
       recovery: [{
         command: `itpay services next ${response.service_execution_id} --json`,
@@ -11299,6 +11575,11 @@ function actionInputError(serviceExecutionID, message, code = "service_action_in
   return new CommandContractError(code, message, code === "candidate_not_found" ? "\u5F53\u524D rank \u4E0D\u5B58\u5728\u6216\u5F53\u524D\u5019\u9009\u96C6\u4E0D\u53EF\u7528\u3002\u4E0D\u8981\u65B0\u5EFA Execution\uFF0C\u4E0D\u8981\u91CD\u65B0 invoke\uFF0C\u4E0D\u8981\u6784\u9020\u5019\u9009 ID\uFF1B\u53EA\u6062\u590D\u540C\u4E00 Execution \u5F53\u524D\u4ECD\u7136\u6709\u6548\u7684\u5019\u9009\u3002" : "\u4F7F\u7528\u5F53\u524D safe result \u4E2D\u7684\u5408\u6CD5 action \u548C candidate rank\uFF1B\u9700\u8981\u4EBA\u786E\u8BA4\u65F6\u5148\u8BE2\u95EE\u7528\u6237\u3002", [{ command: `itpay services next ${serviceExecutionID} --json`, reason: "\u91CD\u65B0\u8BFB\u53D6\u540C\u4E00 Execution \u7684\u5F53\u524D\u53EF\u9009\u52A8\u4F5C" }]);
 }
 async function runServicesCheckout(backend, config, serviceExecutionID, capabilityID, options = {}) {
+  const host = options.host ?? "terminal";
+  const contextError = validateContext(host, options.target);
+  if (contextError) {
+    throw new CommandContractError(contextError.code, contextError.message, "\u4ECE\u5F53\u524D\u53EF\u4FE1\u4F1A\u8BDD\u4E0A\u4E0B\u6587\u8865\u9F50 Host/target\uFF1B\u672C\u6B21\u672A\u521B\u5EFA Checkout\u3002", []);
+  }
   const deliveryContact = {
     ...options.deliveryContact ?? {},
     ...options.email ? { email: options.email } : {}
@@ -11333,14 +11614,18 @@ async function runServicesCheckout(backend, config, serviceExecutionID, capabili
   const checkout = response.checkout;
   const checkoutID = checkout.checkout.checkout_id;
   const displayToken = checkout.display_token;
+  const locale = normalizeCardLocale(options.locale);
   const checkoutURL = tokenizedCheckoutURL2(checkout.checkout_url, displayToken, checkout.qr_payload);
+  const cardURL = localizeCardURL(absolutePublicURL3(config.baseURL, checkout.card_url ?? fallbackCardURL2(config.baseURL, checkoutID, displayToken)), locale);
+  const cardPNGURL = localizeCardURL(absolutePublicURL3(config.baseURL, checkout.card_png_url ?? checkout.qr_png_url ?? fallbackCardPNGURL2(config.baseURL, checkoutID, displayToken)), locale);
   const plan = buildCheckoutQRPlan({
-    host: options.host ?? "terminal",
+    host,
     checkoutID,
     checkoutURL,
+    cardURL,
     displayToken,
     qrPayload: checkout.qr_payload,
-    ...checkout.qr_png_url ? { qrPNGURL: checkout.qr_png_url } : {},
+    qrPNGURL: cardPNGURL,
     nextAction: checkout.checkout.next_action,
     orderItems: response.cart.items.map((item) => ({
       title: item.title,
@@ -11349,7 +11634,8 @@ async function runServicesCheckout(backend, config, serviceExecutionID, capabili
       currency: item.currency
     })),
     orderCurrency: checkout.checkout.currency,
-    ...options.agentType ? { agentType: options.agentType } : {}
+    ...options.agentType ? { agentType: options.agentType } : {},
+    locale
   });
   options.persistHandoff?.({
     serviceExecutionID,
@@ -11359,9 +11645,9 @@ async function runServicesCheckout(backend, config, serviceExecutionID, capabili
     checkoutURL
   });
   const platform = platformKeyForHost(plan.host);
-  if (platform === "telegram" || platform === "feishu" || platform === "lark") {
+  if (!options.jsonOutput && (platform === "telegram" || platform === "feishu" || platform === "lark")) {
     await dispatchRender(plan, {
-      host: options.host ?? "terminal",
+      host,
       ...options.target ? { target: options.target } : {},
       ...options.qrFormat ? { qrFormat: options.qrFormat } : {},
       ...options.qrFilePath ? { qrFilePath: options.qrFilePath } : {},
@@ -11378,7 +11664,7 @@ async function runServicesCheckout(backend, config, serviceExecutionID, capabili
       ...options.fetchImpl ? { fetchImpl: options.fetchImpl } : {}
     });
   }
-  const envelope = buildServicesCheckoutEnvelope(response, checkoutURL, plan, config.baseURL, options.agentType);
+  const envelope = buildServicesCheckoutEnvelope(response, checkoutURL, plan, options.agentType, options.target);
   const plainResult = [
     `service_execution_id: ${response.binding.service_execution_id}`,
     `checkout_id: ${checkoutID}`,
@@ -11612,28 +11898,33 @@ function servicesNextEnvelope(model) {
         delivery_mode: deliveryMode,
         items
       },
-      instruction: items.length > 0 ? selection ? "Agent-visible \u641C\u7D22\u5DF2\u5B8C\u6210\u3002\u5411\u7528\u6237\u5C55\u793A items \u4E2D\u7684\u7F16\u53F7\u3001title \u548C safe_payload\uFF0C\u7136\u540E\u505C\u6B62\uFF1B\u4E0D\u8981\u8C03\u7528 read-result\u3002\u53EA\u6709\u7528\u6237\u660E\u786E\u9009\u62E9\u5019\u9009\u5E76\u8981\u6C42\u7EE7\u7EED\u65F6\uFF0C\u624D\u6267\u884C next.command\u3002" : "\u8FD9\u662F\u5F53\u524D Graph \u6B65\u9AA4\u5BF9\u5E94\u7684\u4EA4\u4ED8\uFF1B\u7ED3\u679C\u5DF2\u53EF\u4F9B Agent \u4F7F\u7528\uFF0C\u53EA\u4F7F\u7528 safe_payload\u3002" : "Agent-visible \u4EA4\u4ED8\u5DF2\u5B8C\u6210\u4F46\u6CA1\u6709\u7ED3\u679C\u9879\uFF1B\u4E0D\u8981\u8C03\u7528 read-result \u6216\u91CD\u653E\u5F53\u524D execution\u3002",
+      instruction: items.length > 0 ? selection ? "Agent-visible \u641C\u7D22\u5DF2\u5B8C\u6210\u3002\u5411\u7528\u6237\u5C55\u793A items \u4E2D\u7684\u7F16\u53F7\u3001title \u548C safe_payload\uFF0C\u7136\u540E\u505C\u6B62\uFF1B\u4E0D\u8981\u8C03\u7528 read-result\u3002\u53EA\u6709\u7528\u6237\u660E\u786E\u9009\u62E9\u5019\u9009\u5E76\u8981\u6C42\u7EE7\u7EED\u65F6\uFF0C\u624D\u6267\u884C next.command\u3002" : "\u8FD9\u662F\u5F53\u524D Graph \u6B65\u9AA4\u5BF9\u5E94\u7684\u4EA4\u4ED8\uFF1B\u7ED3\u679C\u5DF2\u53EF\u4F9B Agent \u4F7F\u7528\uFF0C\u53EA\u4F7F\u7528 safe_payload\u3002" : "Agent-visible \u4EA4\u4ED8\u5DF2\u5B8C\u6210\u4F46\u6709 0 \u4E2A\u7ED3\u679C\u3002\u5411\u7528\u6237\u5C55\u793A\u7A7A\u7ED3\u679C\u5E76\u505C\u6B62\uFF1B\u4E0D\u8981\u8C03\u7528 read-result\u3001\u91CD\u653E\u5F53\u524D Execution\u3001\u4FEE\u6539\u8F93\u5165\u6216\u521B\u5EFA\u65B0 Execution\u3002",
       next: selection ? {
         command: `itpay services action ${execution.service_execution_id} --action select_candidate --actor-type human --status approved --candidate <rank> --json`,
         reason: "\u4EC5\u5728\u7528\u6237\u660E\u786E\u9009\u62E9\u540E\u9501\u5B9A\u6765\u6E90\u5019\u9009"
       } : null,
-      recovery: items.length > 0 ? [] : [{ command: `itpay services get ${execution.service_execution_id} --json`, reason: "\u68C0\u67E5\u4EA4\u4ED8\u65F6\u95F4\u7EBF" }]
+      recovery: []
     };
   }
   if (deliveryMode === "vault_artifact") {
     const grantStatus = normalizeGrantStatus(delivery?.grant_status);
     const grantActive = grantStatus === "active";
+    const grantPending = grantStatus === "pending";
     return {
-      status: grantActive ? "grant_active" : "human_authorization_required",
+      status: grantActive ? "grant_active" : grantPending ? "result_preparing" : "human_authorization_required",
       result: {
         service_execution_id: execution.service_execution_id,
         ...delivery?.capability_id ? { capability_id: delivery.capability_id } : {},
         delivery_mode: deliveryMode,
         grant_status: grantStatus,
+        ...delivery?.preparation ? { preparation: delivery.preparation } : {},
         ...grantActive && delivery?.grant_expires_at ? { grant_expires_at: delivery.grant_expires_at } : {}
       },
-      instruction: grantActive ? "\u8FD9\u662F\u5F53\u524D Graph \u6B65\u9AA4\u5BF9\u5E94\u7684\u4EA4\u4ED8\uFF1B\u7528\u6237\u6388\u6743\u6709\u6548\uFF0C\u7ACB\u5373\u8BFB\u53D6\u5E76\u9075\u5B88\u5B57\u6BB5\u8303\u56F4\u4E0E\u5230\u671F\u65F6\u95F4\u3002" : "\u8FD9\u662F\u5F53\u524D Graph \u6B65\u9AA4\u5BF9\u5E94\u7684\u4EA4\u4ED8\uFF1B\u8BF7\u7528\u6237\u5728\u8BA2\u5355\u9875\u9762\u6388\u6743\uFF0C\u672A\u6388\u6743\u524D\u4E0D\u8981\u8BFB\u53D6\u6216\u731C\u6D4B\u5185\u5BB9\u3002",
-      next: {
+      instruction: grantActive ? "\u8FD9\u662F\u5F53\u524D Graph \u6B65\u9AA4\u5BF9\u5E94\u7684\u4EA4\u4ED8\uFF1B\u7528\u6237\u6388\u6743\u6709\u6548\uFF0C\u7ACB\u5373\u8BFB\u53D6\u5E76\u9075\u5B88\u5B57\u6BB5\u8303\u56F4\u4E0E\u5230\u671F\u65F6\u95F4\u3002" : grantPending ? "\u7528\u6237\u5DF2\u7ECF\u5B8C\u6210\u6388\u6743\uFF0C\u670D\u52A1\u7AEF\u6B63\u5728\u6309\u5DF2\u53D1\u5E03\u6267\u884C\u56FE\u51C6\u5907\u4EA4\u4ED8\u5185\u5BB9\u3002\u4E0D\u8981\u518D\u6B21\u4ED8\u6B3E\u3001\u518D\u6B21\u6388\u6743\u3001\u65B0\u5EFA Execution \u6216\u8C03\u7528 read-result\uFF1B\u53EA\u6267\u884C next.command \u67E5\u8BE2\u540C\u4E00 Execution\u3002" : "\u8FD9\u662F\u5F53\u524D Graph \u6B65\u9AA4\u5BF9\u5E94\u7684\u4EA4\u4ED8\uFF1B\u8BF7\u7528\u6237\u5728\u8BA2\u5355\u9875\u9762\u6388\u6743\uFF0C\u672A\u6388\u6743\u524D\u4E0D\u8981\u8BFB\u53D6\u6216\u731C\u6D4B\u5185\u5BB9\u3002",
+      next: grantPending ? {
+        command: `itpay services next ${execution.service_execution_id} --json`,
+        reason: "\u7B49\u5F85\u540C\u4E00 Execution \u7684\u4EA4\u4ED8\u51C6\u5907\u5B8C\u6210"
+      } : {
         command: `itpay services read-result ${execution.service_execution_id} --json`,
         reason: grantActive ? "\u8BFB\u53D6\u5F53\u524D\u6709\u6548 grant \u7684\u7ED3\u679C" : "\u4EC5\u5728\u7528\u6237\u786E\u8BA4\u6388\u6743\u540E\u6267\u884C"
       },
@@ -11653,7 +11944,7 @@ function servicesNextEnvelope(model) {
           phase: execution.phase,
           checkout: continuation.checkout
         },
-        instruction: purchaseConfirmationInstruction(execution.status === "quota_exhausted" ? "quota_exhausted" : "candidate_selected", continuation.price, continuation.capability.delivery_email_required),
+        instruction: purchaseConfirmationInstruction(execution.status === "quota_exhausted" ? "quota_exhausted" : "candidate_selected", continuation.price, continuation.capability.delivery_email_required, continuation.capability.delivery_email_purpose),
         next: continuation.next,
         recovery: []
       };
@@ -11821,16 +12112,18 @@ function parseValue(value) {
     return Number(value);
   return value;
 }
-function buildServicesCheckoutEnvelope(response, checkoutURL, plan, baseURL, agentType) {
+function buildServicesCheckoutEnvelope(response, checkoutURL, plan, agentType, target) {
   const checkout = response.checkout;
   const platform = platformKeyForHost(plan.host);
   const amount = formatMoney3(checkout.checkout.amount_minor, checkout.checkout.currency);
   const presentationHandoff = buildCheckoutHandoff({
     platform,
-    url: checkoutURL,
+    url: plan.linkOnlyURL ?? checkoutURL,
     amount,
+    plan,
     ...agentType ? { agentType } : {},
-    ...checkout.qr_png_url ? { qrImageURL: absolutePublicURL3(baseURL, checkout.qr_png_url) } : {},
+    ...target ? { target } : {},
+    ...plan.preferredQRSources[0] ? { qrImageURL: plan.preferredQRSources[0] } : {},
     ...plan.ideImageAttach?.status === "downloaded" && plan.ideImageAttach.localPath ? { localPath: plan.ideImageAttach.localPath } : {},
     ...platform === "markdown" ? { markdown: buildAgentChatHandoff(plan).markdown } : {}
   });
@@ -11846,11 +12139,18 @@ function buildServicesCheckoutEnvelope(response, checkoutURL, plan, baseURL, age
     handoff: presentationHandoff.handoff,
     instruction: presentationHandoff.instruction,
     next: {
-      command: `itpay checkout --id ${checkout.checkout.checkout_id} --token ${checkout.display_token} --json`,
+      command: plan.afterActionCommand ?? `itpay checkout --id ${checkout.checkout.checkout_id} --token ${checkout.display_token} --json`,
       reason: "\u4EC5\u5728\u7528\u6237\u5B8C\u6210\u4ED8\u6B3E\u64CD\u4F5C\u6216\u8981\u6C42\u67E5\u8BE2\u540E\uFF0C\u8BFB\u53D6\u540C\u4E00 Checkout \u7684\u6743\u5A01\u72B6\u6001"
     },
     recovery: []
   };
+}
+function fallbackCardURL2(baseURL, checkoutID, displayToken) {
+  const root = baseURL.replace(/\/$/, "");
+  return `${root}/v1/checkouts/${encodeURIComponent(checkoutID)}/card?display_token=${encodeURIComponent(displayToken)}`;
+}
+function fallbackCardPNGURL2(baseURL, checkoutID, displayToken) {
+  return `${fallbackCardURL2(baseURL, checkoutID, displayToken)}.png`.replace("/card?", "/card.png?");
 }
 function checkoutCapabilityID(response, fallback = "") {
   return response.capability_id || fallback;
@@ -11891,13 +12191,20 @@ function tokenizedCheckoutURL2(checkoutURL, displayToken, qrPayload) {
   }
 }
 
-// dist/src/main.js
+// ../../../../../../tmp/itpay-platform-bundle-JhDtp1/node_modules/@itpay/cli/dist/src/main.js
 var program2 = new Command();
-program2.name("itpay").description("V3 ItPay CLI \u2014 checkout, payment, order, and refund commands").option("--agent-type <type>", "agent runtime type used for device enrollment and client-specific guidance").version(CLI_VERSION);
-function withHost(value) {
-  const host = normalizeHost(value);
+program2.name("itpay").description("V3 ItPay CLI \u2014 one entry point for buy workflows and future sell workflows").option("--agent-type <type>", "agent runtime type used for device enrollment and client-specific guidance").version(CLI_VERSION);
+function withHost(value, agentType, target) {
+  if (!value && agentType?.trim().toLowerCase() === "openclaw") {
+    throw new CommandContractError("host_required", "OpenClaw requires an explicit --host entry", "\u4ECE\u5F53\u524D\u53EF\u4FE1 OpenClaw \u4F1A\u8BDD\u4E0A\u4E0B\u6587\u4F20\u5165 --host\uFF1BIM \u5165\u53E3\u540C\u65F6\u4F20 --target\u3002\u672C\u6B21\u672A\u521B\u5EFA\u6216\u4FEE\u6539\u8D44\u6E90\u3002", []);
+  }
+  const host = normalizeHost(value ?? defaultHostForAgentType(agentType));
   if (!host) {
-    throw new Error(`invalid --host "${value ?? ""}". Supported: terminal, codex, claude-code, telegram, discord, whatsapp, feishu, lark, plain-chat`);
+    throw new CommandContractError("invalid_host", `invalid --host "${value ?? ""}". Supported: terminal, codex, claude-code, telegram, discord, whatsapp, feishu, lark, plain-chat`, "\u4F20\u5165\u53D7\u652F\u6301\u7684\u5C55\u793A Host\uFF1B\u672C\u6B21\u672A\u521B\u5EFA\u6216\u4FEE\u6539\u8D44\u6E90\u3002", []);
+  }
+  const contextError = agentType?.trim().toLowerCase() === "openclaw" ? validateContext(host, target) : void 0;
+  if (contextError) {
+    throw new CommandContractError(contextError.code, contextError.message, "\u4ECE\u5F53\u524D\u53EF\u4FE1\u4F1A\u8BDD\u4E0A\u4E0B\u6587\u8865\u9F50 --target\uFF1B\u672C\u6B21\u672A\u521B\u5EFA\u6216\u4FEE\u6539\u8D44\u6E90\u3002", []);
   }
   return host;
 }
@@ -11944,36 +12251,67 @@ function resolveCheckoutPresentationArgs(input) {
 }
 function reportCLIError(error, contract) {
   const commandError = error instanceof CommandContractError ? error : void 0;
+  const backendOverrideError = error instanceof BackendOverrideError ? error : void 0;
   const deviceError = error instanceof DeviceAuthorizationError ? error : void 0;
   const stateError = error instanceof DeviceStateError ? error : void 0;
+  const transportError = error instanceof HttpTransportError ? error : void 0;
   const httpRecovery = errorRecoveryActions(error).map((action) => ({
     command: action.command,
     reason: action.reason ?? action.label
   }));
   const identityRecovery = error instanceof HttpError && (error.code === "agent_identity_required" || error.code === "agent_device_session_required");
   const incompatible = error instanceof HttpError && (error.code === "client_upgrade_required" || error.code === "client_compatibility_headers_required" || error.code === "platform_release_unavailable" || error.status === 404 && error.code === "unknown_error");
+  const requiredCLIVersion = incompatible && error instanceof HttpError && /^\d+\.\d+\.\d+$/.test(error.payload?.minimum_cli_version ?? "") ? error.payload.minimum_cli_version : void 0;
   const backendInternal = error instanceof HttpError && error.status === 500 && error.code === "internal_error";
+  const providerConnectionUnavailable = error instanceof HttpError && error.code === "provider_connection_unavailable";
+  const providerTemporary = error instanceof HttpError && error.code === "provider_temporarily_unavailable";
+  const providerRejected = error instanceof HttpError && error.code === "provider_rejected";
+  const providerInputRejected = error instanceof HttpError && error.code === "provider_input_rejected";
+  const providerContractMismatch = error instanceof HttpError && error.code === "provider_contract_mismatch";
+  const capabilityInputInvalid = error instanceof HttpError && error.code === "capability_input_invalid";
   const deviceRecovery = deviceError ? [{
-    command: "itpay skill show itpay-buyer --json",
-    reason: "\u8BFB\u53D6\u8EAB\u4EFD\u8FB9\u754C\uFF1B\u8BE5\u9519\u8BEF\u9700\u8981\u7528\u6237\u6216\u8FD0\u8425\u6062\u590D Backend \u767B\u8BB0\uFF0C\u4E0D\u80FD\u901A\u8FC7\u6362\u7C7B\u578B\u6216\u5220\u9664\u672C\u5730\u8EAB\u4EFD\u7ED5\u8FC7"
+    command: "itpay skill show itpay --json",
+    reason: "\u8BFB\u53D6 ItPay \u8EAB\u4EFD\u8FB9\u754C\uFF1B\u8BE5\u9519\u8BEF\u9700\u8981\u7528\u6237\u6216\u8FD0\u8425\u6062\u590D Backend \u767B\u8BB0\uFF0C\u4E0D\u80FD\u901A\u8FC7\u6362\u7C7B\u578B\u6216\u5220\u9664\u672C\u5730\u8EAB\u4EFD\u7ED5\u8FC7"
   }] : [];
   const stateRecovery = stateError ? [{
-    command: "itpay skill show itpay-buyer --json",
+    command: "itpay skill show itpay --json",
     reason: "\u8BFB\u53D6 Device \u72B6\u6001\u8FB9\u754C\uFF1B\u4FEE\u590D\u5F53\u524D Host \u7684\u6301\u4E45\u5199\u6743\u9650\u540E\u91CD\u8BD5\u539F\u547D\u4EE4"
   }] : [];
   const authorizationInstruction = stateError ? "\u5F53\u524D\u8FD0\u884C\u73AF\u5883\u65E0\u6CD5\u5199\u5165 owner-only Device \u72B6\u6001\uFF1B\u8BF7\u4FDD\u6301\u540C\u4E00 Node\u3001CLI \u548C Agent Type\uFF0C\u5728\u5141\u8BB8\u6301\u4E45\u5199\u5165 ~/.itpay-v3 \u7684\u6267\u884C\u73AF\u5883\u4E2D\u91CD\u8BD5\u3002\u4E0D\u8981\u624B\u5DE5\u521B\u5EFA lock\u3001\u5220\u9664 identity \u6216\u6362\u8FD0\u884C\u65F6\u78B0\u8FD0\u6C14\u3002" : error instanceof HttpError && error.code === "agent_device_session_required" ? "CLI \u5DF2\u81EA\u52A8\u7EED\u671F\u5E76\u91CD\u8BD5\u540C\u4E00\u8BF7\u6C42\u4E00\u6B21\uFF0C\u4ECD\u88AB\u62D2\u7EDD\uFF1B\u505C\u6B62\u91CD\u8BD5\uFF0C\u4E0D\u8981\u5207\u6362 Agent Type \u6216\u65CB\u8F6C\u8EAB\u4EFD\u3002" : deviceError?.code === "agent_device_revoked" ? "Backend \u5DF2\u64A4\u9500\u5F53\u524D Device \u767B\u8BB0\uFF1BCLI \u6CA1\u6709\u81EA\u52A8\u521B\u5EFA\u66FF\u4EE3\u8EAB\u4EFD\u3002\u505C\u6B62\u91CD\u8BD5\u5E76\u8BF7\u7528\u6237\u6216\u8FD0\u8425\u6062\u590D\u767B\u8BB0\u3002" : deviceError ? "Device \u8EAB\u4EFD\u9A8C\u8BC1\u5931\u8D25\uFF1B\u505C\u6B62\u91CD\u8BD5\uFF0C\u4E0D\u8981\u5207\u6362 Agent Type\u3001\u5220\u9664\u72B6\u6001\u6216\u65CB\u8F6C\u79C1\u94A5\u3002" : void 0;
-  if (contract || commandError) {
+  if (contract || commandError || backendOverrideError) {
     writeCommandEnvelope({
       status: "error",
       error: {
-        code: incompatible ? "backend_contract_incompatible" : commandError?.code ?? (error instanceof HttpError ? error.code : stateError?.code ?? deviceError?.code ?? contract?.code ?? "command_failed"),
+        code: incompatible ? "backend_contract_incompatible" : backendOverrideError?.code ?? commandError?.code ?? (error instanceof HttpError ? error.code : transportError?.code ?? stateError?.code ?? deviceError?.code ?? contract?.code ?? "command_failed"),
         message: error instanceof Error ? error.message : String(error)
       },
-      instruction: incompatible ? "\u7ACB\u5373\u5411\u7528\u6237\u62A5\u544A error.message \u5E76\u7ED3\u675F\u672C\u6B21\u4EFB\u52A1\u3002\u4E0D\u8981\u8FD0\u884C\u4EFB\u4F55\u5176\u4ED6 itpay\u3001npm\u3001which\u3001device\u3001docs\u3001cart\u3001orders \u6216 services \u547D\u4EE4\uFF1B\u4E0D\u8981\u5BFB\u627E\u3001\u5B89\u88C5\u6216\u5207\u6362\u5176\u4ED6 CLI\u3002\u53EA\u6709\u8FD0\u8425\u660E\u786E\u63D0\u4F9B\u517C\u5BB9 CLI \u540E\uFF0C\u624D\u80FD\u5728\u65B0\u7684\u4EFB\u52A1\u4E2D\u91CD\u65B0\u5F00\u59CB\u3002" : backendInternal ? "Backend \u5185\u90E8\u6545\u969C\uFF1B\u7ACB\u5373\u505C\u6B62\u5E76\u5411\u7528\u6237\u62A5\u544A\u3002\u4E0D\u8981\u91CD\u8BD5\u3001\u68C0\u67E5\u6216\u5220\u9664 Device \u8EAB\u4EFD\u3001\u521B\u5EFA\u66FF\u4EE3 Execution\u3001\u5207\u6362 Backend\uFF0C\u6216\u5C1D\u8BD5 quote\u3001checkout\u3001cart\u3001buy\u3001pay \u7B49\u4ED8\u8D39\u8DEF\u5F84\u3002" : commandError?.instruction ?? authorizationInstruction ?? contract?.instruction ?? "\u68C0\u67E5\u547D\u4EE4\u53C2\u6570\u540E\u91CD\u8BD5\u3002",
+      ...requiredCLIVersion ? {
+        result: {
+          current_cli_version: CLI_VERSION,
+          required_cli_version: requiredCLIVersion
+        }
+      } : transportError ? {
+        result: {
+          attempts: transportError.attempts,
+          automatic_retry_performed: transportError.attempts > 1
+        }
+      } : error instanceof HttpError && error.payload?.service_execution_id ? {
+        result: {
+          service_execution_id: error.payload.service_execution_id,
+          provider_called: error.payload.provider_called === true,
+          ...error.payload.effective_quota ? {
+            quota: {
+              remaining: error.payload.effective_quota.remaining,
+              limit: error.payload.effective_quota.limit
+            }
+          } : {}
+        }
+      } : {},
+      instruction: incompatible ? requiredCLIVersion ? distributionUpgradeInstruction() : "\u7ACB\u5373\u5411\u7528\u6237\u62A5\u544A error.message \u5E76\u7ED3\u675F\u672C\u6B21\u4EFB\u52A1\u3002Backend \u672A\u63D0\u4F9B\u53EF\u9A8C\u8BC1\u7684\u517C\u5BB9 CLI \u7248\u672C\uFF1B\u4E0D\u8981\u8FD0\u884C\u5176\u4ED6 ItPay \u6216 npm \u547D\u4EE4\uFF0C\u4E0D\u8981\u731C\u6D4B\u7248\u672C\u3001\u5207\u6362 Agent Type \u6216\u5220\u9664 Device \u8EAB\u4EFD\u3002" : backendInternal ? "Backend \u5185\u90E8\u6545\u969C\uFF1B\u7ACB\u5373\u505C\u6B62\u5E76\u5411\u7528\u6237\u62A5\u544A\u3002\u4E0D\u8981\u91CD\u8BD5\u3001\u68C0\u67E5\u6216\u5220\u9664 Device \u8EAB\u4EFD\u3001\u521B\u5EFA\u66FF\u4EE3 Execution\u3001\u5207\u6362 Backend\uFF0C\u6216\u5C1D\u8BD5 quote\u3001checkout\u3001cart\u3001buy\u3001pay \u7B49\u4ED8\u8D39\u8DEF\u5F84\u3002" : providerConnectionUnavailable ? "Provider \u8BF7\u6C42\u672A\u53D1\u51FA\uFF0C\u9884\u7559\u514D\u8D39\u989D\u5EA6\u5DF2\u91CA\u653E\uFF1B\u5F53\u524D Execution \u5DF2\u5931\u8D25\u3002\u7ACB\u5373\u5411\u7528\u6237\u62A5\u544A error.message \u5E76\u505C\u6B62\uFF0C\u4E0D\u8981\u81EA\u52A8\u91CD\u8BD5\u3001\u4E0D\u8981\u7EE7\u7EED\u540C\u4E00 Execution\uFF0C\u4E5F\u4E0D\u8981\u8FDB\u5165\u4EFB\u4F55\u4ED8\u8D39\u8DEF\u5F84\u3002\u53EA\u6709\u8FD0\u8425\u786E\u8BA4\u8FDE\u63A5\u6062\u590D\u4E14\u7528\u6237\u660E\u786E\u8981\u6C42\u91CD\u65B0\u67E5\u8BE2\u540E\uFF0C\u624D\u542F\u52A8\u65B0\u7684 Service Execution\u3002" : providerTemporary ? "\u4E0A\u6E38\u670D\u52A1\u6682\u65F6\u4E0D\u53EF\u7528\uFF1B\u5411\u7528\u6237\u9010\u5B57\u62A5\u544A error.message \u548C result.quota \u5E76\u505C\u6B62\uFF0C\u4E0D\u8981\u81EA\u52A8\u91CD\u8BD5\u3001\u4E0D\u8981\u521B\u5EFA\u65B0 Execution\u3002\u53EA\u6709\u7528\u6237\u4E4B\u540E\u660E\u786E\u63D0\u51FA\u65B0\u8BF7\u6C42\uFF0C\u624D\u53EF\u91CD\u65B0\u5F00\u59CB\u3002" : providerInputRejected ? `Provider \u660E\u786E\u62D2\u7EDD\u4E86\u8BE5\u8F93\u5165\uFF1A${error instanceof Error ? error.message : String(error)}\u3002\u8BF7\u5411\u7528\u6237\u62A5\u544A error.message \u548C result.quota \u5E76\u505C\u6B62\u3002\u4E0D\u8981\u81EA\u884C\u4FEE\u6539\u8F93\u5165\u3001\u4E0D\u8981\u91CD\u8BD5\u3001\u4E0D\u8981\u521B\u5EFA\u65B0 Execution\uFF1B\u53EA\u6709\u7528\u6237\u660E\u786E\u63D0\u4F9B\u65B0\u8F93\u5165\u540E\u624D\u80FD\u91CD\u65B0\u67E5\u8BE2\u3002` : providerContractMismatch ? "Provider \u54CD\u5E94\u4E0E\u5DF2\u53D1\u5E03\u5951\u7EA6\u4E0D\u4E00\u81F4\u3002\u8FD9\u4E0D\u662F\u7528\u6237\u8F93\u5165\u95EE\u9898\u3002\u7ACB\u5373\u505C\u6B62\uFF0C\u4E0D\u8981\u4FEE\u6539\u8F93\u5165\u3001\u4E0D\u8981\u91CD\u8BD5\u3001\u4E0D\u8981\u521B\u5EFA\u65B0 Execution\uFF0C\u4E5F\u4E0D\u8981\u8FDB\u5165\u4ED8\u8D39\u8DEF\u5F84\uFF1B\u5411\u7528\u6237\u62A5\u544A\u5E73\u53F0\u6545\u969C\u548C result.quota\u3002" : providerRejected ? "Provider \u62D2\u7EDD\u4E86\u672C\u6B21\u8BF7\u6C42\uFF0C\u4F46\u672A\u58F0\u660E\u8FD9\u662F\u8F93\u5165\u9519\u8BEF\uFF1B\u5411\u7528\u6237\u9010\u5B57\u62A5\u544A error.message \u548C result.quota \u5E76\u505C\u6B62\u3002\u4E0D\u8981\u4FEE\u6539\u8F93\u5165\u3001\u4E0D\u8981\u91CD\u8BD5\u3001\u4E0D\u8981\u521B\u5EFA\u65B0 Execution\u3002" : capabilityInputInvalid ? "\u8F93\u5165\u672A\u901A\u8FC7\u672C\u5730\u6821\u9A8C\uFF0C\u4E0A\u6E38\u5C1A\u672A\u88AB\u8C03\u7528\u4E14\u7528\u6237\u989D\u5EA6\u672A\u53D8\u5316\u3002\u5411\u7528\u6237\u9010\u5B57\u62A5\u544A error.message \u5E76\u505C\u6B62\uFF0C\u4E0D\u8981\u539F\u6837\u91CD\u8BD5\u6216\u8FD0\u884C\u5176\u4ED6\u6062\u590D\u547D\u4EE4\u3002\u7528\u6237\u63D0\u4F9B\u4FEE\u6B63\u540E\u7684\u8F93\u5165\u540E\uFF0C\u7EE7\u7EED\u4F7F\u7528\u5F53\u524D\u672A\u7ED3\u675F\u7684 Execution\u3002" : transportError ? transportError.attempts > 1 ? "\u4E34\u65F6\u7F51\u7EDC\u6545\u969C\uFF1BCLI \u5DF2\u4EC5\u5BF9\u53EF\u5B89\u5168\u91CD\u653E\u7684\u64CD\u4F5C\u5B8C\u6210\u6709\u9650\u81EA\u52A8\u91CD\u8BD5\uFF0C\u4F46\u4ECD\u672A\u83B7\u5F97\u5B8C\u6574\u54CD\u5E94\u3002\u6309 recovery \u67E5\u8BE2\u540C\u4E00\u8D44\u6E90\u7684\u6743\u5A01\u72B6\u6001\uFF1B\u4E0D\u8981\u521B\u5EFA\u66FF\u4EE3 Checkout\u3001Execution\u3001Payment \u6216 Refund\u3002" : "\u7F51\u7EDC\u5728\u5B8C\u6574\u54CD\u5E94\u524D\u4E2D\u65AD\uFF1B\u5F53\u524D\u5199\u64CD\u4F5C\u6CA1\u6709\u5B89\u5168\u91CD\u653E\u5408\u540C\uFF0C\u56E0\u6B64 CLI \u672A\u81EA\u52A8\u91CD\u8BD5\u3002\u6309 recovery \u67E5\u8BE2\u6743\u5A01\u72B6\u6001\uFF1B\u4E0D\u8981\u539F\u6837\u91CD\u653E\u6216\u521B\u5EFA\u66FF\u4EE3 Checkout\u3001Execution\u3001Payment \u6216 Refund\u3002" : backendOverrideError ? "\u79FB\u9664 ITPAY_BACKEND_URL \u4F7F\u7528\u6B63\u5F0F\u73AF\u5883\uFF0C\u6216\u51C6\u786E\u8BBE\u7F6E\u4E3A https://dev.itpay.ai\u3002" : commandError?.instruction ?? authorizationInstruction ?? contract?.instruction ?? "\u68C0\u67E5\u547D\u4EE4\u53C2\u6570\u540E\u91CD\u8BD5\u3002",
       next: null,
-      recovery: incompatible || backendInternal ? [] : commandError?.recovery ?? (stateError ? stateRecovery : deviceError ? deviceRecovery : identityRecovery ? httpRecovery : contract?.recovery ?? [])
+      recovery: incompatible ? requiredCLIVersion ? [distributionUpgradeAction(requiredCLIVersion)] : [] : backendInternal || providerConnectionUnavailable || providerTemporary || providerInputRejected || providerContractMismatch || providerRejected || capabilityInputInvalid ? [] : backendOverrideError ? [] : commandError?.recovery ?? (stateError ? stateRecovery : deviceError ? deviceRecovery : identityRecovery ? httpRecovery : contract?.recovery ?? [])
     }, {
-      ...contract?.jsonOutput !== void 0 ? { jsonOutput: contract.jsonOutput } : {},
+      ...contract?.jsonOutput !== void 0 ? { jsonOutput: contract.jsonOutput } : backendOverrideError ? { jsonOutput: process.argv.includes("--json") } : {},
       output: (text) => {
         process.stderr.write(text);
       }
@@ -11985,6 +12323,12 @@ function reportCLIError(error, contract) {
     process.stderr.write(`[${error.status}] ${error.code}: ${error.message}
 `);
     printErrorRecovery(error, (text) => process.stderr.write(text));
+    process.exitCode = 1;
+    return;
+  }
+  if (error instanceof HttpTransportError) {
+    process.stderr.write(`[${error.code}] ${error.message}
+`);
     process.exitCode = 1;
     return;
   }
@@ -12000,34 +12344,56 @@ function docsErrorFallback(jsonOutput) {
   return {
     jsonOutput,
     code: "docs_unavailable",
-    instruction: "\u5185\u7F6E\u6587\u6863\u7F3A\u5931\u6216\u635F\u574F\uFF1B\u91CD\u65B0\u5B89\u88C5\u540C\u7248\u672C CLI \u540E\u91CD\u8BD5\u3002",
-    recovery: [{ command: `npm install -g @itpay/cli@${CLI_VERSION}`, reason: "\u6062\u590D\u968F\u5305\u53D1\u5E03\u7684\u6587\u6863" }]
+    instruction: "\u5185\u7F6E\u6587\u6863\u7F3A\u5931\u6216\u635F\u574F\uFF1B\u901A\u8FC7\u5F53\u524D\u5206\u53D1\u65B9\u5F0F\u6062\u590D\u540C\u7248\u672C CLI \u540E\u91CD\u8BD5\u3002",
+    recovery: [distributionUpgradeAction(CLI_VERSION)]
   };
+}
+function distributionUpgradeAction(version) {
+  switch (cliDistribution()) {
+    case "openclaw-skill-bundle":
+      return { command: "openclaw skills update itpay", reason: `\u66F4\u65B0\u5305\u542B ItPay CLI ${version} \u7684 Skill bundle` };
+    case "kimi-plugin-bundle":
+      return {
+        command: "/plugins install https://github.com/itpay-ai/itpay-plugin-kimi-work",
+        reason: `\u66F4\u65B0\u5305\u542B ItPay CLI ${version} \u7684 Kimi plugin`
+      };
+    default:
+      return { command: `npm install -g @itpay/cli@${version}`, reason: "\u5B89\u88C5 Backend \u6307\u5B9A\u7684\u517C\u5BB9 CLI \u7248\u672C" };
+  }
+}
+function distributionUpgradeInstruction() {
+  if (cliDistribution() === "npm") {
+    return "\u5F53\u524D CLI \u4E0E Backend \u5408\u7EA6\u4E0D\u517C\u5BB9\u3002\u505C\u6B62\u6240\u6709 ItPay \u4E1A\u52A1\u547D\u4EE4\uFF1B\u53EA\u6267\u884C recovery.command\uFF0C\u5C06 @itpay/cli \u66F4\u65B0\u5230 Backend \u6307\u5B9A\u7684\u7CBE\u786E\u7248\u672C\u3002\u5B89\u88C5\u5B8C\u6210\u540E\u786E\u8BA4 itpay --version \u4E0E result.required_cli_version \u5B8C\u5168\u4E00\u81F4\uFF0C\u518D\u91CD\u65B0\u8FD0\u884C readyz\u3002\u4E0D\u8981\u5B89\u88C5 latest\u3001\u731C\u6D4B\u7248\u672C\u3001\u5207\u6362 Agent Type \u6216\u5220\u9664 Device \u8EAB\u4EFD\u3002";
+  }
+  return "\u5F53\u524D\u5E73\u53F0 bundle \u4E0E Backend \u5408\u7EA6\u4E0D\u517C\u5BB9\u3002\u505C\u6B62\u6240\u6709 ItPay \u4E1A\u52A1\u547D\u4EE4\uFF1B\u53EA\u6267\u884C recovery.command\uFF0C\u66F4\u65B0\u5E73\u53F0 Skill/plugin \u540E\u542F\u52A8\u65B0\u4F1A\u8BDD\uFF0C\u786E\u8BA4 itpay --version \u4E0E result.required_cli_version \u5B8C\u5168\u4E00\u81F4\uFF0C\u518D\u91CD\u65B0\u8FD0\u884C readyz\u3002\u4E0D\u8981\u8FD0\u884C npm\u3001\u731C\u6D4B\u7248\u672C\u3001\u5207\u6362 Agent Type \u6216\u5220\u9664 Device \u8EAB\u4EFD\u3002";
 }
 program2.command("readyz").description("Probe the V3 backend readiness endpoint").option("--json", "output JSON instead of terminal text").action(async (options) => {
   const config = loadConfig();
   const backend = newBackendClient(config);
   try {
-    await requirePlatformCompatibility(backend);
-    await runReadyz(backend, { jsonOutput: Boolean(options.json), ...config.agentType ? { agentType: config.agentType } : {} });
+    await runReadyz(backend, {
+      jsonOutput: Boolean(options.json),
+      backendURL: config.baseURL,
+      environment: config.environment,
+      ...config.agentType ? { agentType: config.agentType } : {}
+    });
   } catch (error) {
     reportCLIError(error, {
       jsonOutput: Boolean(options.json),
       code: "backend_unavailable",
-      instruction: "\u68C0\u67E5 ITPAY_BACKEND_URL \u540E\u91CD\u8BD5\uFF1B\u540E\u7AEF\u6062\u590D\u524D\u4E0D\u8981\u7EE7\u7EED\u4E0B\u5355\u3002",
+      instruction: `\u5F53\u524D\u5B98\u65B9 Backend ${config.baseURL} \u4E0D\u53EF\u7528\uFF1B\u6062\u590D\u524D\u4E0D\u8981\u7EE7\u7EED\u4E0B\u5355\uFF0C\u4E5F\u4E0D\u8981\u5207\u6362\u73AF\u5883\u3002`,
       recovery: [
-        { command: "echo $ITPAY_BACKEND_URL", reason: "\u786E\u8BA4\u5F53\u524D Backend URL" },
-        { command: "itpay readyz", reason: "\u91CD\u8BD5\u53EF\u7528\u6027\u68C0\u67E5" }
+        { command: "itpay readyz", reason: "\u91CD\u8BD5\u5F53\u524D\u5B98\u65B9 Backend \u7684\u53EF\u7528\u6027\u68C0\u67E5" }
       ]
     });
   }
 });
-var deviceCmd = program2.command("device").description("Recover local Device registration state after an operator-confirmed Backend reset");
-deviceCmd.command("recover").description("Forget only the selected Backend registration while preserving the local private key").option("--confirm-backend-reset", "confirm that an operator reset the selected Backend registration database").option("--json", "output JSON instead of terminal text").action(async (options) => {
+var deviceCmd = program2.command("device").description("Recover the current official Backend registration after an operator-confirmed reset");
+deviceCmd.command("recover").description("Forget only the current official Backend registration while preserving the local private key").option("--confirm-backend-reset", "confirm that an operator reset the selected Backend registration database").option("--json", "output JSON instead of terminal text").action(async (options) => {
   const config = loadConfig();
   try {
     if (!config.agentType) {
-      throw new CommandContractError("agent_type_required", "agent type is required for Backend-scoped Device recovery", "\u5982\u5B9E\u58F0\u660E\u5F53\u524D Agent Type\uFF1B\u6062\u590D\u540E\u5FC5\u987B\u7528\u540C\u4E00\u7C7B\u578B\u91CD\u65B0\u767B\u8BB0\u3002", [{ command: "itpay install --json", reason: "\u9009\u62E9\u5F53\u524D\u771F\u5B9E Agent Type" }]);
+      throw new CommandContractError("agent_type_required", `agent type is required for ${config.baseURL} Device recovery`, "\u5982\u5B9E\u58F0\u660E\u5F53\u524D Agent Type\uFF1B\u6062\u590D\u540E\u5FC5\u987B\u7528\u540C\u4E00\u7C7B\u578B\u91CD\u65B0\u767B\u8BB0\u3002", [{ command: "itpay install --json", reason: "\u9009\u62E9\u5F53\u524D\u771F\u5B9E Agent Type" }]);
     }
     if (!options.confirmBackendReset) {
       throw new CommandContractError("backend_reset_confirmation_required", "--confirm-backend-reset is required", "\u4EC5\u5728\u8FD0\u8425\u5DF2\u786E\u8BA4\u5F53\u524D Backend \u7684 Device \u767B\u8BB0\u6570\u636E\u5E93\u88AB\u91CD\u5EFA\u6216\u6E05\u7A7A\u540E\u6267\u884C\uFF1B\u666E\u901A session \u5931\u6548\u6216 revoked \u4E0D\u5F97\u4F7F\u7528\u3002", [{ command: "itpay docs show identity-and-sessions --json", reason: "\u68C0\u67E5\u9002\u7528\u8FB9\u754C" }]);
@@ -12078,8 +12444,8 @@ skillCmd.command("show").description("Show one complete packaged skill").argumen
     reportCLIError(error, {
       jsonOutput: Boolean(options.json),
       code: "skill_unavailable",
-      instruction: "\u5185\u7F6E Skill \u7F3A\u5931\u6216\u635F\u574F\uFF1B\u91CD\u65B0\u5B89\u88C5\u540C\u7248\u672C CLI \u540E\u91CD\u8BD5\u3002",
-      recovery: [{ command: `npm install -g @itpay/cli@${CLI_VERSION}`, reason: "\u6062\u590D\u968F\u5305\u53D1\u5E03\u7684 Skill" }]
+      instruction: "\u5185\u7F6E Skill \u7F3A\u5931\u6216\u635F\u574F\uFF1B\u901A\u8FC7\u5F53\u524D\u5206\u53D1\u65B9\u5F0F\u6062\u590D\u540C\u7248\u672C CLI \u540E\u91CD\u8BD5\u3002",
+      recovery: [distributionUpgradeAction(CLI_VERSION)]
     });
   }
 });
@@ -12186,7 +12552,7 @@ cart.command("add").description("Add a variant/offer/quantity to the canonical s
     if (options.local) {
       runCartAdd(session, { ...addOptions, jsonOutput });
     } else {
-      const host = withHost(options.host ?? defaultHostForAgentType(config.agentType));
+      const host = withHost(options.host, config.agentType, options.target);
       const contextError = validateContext(host, options.target);
       if (contextError) {
         throw new CommandContractError(contextError.code, contextError.message, "\u8865\u9F50\u5F53\u524D\u5BA2\u6237\u7AEF\u6240\u9700\u7684 Host/target\uFF1B\u672C\u6B21\u672A\u521B\u5EFA\u6216\u4FEE\u6539 Cart\u3002", [{ command: "itpay cart add --help", reason: "\u67E5\u770B\u5BA2\u6237\u7AEF\u53C2\u6570" }]);
@@ -12339,7 +12705,7 @@ cart.command("clear").description("Abandon the canonical server cart or explicit
     session.saveToFile(sessionPath);
   }
 });
-program2.command("buy").description("Create a V3 cart and checkout, then render the checkout QR for the host").option("--host <host>", "client host (terminal, telegram, feishu, lark, ...)").option("--target <target>", "chat id / channel id / open id for IM hosts").option("--item <catalog_item_id>").option("--variant <catalog_variant_id>").option("--offer <offer_id>").option("--cart <cart_id>", "existing canonical server cart id").option("--quantity <n>", "quantity", "1").option("--ref <client_reference_id>").option("--contact-email <email>").option("--contact-phone <phone>").option("--require-contact <fields>", "comma-separated required contact fields: email,phone").option("--qr-format <format>", "unicode|utf8|ansi|terminal").option("--qr-file <path>", "explicit QR file path").option("--pay", "also create a payment intent and optionally wait for verification").option("--method <alipay|wechatpay>", "payment method for --pay", "alipay").option("--no-wait", "do not wait for payment verification after --pay").option("--timeout <seconds>", "max seconds to wait for payment", "120").option("--json", "output JSON instead of terminal text").action(async (options) => {
+program2.command("buy").description("Create a V3 cart and checkout, then render the checkout QR for the host").option("--host <host>", "client host (terminal, telegram, feishu, lark, ...)").option("--target <target>", "chat id / channel id / open id for IM hosts").option("--item <catalog_item_id>").option("--variant <catalog_variant_id>").option("--offer <offer_id>").option("--cart <cart_id>", "existing canonical server cart id").option("--quantity <n>", "quantity", "1").option("--ref <client_reference_id>").option("--contact-email <email>").option("--contact-phone <phone>").option("--require-contact <fields>", "comma-separated required contact fields: email,phone").option("--qr-format <format>", "unicode|utf8|ansi|terminal").option("--qr-file <path>", "explicit QR file path").option("--locale <locale>", "payment card language: zh-CN|en", "zh-CN").option("--pay", "also create a payment intent and optionally wait for verification").option("--method <alipay|wechatpay>", "payment method for --pay", "alipay").option("--no-wait", "do not wait for payment verification after --pay").option("--timeout <seconds>", "max seconds to wait for payment", "120").option("--json", "output JSON instead of terminal text").action(async (options) => {
   const config = loadConfig();
   const backend = newBackendClient(config);
   const sessionPath = cartSessionPath();
@@ -12361,7 +12727,7 @@ program2.command("buy").description("Create a V3 cart and checkout, then render 
     }
     const quantity = positiveInteger(options.quantity, "--quantity");
     const timeout = positiveInteger(options.timeout, "--timeout");
-    const host = withHost(options.host ?? defaultHostForAgentType(config.agentType));
+    const host = withHost(options.host, config.agentType, options.target);
     const contact = {};
     if (options.contactEmail)
       contact.email = options.contactEmail;
@@ -12395,6 +12761,7 @@ program2.command("buy").description("Create a V3 cart and checkout, then render 
       ...requiredContactFields ? { requiredContactFields } : {},
       ...options.qrFormat ? { qrFormat: options.qrFormat } : {},
       ...options.qrFile ? { qrFilePath: options.qrFile } : {},
+      locale: options.locale,
       ...options.pay ? { pay: true, payMethod: options.method, noWait: options.wait === false, payTimeoutSec: timeout } : {},
       ...jsonOutput ? { jsonOutput: true } : {}
     };
@@ -12413,13 +12780,13 @@ program2.command("buy").description("Create a V3 cart and checkout, then render 
     session.saveToFile(sessionPath);
   }
 });
-program2.command("checkout").description("Read the canonical V3 checkout presentation by checkout_id + display_token").option("--host <host>", "client host").option("--target <target>").option("--id <checkout_id>").option("--token <display_token>").option("--json", "output compact JSON").action(async (options) => {
+program2.command("checkout").description("Read the canonical V3 checkout presentation by checkout_id + display_token").option("--host <host>", "client host").option("--target <target>").option("--id <checkout_id>").option("--token <display_token>").option("--locale <locale>", "payment card language: zh-CN|en", "zh-CN").option("--json", "output compact JSON").action(async (options) => {
   const config = loadConfig();
-  const host = withHost(options.host ?? defaultHostForAgentType(config.agentType));
   const session = CartSession.loadFromFile(cartSessionPath(), config.checkoutCurrency);
   const snap = session.show();
   const backend = newBackendClient(config);
   try {
+    const host = withHost(options.host, config.agentType, options.target);
     const { checkoutID, displayToken } = resolveCheckoutPresentationArgs({
       ...options.id ? { requestedCheckoutID: options.id } : {},
       ...options.token ? { requestedDisplayToken: options.token } : {},
@@ -12430,8 +12797,10 @@ program2.command("checkout").description("Read the canonical V3 checkout present
       checkoutID,
       displayToken,
       host,
+      ...options.target ? { target: options.target } : {},
       ...config.agentType ? { agentType: config.agentType } : {},
       baseURL: config.baseURL,
+      locale: options.locale,
       jsonOutput: Boolean(options.json)
     });
   } catch (error) {
@@ -12461,7 +12830,7 @@ program2.command("pay").description("Create a V3 payment intent (CLI escape hatc
     if (!displayToken) {
       throw new CommandContractError("checkout_token_required", "display token is required for this checkout", "\u63D0\u4F9B\u540C\u4E00 Checkout \u7684 display token\uFF1B\u4E0D\u8981\u62FC\u63A5\u5176\u4ED6 Checkout \u7684 token\u3002", [{ command: "itpay next --json", reason: "\u6062\u590D\u672C\u673A\u4FDD\u5B58\u7684\u540C\u4E00 Checkout" }]);
     }
-    const host = withHost(options.host ?? defaultHostForAgentType(config.agentType));
+    const host = withHost(options.host, config.agentType, options.target);
     const contextError = validateContext(host, options.target);
     if (contextError) {
       throw new CommandContractError(contextError.code, contextError.message, "\u4E3A\u5F53\u524D Host \u63D0\u4F9B\u6709\u6548 target\uFF1B\u672C\u6B21\u672A\u521B\u5EFA Payment Intent\u3002", [
@@ -12633,7 +13002,7 @@ services.command("start").description("Start a contract-backed service execution
   const backend = newBackendClient(config);
   try {
     await runServicesStart(backend, serviceID, {
-      host: withHost(options.host ?? defaultHostForAgentType(config.agentType)),
+      host: withHost(options.host, config.agentType, options.target),
       ...options.target ? { target: options.target } : {},
       jsonOutput: Boolean(options.json)
     });
@@ -12704,7 +13073,7 @@ services.command("quote").description("Prepare a paid service quote without crea
     });
   }
 });
-services.command("checkout").description("Create checkout from a service execution and render the ItPay checkout handoff").argument("<service_execution_id>").option("--capability <capability_id>").option("--input <key=value>", "input to lock into the paid service quote", collectOption, []).option("--email <delivery_email>").option("--resume", "reissue the existing checkout handoff without creating another checkout").option("--host <host>", "client host (terminal, codex, telegram, feishu, lark, ...)").option("--target <target>", "chat id / channel id / open id for IM hosts").option("--qr-format <format>", "unicode|utf8|ansi|terminal").option("--qr-file <path>", "explicit QR file path").option("--json", "output JSON instead of terminal text").action(async (serviceExecutionID, options) => {
+services.command("checkout").description("Create checkout from a service execution and render the ItPay checkout handoff").argument("<service_execution_id>").option("--capability <capability_id>").option("--input <key=value>", "input to lock into the paid service quote", collectOption, []).option("--email <delivery_email>").option("--resume", "reissue the existing checkout handoff without creating another checkout").option("--host <host>", "client host (terminal, codex, telegram, feishu, lark, ...)").option("--target <target>", "chat id / channel id / open id for IM hosts").option("--qr-format <format>", "unicode|utf8|ansi|terminal").option("--qr-file <path>", "explicit QR file path").option("--locale <locale>", "payment card language: zh-CN|en", "zh-CN").option("--json", "output JSON instead of terminal text").action(async (serviceExecutionID, options) => {
   const config = loadConfig();
   const backend = newBackendClient(config);
   const sessionPath = cartSessionPath();
@@ -12714,11 +13083,12 @@ services.command("checkout").description("Create checkout from a service executi
       ...options.email ? { email: options.email } : {},
       lockedInput: parseKeyValueList(options.input),
       resume: Boolean(options.resume),
-      host: withHost(options.host ?? defaultHostForAgentType(config.agentType)),
+      host: withHost(options.host, config.agentType, options.target),
       ...config.agentType ? { agentType: config.agentType } : {},
       ...options.target ? { target: options.target } : {},
       ...options.qrFormat ? { qrFormat: options.qrFormat } : {},
       ...options.qrFile ? { qrFilePath: options.qrFile } : {},
+      locale: options.locale,
       jsonOutput: Boolean(options.json),
       persistHandoff: (handoff) => {
         session.rememberCheckout({

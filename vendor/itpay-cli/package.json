@@ -1,6 +1,6 @@
 {
   "name": "@itpay/cli-vendored",
-  "version": "2.0.11",
+  "version": "2.0.25",
   "private": true,
   "type": "module",
   "bin": {
@@ -10,12 +10,12 @@
     "node": ">=18"
   },
   "itpaySource": {
-    "package": "@itpay/cli@2.0.11",
+    "package": "@itpay/cli@2.0.25",
     "repository": "https://github.com/itpay-ai/cli.git",
-    "commit": "53b072f572e9f9c1f3e23f86691aceeae0d7419d"
+    "commit": "f8fd62a8707919da77e7a792103a23b40b0e252f"
   },
   "itpaySkillPatches": [
-    "load the canonical root SKILL.md and advertise its bundled wrapper through ITPAY_CLI_SKILL_FILE",
+    "accept the historical itpay-buyer alias while loading the canonical root SKILL.md through ITPAY_CLI_SKILLS_DIR",
     "expose all eight backend-supported Agent Types during onboarding"
   ]
 }

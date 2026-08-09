@@ -4,7 +4,7 @@ description: "Use ItPay when a user or another skill asks an AI agent to discove
 license: MIT
 metadata:
   slug: itpay-buyer
-  version: 2.2.0
+  version: 2.2.1
   displayName: ItPay Buyer
 ---
 
@@ -54,12 +54,14 @@ Run with the bundled wrapper:
 ```bash
 sh <skill-root>/bin/itpay --version
 sh <skill-root>/bin/itpay --agent-type <agent_type> readyz --json
-sh <skill-root>/bin/itpay --agent-type <agent_type> skill show itpay-buyer --json
+sh <skill-root>/bin/itpay --agent-type <agent_type> skill show itpay --json
 ```
 
 Keep the same Agent Type, wrapper, Node launcher, Backend URL, and Host-approved permission context for the whole flow. Follow the returned `next.command`; after typed `readyz`, load the complete Skill again before continuing.
 
 If the bundle, its offline docs, or the canonical root Skill is unavailable, report a damaged Skill installation. Do not recover by installing a second global CLI.
+
+If `backend_contract_incompatible` returns `result.required_cli_version`, stop every ItPay business command. This Skill runs a pinned bundle, so do **not** execute the returned global npm recovery: it would not update this wrapper. Tell the human that the installed Skill bundles `result.current_cli_version`, Backend requires `result.required_cli_version`, and `itpay-buyer` must be updated through the same Skill installation channel. After that update, require `sh <skill-root>/bin/itpay --version` to equal the required version exactly before rerunning typed `readyz`. Never use `latest`, guess a version, switch launchers, Agent Type, or Device identity.
 
 ## Identity And Sessions
 
@@ -92,7 +94,7 @@ When `status` is `human_checkout_required`, make the amount, ItPay Checkout QR, 
 
 - Desktop Agents: send `handoff.markdown` unchanged; verify that the QR, amount, and link are visible.
 - CLI Agents: show the returned terminal QR, amount, and link in the watched terminal. Never claim a desktop image was shown.
-- WorkBuddy with `plain-chat`: when `handoff.qr_image_url` exists, use its complete value as the only `files` element in `present_files`; also show the amount and `handoff.url`.
+- WorkBuddy with `plain-chat`: `handoff.url` is the fully rendered ItPay Card Link. Show the amount, send/open that link, then stop. Never call `present_files`, inspect files, download or rebuild a QR, call `pay`, or create another Checkout.
 - If the preferred renderer is unavailable, show the returned `handoff.url`, report the presentation limitation, and stop. Never rebuild a QR, call `pay`, or create another Checkout as presentation recovery.
 
 Run `next.command` only after the human says they acted or asks for status. QR display, page opening, redirects, and user claims are not payment proof. Only canonical Backend Checkout or Order state proves payment. Normal payment uses Checkout; `pay` and `buy --pay` are operator escape hatches.
@@ -137,7 +139,7 @@ Use the bundled offline docs instead of guessing:
 itpay docs list --json
 itpay docs search <term> --json
 itpay docs show <topic> --json
-itpay skill show itpay-buyer --json
+itpay skill show itpay --json
 ```
 
 Read only the topic needed for the current state. The CLI's server-returned current state and next action remain authoritative.

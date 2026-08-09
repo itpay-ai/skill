@@ -21,6 +21,6 @@ if [ ! -f "$BUNDLE" ]; then
 fi
 
 export ITPAY_CLI_DOCS_DIR="$SKILL_ROOT/vendor/itpay-cli/docs/agent/buyer"
-export ITPAY_CLI_SKILL_FILE="$SKILL_ROOT/SKILL.md"
+export ITPAY_CLI_SKILLS_DIR="$SKILL_ROOT"
 
 exec node "$BUNDLE" "$@"
