@@ -1,12 +1,21 @@
 # ItPay Buyer Skill
 
 [![Agent Skill](https://img.shields.io/badge/Agent%20Skill-itpay--buyer-111827)](./SKILL.md)
-[![Bundled CLI](https://img.shields.io/badge/%40itpay%2Fcli-2.0.25-6366f1)](https://www.npmjs.com/package/@itpay/cli)
+[![Bundled CLI](https://img.shields.io/badge/%40itpay%2Fcli-2.0.32-6366f1)](https://www.npmjs.com/package/@itpay/cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
 ItPay 官方 Buyer Skill。Agent 安装一个目录后即可发现并调用固定版本的 ItPay CLI，用于发现、比较、购买、恢复、接收和退款经过验证的第三方服务。
 
 The official ItPay buyer Skill. It ships a pinned CLI bundle so an Agent can discover and execute ItPay workflows without a global CLI installation or a separately configured MCP connector.
+
+官方 Agent 安装提示（可直接复制）：
+
+> 安装或更新官方 `itpay-ai/skill` 到你当前平台的 Skills 目录，使用 Skill
+> 自带的固定 CLI，不要安装或切换全局 CLI。完整读取根 `SKILL.md`，按我的
+> 自然语言需求自行使用 ItPay；不要让我运行命令或学习内部术语。只有需要我
+> 选择、授权、付款、提供联系方式或确认退款时才询问我，展示官方操作入口后
+> 停止等待。不要切换身份或环境、绕过授权、重复付款或新建资源。完成后只回复
+> “ItPay 已就绪”。
 
 ## 为什么这样打包
 
@@ -14,7 +23,7 @@ The official ItPay buyer Skill. It ships a pinned CLI bundle so an Agent can dis
 - description 把 ItPay、付费/验证服务、企业查询、Checkout、交付、订单和退款等触发语义放在最前面，便于 Agent 在 Skill 列表被截断时仍能匹配。
 - `agents/openai.yaml` 允许隐式调用，并提供显式 `$itpay-buyer` 启动提示。
 - `bin/itpay` 从 Skill 自身路径解析固定 CLI，不依赖当前工作目录或全局 `PATH`。
-- `vendor/itpay-cli` 内置 `@itpay/cli` 2.0.25 和离线 Agent docs；CLI 通过环境变量读取根 `SKILL.md`，不再携带第二份副本。
+- `vendor/itpay-cli` 内置 `@itpay/cli` 2.0.32 和离线 Agent docs；CLI 通过环境变量读取根 `SKILL.md`，不再携带第二份副本。
 - 自动化测试检查发现元数据、唯一入口、wrapper、8 个 Agent Type、CLI command families 和离线 docs。
 
 本仓库采用单文件 bundle，而不是 Git submodule。普通 Git clone、SkillHub 导入及多数 Agent Skill 安装器不会递归拉取 submodule；bundle 能保证 Skill 被发现后立即有可执行入口。
@@ -108,7 +117,7 @@ sh ./bin/itpay docs list --json
 
 ## 更新 vendored CLI
 
-当前 bundle 固定到 `@itpay/cli@2.0.25`、Git commit `f8fd62a8707919da77e7a792103a23b40b0e252f`，并带有两项可审计的通用 Skill 适配：接受历史名称 `itpay-buyer` 作为 canonical `itpay` 的别名，以及在通用 onboarding 中公布 Backend 已支持的全部 8 个 Agent Type。升级时应从对应 CLI source build 生成 ESM bundle，同步 `docs/agent/buyer`，重新应用这两项适配并运行全部测试。
+当前 bundle 固定到 `@itpay/cli@2.0.32`、Git commit `dd825acea8507e1d3ad7c0ec1807ef90b6b2cb2f`，并带有两项可审计的通用 Skill 适配：接受历史名称 `itpay-buyer` 作为 canonical `itpay` 的别名，以及在通用 onboarding 中公布 Backend 已支持的全部 8 个 Agent Type。升级时应从对应 CLI source build 生成 ESM bundle，同步 `docs/agent/buyer`，重新应用这两项适配并运行全部测试。
 
 ## 安全边界
 

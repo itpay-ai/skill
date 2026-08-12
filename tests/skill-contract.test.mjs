@@ -38,7 +38,7 @@ test("Skill frontmatter supports Agent discovery and SkillHub publishing", () =>
   assert.match(frontmatter, /^metadata:$/m);
   assert.match(frontmatter, /^  slug: itpay-buyer$/m);
   assert.match(frontmatter, /^license: MIT$/m);
-  assert.match(frontmatter, /^  version: 2\.2\.1$/m);
+  assert.match(frontmatter, /^  version: 2\.2\.2$/m);
   assert.match(frontmatter, /^  displayName: ItPay Buyer$/m);
   assert.match(frontmatter, /ItPay/);
   assert.match(frontmatter, /company lookup|企业查询/);
@@ -67,12 +67,12 @@ test("the repository exposes exactly one canonical SKILL.md", async () => {
 });
 
 test("runtime metadata pins compatible Node and CLI versions", () => {
-  assert.equal(packageJson.version, "2.2.1");
+  assert.equal(packageJson.version, "2.2.2");
   assert.equal(packageJson.engines.node, ">=18");
-  assert.equal(vendorPackage.version, "2.0.25");
+  assert.equal(vendorPackage.version, "2.0.32");
   assert.equal(
     vendorPackage.itpaySource.commit,
-    "f8fd62a8707919da77e7a792103a23b40b0e252f",
+    "dd825acea8507e1d3ad7c0ec1807ef90b6b2cb2f",
   );
   assert.equal(vendorPackage.itpaySkillPatches.length, 2);
 });

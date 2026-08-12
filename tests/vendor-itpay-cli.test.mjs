@@ -51,10 +51,7 @@ test("canonical root Skill is available offline and keeps Agent Type", async () 
   assert.equal(envelope.status, "shown");
   assert.equal(envelope.result.skill, "itpay");
   assert.match(envelope.result.content, /# ItPay Buyer/);
-  assert.equal(
-    envelope.next.command,
-    "itpay --agent-type codex-desktop catalog list --json",
-  );
+  assert.equal(envelope.next, null);
 });
 
 test("historical itpay-buyer skill name remains a compatible alias", async () => {
@@ -105,11 +102,8 @@ test("newly exposed Agent Types can load the canonical root Skill", async () => 
     ]);
     const envelope = JSON.parse(stdout);
     assert.equal(envelope.status, "shown");
-    assert.equal(
-      envelope.next.command,
-      `itpay --agent-type ${agentType} catalog list --json`,
-    );
-    assert.match(envelope.result.content, /version: 2\.2\.1/);
+    assert.equal(envelope.next, null);
+    assert.match(envelope.result.content, /version: 2\.2\.2/);
   }
 });
 

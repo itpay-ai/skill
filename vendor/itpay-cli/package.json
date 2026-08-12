@@ -1,6 +1,6 @@
 {
   "name": "@itpay/cli-vendored",
-  "version": "2.0.25",
+  "version": "2.0.32",
   "private": true,
   "type": "module",
   "bin": {
@@ -10,9 +10,9 @@
     "node": ">=18"
   },
   "itpaySource": {
-    "package": "@itpay/cli@2.0.25",
+    "package": "@itpay/cli@2.0.32",
     "repository": "https://github.com/itpay-ai/cli.git",
-    "commit": "f8fd62a8707919da77e7a792103a23b40b0e252f"
+    "commit": "dd825acea8507e1d3ad7c0ec1807ef90b6b2cb2f"
   },
   "itpaySkillPatches": [
     "accept the historical itpay-buyer alias while loading the canonical root SKILL.md through ITPAY_CLI_SKILLS_DIR",
