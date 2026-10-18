@@ -52,10 +52,12 @@ test("implicit invocation and default prompt advertise the Skill", () => {
   assert.match(openai, /default_prompt: "Use \$itpay-buyer /);
 });
 
-test("bundled command is the only normal control surface", () => {
+test("explicit CLI stays bundled while selected MCP owns its tasks", () => {
   assert.match(skill, /references\/itpay-cli-invocation\.md/);
   assert.match(skill, /sh <skill-root>\/bin\/itpay/);
-  assert.match(skill, /no global CLI install or MCP connection is required/i);
+  assert.match(skill, /For an explicit CLI task, use the bundled ItPay CLI/);
+  assert.match(skill, /plugin uses its remote MCP in both ChatGPT and Codex/);
+  assert.match(skill, /no credential copying, automatic fallback or duplicate purchase/);
   assert.match(invocation, /Replace only the leading launcher/);
   assert.match(invocation, /archive-based installer.*executable bit/);
   assert.match(invocation, /Do not choose the launcher with `command -v`/);

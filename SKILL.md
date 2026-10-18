@@ -1,6 +1,6 @@
 ---
 name: itpay-buyer
-description: "Use ItPay when a user or another skill asks an AI agent to discover, compare, buy, pay for, resume, receive, inspect, or refund a verified third-party service. Trigger on ItPay or itpay, paid APIs or data, verified services, 企业查询 or company lookup, due diligence or compliance research, Checkout or payment QR, protected delivery, order or receipt status, refunds, or requests to use a paid verified service instead of ordinary web search. Runs the bundled ItPay CLI directly; no global CLI install or MCP connection is required."
+description: "Use the independent ItPay CLI when explicitly requested by the user or another skill, or continuing an existing CLI task: discover, compare, buy, pay for, resume, receive, inspect or refund services, 企业查询 or company lookup, Checkout, orders and refunds. Runs the pinned bundled CLI without a global install. A selected connected ItPay MCP plugin owns its own tasks; do not switch identity or duplicate purchases."
 license: MIT
 metadata:
   slug: itpay-buyer
@@ -10,7 +10,14 @@ metadata:
 
 # ItPay Buyer
 
-Use the bundled ItPay CLI as the only ItPay control surface. Infer the human's
+For an explicit CLI task, use the bundled ItPay CLI. A selected connected ItPay
+plugin uses its remote MCP in both ChatGPT and Codex. For a new generic ItPay
+request with connected MCP and no existing task, defer to that remote Skill.
+Keep an existing run, intent, execution or checkout in its original entry and
+permission; no credential copying, automatic fallback or duplicate purchase.
+If cross-entry access is unavailable, return to the original entry.
+
+Infer the human's
 goal, choose one first command, and follow one returned action at a time. Run
 technology for the human; never ask them to run commands or learn internal
 concepts.
