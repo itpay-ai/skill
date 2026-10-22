@@ -1,4 +1,4 @@
-# ItPay Buyer Skill
+# ItPay Buyer — independent CLI Skill
 
 [![Agent Skill](https://img.shields.io/badge/Agent%20Skill-itpay--buyer-111827)](./SKILL.md)
 [![Bundled CLI](https://img.shields.io/badge/%40itpay%2Fcli-2.0.32-6366f1)](https://www.npmjs.com/package/@itpay/cli)
@@ -7,6 +7,8 @@
 ItPay 官方 Buyer Skill。Agent 安装一个目录后即可发现并调用固定版本的 ItPay CLI，用于发现、比较、购买、恢复、接收和退款经过验证的第三方服务。
 
 The official ItPay buyer Skill. It ships a pinned CLI bundle so an Agent can discover and execute ItPay workflows without a global CLI installation or a separately configured MCP connector.
+
+明确选择插件的任务使用远程 MCP；明确选择 CLI 的任务使用此 Skill。已有任务沿原入口和权限恢复，不复制身份或自动重建订单。泛称 ItPay 且已有 MCP 连接、没有在途任务时，优先连接的 MCP。
 
 官方 Agent 安装提示（可直接复制）：
 
