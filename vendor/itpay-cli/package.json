@@ -1,6 +1,6 @@
 {
   "name": "@itpay/cli",
-  "version": "2.1.51",
+  "version": "2.1.52",
   "description": "The ItPay CLI for services, orders, and human-authorized purchased content.",
   "type": "module",
   "bin": {
@@ -141,5 +141,5 @@
     "url": "git+https://github.com/itpay-ai/cli.git"
   },
   "itpayBundleFormat": "buyer-esm-v1",
-  "gitHead": "e9b6854af17c7fcc5ef0fa809f8c661f05121d50"
+  "gitHead": "463d0cb9c500b03579d3c2d3901625d77bd300d0"
 }

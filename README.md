@@ -1,6 +1,6 @@
 # ItPay Buyer Skill candidate
 
-This independent Skill contains the fixed Buyer CLI 2.1.51 candidate, with no
+This independent Skill contains the fixed Buyer CLI 2.1.52 candidate, with no
 runtime dependency download or global CLI installation. The canonical Skill name
 is `itpay`; the old `skill show itpay-buyer` reader remains a compatible alias.
 This branch is not a published SkillHub release or a verified native-host setup.
@@ -30,7 +30,7 @@ host discovery, cross-session persistence, account authorization or natural UX.
 Install only through an already authorized host Skill channel and permitted
 paths. Do not silently replace another installed Skill or reset its identity.
 The new Backend/API/publication combination must be installed and verified before
-business testing; the 2.1.51 tarball is not yet on npm next. Production latest and
+business testing; the 2.1.52 tarball is not yet on npm next. Production latest and
 other default channels are unchanged. Dot/Muse native MCP products have their own
 remote packages; this Skill does not create or bypass an MCP connection.
 
