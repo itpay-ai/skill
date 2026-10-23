@@ -3,7 +3,7 @@ set -eu
 
 SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 SKILL_ROOT=$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)
-BUNDLE="$SKILL_ROOT/vendor/itpay-cli/itpay-cli.bundle.mjs"
+BUNDLE="$SKILL_ROOT/vendor/itpay-cli/dist/src/main.js"
 
 if ! command -v node >/dev/null 2>&1; then
   echo "ItPay bundled CLI requires Node.js 18 or newer." >&2
