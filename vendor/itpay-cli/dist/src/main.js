@@ -40,18 +40,18 @@ var __toESM = (mod, isNodeMode, target2) => (target2 = mod != null ? __create(__
   mod
 ));
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/can-promise.js
+// node_modules/qrcode/lib/can-promise.js
 var require_can_promise = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/can-promise.js"(exports, module) {
+  "node_modules/qrcode/lib/can-promise.js"(exports, module) {
     module.exports = function() {
       return typeof Promise === "function" && Promise.prototype && Promise.prototype.then;
     };
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/utils.js
+// node_modules/qrcode/lib/core/utils.js
 var require_utils = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/utils.js"(exports) {
+  "node_modules/qrcode/lib/core/utils.js"(exports) {
     var toSJISFunction;
     var CODEWORDS_COUNT = [
       0,
@@ -128,9 +128,9 @@ var require_utils = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/error-correction-level.js
+// node_modules/qrcode/lib/core/error-correction-level.js
 var require_error_correction_level = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/error-correction-level.js"(exports) {
+  "node_modules/qrcode/lib/core/error-correction-level.js"(exports) {
     exports.L = { bit: 1 };
     exports.M = { bit: 0 };
     exports.Q = { bit: 3 };
@@ -174,9 +174,9 @@ var require_error_correction_level = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/bit-buffer.js
+// node_modules/qrcode/lib/core/bit-buffer.js
 var require_bit_buffer = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/bit-buffer.js"(exports, module) {
+  "node_modules/qrcode/lib/core/bit-buffer.js"(exports, module) {
     function BitBuffer() {
       this.buffer = [];
       this.length = 0;
@@ -210,9 +210,9 @@ var require_bit_buffer = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/bit-matrix.js
+// node_modules/qrcode/lib/core/bit-matrix.js
 var require_bit_matrix = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/bit-matrix.js"(exports, module) {
+  "node_modules/qrcode/lib/core/bit-matrix.js"(exports, module) {
     function BitMatrix(size) {
       if (!size || size < 1) {
         throw new Error("BitMatrix size must be defined and greater than 0");
@@ -240,9 +240,9 @@ var require_bit_matrix = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/alignment-pattern.js
+// node_modules/qrcode/lib/core/alignment-pattern.js
 var require_alignment_pattern = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/alignment-pattern.js"(exports) {
+  "node_modules/qrcode/lib/core/alignment-pattern.js"(exports) {
     var getSymbolSize = require_utils().getSymbolSize;
     exports.getRowColCoords = /* @__PURE__ */ __name(function getRowColCoords(version) {
       if (version === 1) return [];
@@ -275,9 +275,9 @@ var require_alignment_pattern = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/finder-pattern.js
+// node_modules/qrcode/lib/core/finder-pattern.js
 var require_finder_pattern = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/finder-pattern.js"(exports) {
+  "node_modules/qrcode/lib/core/finder-pattern.js"(exports) {
     var getSymbolSize = require_utils().getSymbolSize;
     var FINDER_PATTERN_SIZE = 7;
     exports.getPositions = /* @__PURE__ */ __name(function getPositions(version) {
@@ -294,9 +294,9 @@ var require_finder_pattern = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/mask-pattern.js
+// node_modules/qrcode/lib/core/mask-pattern.js
 var require_mask_pattern = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/mask-pattern.js"(exports) {
+  "node_modules/qrcode/lib/core/mask-pattern.js"(exports) {
     exports.Patterns = {
       PATTERN000: 0,
       PATTERN001: 1,
@@ -437,9 +437,9 @@ var require_mask_pattern = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/error-correction-code.js
+// node_modules/qrcode/lib/core/error-correction-code.js
 var require_error_correction_code = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/error-correction-code.js"(exports) {
+  "node_modules/qrcode/lib/core/error-correction-code.js"(exports) {
     var ECLevel = require_error_correction_level();
     var EC_BLOCKS_TABLE = [
       // L  M  Q  H
@@ -798,9 +798,9 @@ var require_error_correction_code = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/galois-field.js
+// node_modules/qrcode/lib/core/galois-field.js
 var require_galois_field = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/galois-field.js"(exports) {
+  "node_modules/qrcode/lib/core/galois-field.js"(exports) {
     var EXP_TABLE = new Uint8Array(512);
     var LOG_TABLE = new Uint8Array(256);
     (/* @__PURE__ */ __name(function initTables() {
@@ -831,9 +831,9 @@ var require_galois_field = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/polynomial.js
+// node_modules/qrcode/lib/core/polynomial.js
 var require_polynomial = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/polynomial.js"(exports) {
+  "node_modules/qrcode/lib/core/polynomial.js"(exports) {
     var GF = require_galois_field();
     exports.mul = /* @__PURE__ */ __name(function mul(p1, p2) {
       const coeff = new Uint8Array(p1.length + p2.length - 1);
@@ -867,9 +867,9 @@ var require_polynomial = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/reed-solomon-encoder.js
+// node_modules/qrcode/lib/core/reed-solomon-encoder.js
 var require_reed_solomon_encoder = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/reed-solomon-encoder.js"(exports, module) {
+  "node_modules/qrcode/lib/core/reed-solomon-encoder.js"(exports, module) {
     var Polynomial = require_polynomial();
     function ReedSolomonEncoder(degree) {
       this.genPoly = void 0;
@@ -900,18 +900,18 @@ var require_reed_solomon_encoder = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/version-check.js
+// node_modules/qrcode/lib/core/version-check.js
 var require_version_check = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/version-check.js"(exports) {
+  "node_modules/qrcode/lib/core/version-check.js"(exports) {
     exports.isValid = /* @__PURE__ */ __name(function isValid2(version) {
       return !isNaN(version) && version >= 1 && version <= 40;
     }, "isValid");
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/regex.js
+// node_modules/qrcode/lib/core/regex.js
 var require_regex = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/regex.js"(exports) {
+  "node_modules/qrcode/lib/core/regex.js"(exports) {
     var numeric = "[0-9]+";
     var alphanumeric = "[A-Z $%*+\\-./:]+";
     var kanji = "(?:[u3000-u303F]|[u3040-u309F]|[u30A0-u30FF]|[uFF00-uFFEF]|[u4E00-u9FAF]|[u2605-u2606]|[u2190-u2195]|u203B|[u2010u2015u2018u2019u2025u2026u201Cu201Du2225u2260]|[u0391-u0451]|[u00A7u00A8u00B1u00B4u00D7u00F7])+";
@@ -937,9 +937,9 @@ var require_regex = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/mode.js
+// node_modules/qrcode/lib/core/mode.js
 var require_mode = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/mode.js"(exports) {
+  "node_modules/qrcode/lib/core/mode.js"(exports) {
     var VersionCheck = require_version_check();
     var Regex = require_regex();
     exports.NUMERIC = {
@@ -1019,9 +1019,9 @@ var require_mode = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/version.js
+// node_modules/qrcode/lib/core/version.js
 var require_version = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/version.js"(exports) {
+  "node_modules/qrcode/lib/core/version.js"(exports) {
     var Utils = require_utils();
     var ECCode = require_error_correction_code();
     var ECLevel = require_error_correction_level();
@@ -1118,9 +1118,9 @@ var require_version = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/format-info.js
+// node_modules/qrcode/lib/core/format-info.js
 var require_format_info = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/format-info.js"(exports) {
+  "node_modules/qrcode/lib/core/format-info.js"(exports) {
     var Utils = require_utils();
     var G15 = 1 << 10 | 1 << 8 | 1 << 5 | 1 << 4 | 1 << 2 | 1 << 1 | 1 << 0;
     var G15_MASK = 1 << 14 | 1 << 12 | 1 << 10 | 1 << 4 | 1 << 1;
@@ -1136,9 +1136,9 @@ var require_format_info = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/numeric-data.js
+// node_modules/qrcode/lib/core/numeric-data.js
 var require_numeric_data = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/numeric-data.js"(exports, module) {
+  "node_modules/qrcode/lib/core/numeric-data.js"(exports, module) {
     var Mode = require_mode();
     function NumericData(data) {
       this.mode = Mode.NUMERIC;
@@ -1172,9 +1172,9 @@ var require_numeric_data = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/alphanumeric-data.js
+// node_modules/qrcode/lib/core/alphanumeric-data.js
 var require_alphanumeric_data = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/alphanumeric-data.js"(exports, module) {
+  "node_modules/qrcode/lib/core/alphanumeric-data.js"(exports, module) {
     var Mode = require_mode();
     var ALPHA_NUM_CHARS = [
       "0",
@@ -1252,9 +1252,9 @@ var require_alphanumeric_data = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/byte-data.js
+// node_modules/qrcode/lib/core/byte-data.js
 var require_byte_data = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/byte-data.js"(exports, module) {
+  "node_modules/qrcode/lib/core/byte-data.js"(exports, module) {
     var Mode = require_mode();
     function ByteData(data) {
       this.mode = Mode.BYTE;
@@ -1283,9 +1283,9 @@ var require_byte_data = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/kanji-data.js
+// node_modules/qrcode/lib/core/kanji-data.js
 var require_kanji_data = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/kanji-data.js"(exports, module) {
+  "node_modules/qrcode/lib/core/kanji-data.js"(exports, module) {
     var Mode = require_mode();
     var Utils = require_utils();
     function KanjiData(data) {
@@ -1323,9 +1323,9 @@ var require_kanji_data = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/dijkstrajs/dijkstra.js
+// node_modules/dijkstrajs/dijkstra.js
 var require_dijkstra = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/dijkstrajs/dijkstra.js"(exports, module) {
+  "node_modules/dijkstrajs/dijkstra.js"(exports, module) {
     "use strict";
     var dijkstra = {
       single_source_shortest_paths: /* @__PURE__ */ __name(function(graph, s, d) {
@@ -1424,9 +1424,9 @@ var require_dijkstra = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/segments.js
+// node_modules/qrcode/lib/core/segments.js
 var require_segments = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/segments.js"(exports) {
+  "node_modules/qrcode/lib/core/segments.js"(exports) {
     var Mode = require_mode();
     var NumericData = require_numeric_data();
     var AlphanumericData = require_alphanumeric_data();
@@ -1618,9 +1618,9 @@ var require_segments = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/qrcode.js
+// node_modules/qrcode/lib/core/qrcode.js
 var require_qrcode = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/core/qrcode.js"(exports) {
+  "node_modules/qrcode/lib/core/qrcode.js"(exports) {
     var Utils = require_utils();
     var ECLevel = require_error_correction_level();
     var BitBuffer = require_bit_buffer();
@@ -1888,9 +1888,9 @@ var require_qrcode = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/chunkstream.js
+// node_modules/pngjs/lib/chunkstream.js
 var require_chunkstream = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/chunkstream.js"(exports, module) {
+  "node_modules/pngjs/lib/chunkstream.js"(exports, module) {
     "use strict";
     var util2 = __require("util");
     var Stream = __require("stream");
@@ -2026,9 +2026,9 @@ var require_chunkstream = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/interlace.js
+// node_modules/pngjs/lib/interlace.js
 var require_interlace = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/interlace.js"(exports) {
+  "node_modules/pngjs/lib/interlace.js"(exports) {
     "use strict";
     var imagePasses = [
       {
@@ -2109,9 +2109,9 @@ var require_interlace = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/paeth-predictor.js
+// node_modules/pngjs/lib/paeth-predictor.js
 var require_paeth_predictor = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/paeth-predictor.js"(exports, module) {
+  "node_modules/pngjs/lib/paeth-predictor.js"(exports, module) {
     "use strict";
     module.exports = /* @__PURE__ */ __name(function paethPredictor(left, above, upLeft) {
       let paeth = left + above - upLeft;
@@ -2129,9 +2129,9 @@ var require_paeth_predictor = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/filter-parse.js
+// node_modules/pngjs/lib/filter-parse.js
 var require_filter_parse = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/filter-parse.js"(exports, module) {
+  "node_modules/pngjs/lib/filter-parse.js"(exports, module) {
     "use strict";
     var interlaceUtils = require_interlace();
     var paethPredictor = require_paeth_predictor();
@@ -2271,9 +2271,9 @@ var require_filter_parse = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/filter-parse-async.js
+// node_modules/pngjs/lib/filter-parse-async.js
 var require_filter_parse_async = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/filter-parse-async.js"(exports, module) {
+  "node_modules/pngjs/lib/filter-parse-async.js"(exports, module) {
     "use strict";
     var util2 = __require("util");
     var ChunkStream = require_chunkstream();
@@ -2297,9 +2297,9 @@ var require_filter_parse_async = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/constants.js
+// node_modules/pngjs/lib/constants.js
 var require_constants = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/constants.js"(exports, module) {
+  "node_modules/pngjs/lib/constants.js"(exports, module) {
     "use strict";
     module.exports = {
       PNG_SIGNATURE: [137, 80, 78, 71, 13, 10, 26, 10],
@@ -2332,9 +2332,9 @@ var require_constants = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/crc.js
+// node_modules/pngjs/lib/crc.js
 var require_crc = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/crc.js"(exports, module) {
+  "node_modules/pngjs/lib/crc.js"(exports, module) {
     "use strict";
     var crcTable = [];
     (function() {
@@ -2372,9 +2372,9 @@ var require_crc = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/parser.js
+// node_modules/pngjs/lib/parser.js
 var require_parser = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/parser.js"(exports, module) {
+  "node_modules/pngjs/lib/parser.js"(exports, module) {
     "use strict";
     var constants4 = require_constants();
     var CrcCalculator = require_crc();
@@ -2593,9 +2593,9 @@ var require_parser = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/bitmapper.js
+// node_modules/pngjs/lib/bitmapper.js
 var require_bitmapper = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/bitmapper.js"(exports) {
+  "node_modules/pngjs/lib/bitmapper.js"(exports) {
     "use strict";
     var interlaceUtils = require_interlace();
     var pixelBppMapper = [
@@ -2845,9 +2845,9 @@ var require_bitmapper = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/format-normaliser.js
+// node_modules/pngjs/lib/format-normaliser.js
 var require_format_normaliser = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/format-normaliser.js"(exports, module) {
+  "node_modules/pngjs/lib/format-normaliser.js"(exports, module) {
     "use strict";
     function dePalette(indata, outdata, width, height, palette) {
       let pxPos = 0;
@@ -2929,9 +2929,9 @@ var require_format_normaliser = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/parser-async.js
+// node_modules/pngjs/lib/parser-async.js
 var require_parser_async = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/parser-async.js"(exports, module) {
+  "node_modules/pngjs/lib/parser-async.js"(exports, module) {
     "use strict";
     var util2 = __require("util");
     var zlib = __require("zlib");
@@ -3055,9 +3055,9 @@ var require_parser_async = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/bitpacker.js
+// node_modules/pngjs/lib/bitpacker.js
 var require_bitpacker = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/bitpacker.js"(exports, module) {
+  "node_modules/pngjs/lib/bitpacker.js"(exports, module) {
     "use strict";
     var constants4 = require_constants();
     module.exports = function(dataIn, width, height, options) {
@@ -3206,9 +3206,9 @@ var require_bitpacker = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/filter-pack.js
+// node_modules/pngjs/lib/filter-pack.js
 var require_filter_pack = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/filter-pack.js"(exports, module) {
+  "node_modules/pngjs/lib/filter-pack.js"(exports, module) {
     "use strict";
     var paethPredictor = require_paeth_predictor();
     function filterNone(pxData, pxPos, byteWidth, rawData, rawPos) {
@@ -3358,9 +3358,9 @@ var require_filter_pack = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/packer.js
+// node_modules/pngjs/lib/packer.js
 var require_packer = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/packer.js"(exports, module) {
+  "node_modules/pngjs/lib/packer.js"(exports, module) {
     "use strict";
     var constants4 = require_constants();
     var CrcStream = require_crc();
@@ -3458,9 +3458,9 @@ var require_packer = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/packer-async.js
+// node_modules/pngjs/lib/packer-async.js
 var require_packer_async = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/packer-async.js"(exports, module) {
+  "node_modules/pngjs/lib/packer-async.js"(exports, module) {
     "use strict";
     var util2 = __require("util");
     var Stream = __require("stream");
@@ -3500,9 +3500,9 @@ var require_packer_async = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/sync-inflate.js
+// node_modules/pngjs/lib/sync-inflate.js
 var require_sync_inflate = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/sync-inflate.js"(exports, module) {
+  "node_modules/pngjs/lib/sync-inflate.js"(exports, module) {
     "use strict";
     var assert = __require("assert").ok;
     var zlib = __require("zlib");
@@ -3643,9 +3643,9 @@ var require_sync_inflate = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/sync-reader.js
+// node_modules/pngjs/lib/sync-reader.js
 var require_sync_reader = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/sync-reader.js"(exports, module) {
+  "node_modules/pngjs/lib/sync-reader.js"(exports, module) {
     "use strict";
     var SyncReader = module.exports = function(buffer) {
       this._buffer = buffer;
@@ -3681,9 +3681,9 @@ var require_sync_reader = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/filter-parse-sync.js
+// node_modules/pngjs/lib/filter-parse-sync.js
 var require_filter_parse_sync = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/filter-parse-sync.js"(exports) {
+  "node_modules/pngjs/lib/filter-parse-sync.js"(exports) {
     "use strict";
     var SyncReader = require_sync_reader();
     var Filter = require_filter_parse();
@@ -3705,9 +3705,9 @@ var require_filter_parse_sync = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/parser-sync.js
+// node_modules/pngjs/lib/parser-sync.js
 var require_parser_sync = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/parser-sync.js"(exports, module) {
+  "node_modules/pngjs/lib/parser-sync.js"(exports, module) {
     "use strict";
     var hasSyncZlib = true;
     var zlib = __require("zlib");
@@ -3803,9 +3803,9 @@ var require_parser_sync = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/packer-sync.js
+// node_modules/pngjs/lib/packer-sync.js
 var require_packer_sync = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/packer-sync.js"(exports, module) {
+  "node_modules/pngjs/lib/packer-sync.js"(exports, module) {
     "use strict";
     var hasSyncZlib = true;
     var zlib = __require("zlib");
@@ -3848,9 +3848,9 @@ var require_packer_sync = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/png-sync.js
+// node_modules/pngjs/lib/png-sync.js
 var require_png_sync = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/png-sync.js"(exports) {
+  "node_modules/pngjs/lib/png-sync.js"(exports) {
     "use strict";
     var parse = require_parser_sync();
     var pack = require_packer_sync();
@@ -3863,9 +3863,9 @@ var require_png_sync = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/pngjs/lib/png.js
+// node_modules/pngjs/lib/png.js
 var require_png = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/pngjs/lib/png.js"(exports) {
+  "node_modules/pngjs/lib/png.js"(exports) {
     "use strict";
     var util2 = __require("util");
     var Stream = __require("stream");
@@ -4000,9 +4000,9 @@ var require_png = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/renderer/utils.js
+// node_modules/qrcode/lib/renderer/utils.js
 var require_utils2 = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/renderer/utils.js"(exports) {
+  "node_modules/qrcode/lib/renderer/utils.js"(exports) {
     function hex2rgba(hex) {
       if (typeof hex === "number") {
         hex = hex.toString();
@@ -4081,9 +4081,9 @@ var require_utils2 = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/renderer/png.js
+// node_modules/qrcode/lib/renderer/png.js
 var require_png2 = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/renderer/png.js"(exports) {
+  "node_modules/qrcode/lib/renderer/png.js"(exports) {
     var fs2 = __require("fs");
     var PNG = require_png().PNG;
     var Utils = require_utils2();
@@ -4148,9 +4148,9 @@ var require_png2 = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/renderer/utf8.js
+// node_modules/qrcode/lib/renderer/utf8.js
 var require_utf8 = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/renderer/utf8.js"(exports) {
+  "node_modules/qrcode/lib/renderer/utf8.js"(exports) {
     var Utils = require_utils2();
     var BLOCK_CHAR = {
       WW: " ",
@@ -4211,9 +4211,9 @@ var require_utf8 = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/renderer/terminal/terminal.js
+// node_modules/qrcode/lib/renderer/terminal/terminal.js
 var require_terminal = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/renderer/terminal/terminal.js"(exports) {
+  "node_modules/qrcode/lib/renderer/terminal/terminal.js"(exports) {
     exports.render = function(qrData, options, cb) {
       const size = qrData.modules.size;
       const data = qrData.modules.data;
@@ -4239,9 +4239,9 @@ var require_terminal = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/renderer/terminal/terminal-small.js
+// node_modules/qrcode/lib/renderer/terminal/terminal-small.js
 var require_terminal_small = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/renderer/terminal/terminal-small.js"(exports) {
+  "node_modules/qrcode/lib/renderer/terminal/terminal-small.js"(exports) {
     var backgroundWhite = "\x1B[47m";
     var backgroundBlack = "\x1B[40m";
     var foregroundWhite = "\x1B[37m";
@@ -4298,9 +4298,9 @@ var require_terminal_small = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/renderer/terminal.js
+// node_modules/qrcode/lib/renderer/terminal.js
 var require_terminal2 = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/renderer/terminal.js"(exports) {
+  "node_modules/qrcode/lib/renderer/terminal.js"(exports) {
     var big = require_terminal();
     var small = require_terminal_small();
     exports.render = function(qrData, options, cb) {
@@ -4312,9 +4312,9 @@ var require_terminal2 = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/renderer/svg-tag.js
+// node_modules/qrcode/lib/renderer/svg-tag.js
 var require_svg_tag = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/renderer/svg-tag.js"(exports) {
+  "node_modules/qrcode/lib/renderer/svg-tag.js"(exports) {
     var Utils = require_utils2();
     function getColorAttrib(color, attrib) {
       const alpha = color.a / 255;
@@ -4373,9 +4373,9 @@ var require_svg_tag = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/renderer/svg.js
+// node_modules/qrcode/lib/renderer/svg.js
 var require_svg = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/renderer/svg.js"(exports) {
+  "node_modules/qrcode/lib/renderer/svg.js"(exports) {
     var svgTagRenderer = require_svg_tag();
     exports.render = svgTagRenderer.render;
     exports.renderToFile = /* @__PURE__ */ __name(function renderToFile(path3, qrData, options, cb) {
@@ -4391,9 +4391,9 @@ var require_svg = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/renderer/canvas.js
+// node_modules/qrcode/lib/renderer/canvas.js
 var require_canvas = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/renderer/canvas.js"(exports) {
+  "node_modules/qrcode/lib/renderer/canvas.js"(exports) {
     var Utils = require_utils2();
     function clearCanvas(ctx, canvas, size) {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -4446,9 +4446,9 @@ var require_canvas = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/browser.js
+// node_modules/qrcode/lib/browser.js
 var require_browser = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/browser.js"(exports) {
+  "node_modules/qrcode/lib/browser.js"(exports) {
     var canPromise = require_can_promise();
     var QRCode2 = require_qrcode();
     var CanvasRenderer = require_canvas();
@@ -4517,9 +4517,9 @@ var require_browser = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/server.js
+// node_modules/qrcode/lib/server.js
 var require_server = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/server.js"(exports) {
+  "node_modules/qrcode/lib/server.js"(exports) {
     var canPromise = require_can_promise();
     var QRCode2 = require_qrcode();
     var PngRenderer = require_png2();
@@ -4642,16 +4642,16 @@ var require_server = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/qrcode/lib/index.js
+// node_modules/qrcode/lib/index.js
 var require_lib = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/qrcode/lib/index.js"(exports, module) {
+  "node_modules/qrcode/lib/index.js"(exports, module) {
     module.exports = require_server();
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/commander/lib/error.js
+// node_modules/commander/lib/error.js
 var require_error = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/commander/lib/error.js"(exports) {
+  "node_modules/commander/lib/error.js"(exports) {
     var CommanderError2 = class extends Error {
       static {
         __name(this, "CommanderError");
@@ -4690,9 +4690,9 @@ var require_error = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/commander/lib/argument.js
+// node_modules/commander/lib/argument.js
 var require_argument = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/commander/lib/argument.js"(exports) {
+  "node_modules/commander/lib/argument.js"(exports) {
     var { InvalidArgumentError: InvalidArgumentError2 } = require_error();
     var Argument2 = class {
       static {
@@ -4821,9 +4821,9 @@ var require_argument = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/commander/lib/help.js
+// node_modules/commander/lib/help.js
 var require_help = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/commander/lib/help.js"(exports) {
+  "node_modules/commander/lib/help.js"(exports) {
     var { humanReadableArgName } = require_argument();
     var Help2 = class {
       static {
@@ -5240,9 +5240,9 @@ var require_help = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/commander/lib/option.js
+// node_modules/commander/lib/option.js
 var require_option = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/commander/lib/option.js"(exports) {
+  "node_modules/commander/lib/option.js"(exports) {
     var { InvalidArgumentError: InvalidArgumentError2 } = require_error();
     var Option2 = class {
       static {
@@ -5520,9 +5520,9 @@ var require_option = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/commander/lib/suggestSimilar.js
+// node_modules/commander/lib/suggestSimilar.js
 var require_suggestSimilar = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/commander/lib/suggestSimilar.js"(exports) {
+  "node_modules/commander/lib/suggestSimilar.js"(exports) {
     var maxDistance = 3;
     function editDistance(a, b) {
       if (Math.abs(a.length - b.length) > maxDistance)
@@ -5602,9 +5602,9 @@ var require_suggestSimilar = __commonJS({
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/commander/lib/command.js
+// node_modules/commander/lib/command.js
 var require_command = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/commander/lib/command.js"(exports) {
+  "node_modules/commander/lib/command.js"(exports) {
     var EventEmitter = __require("node:events").EventEmitter;
     var childProcess = __require("node:child_process");
     var path3 = __require("node:path");
@@ -7651,9 +7651,9 @@ Expecting one of '${allowedValues.join("', '")}'`);
   }
 });
 
-// ../../../../Documents/itpay_cli/node_modules/commander/index.js
+// node_modules/commander/index.js
 var require_commander = __commonJS({
-  "../../../../Documents/itpay_cli/node_modules/commander/index.js"(exports) {
+  "node_modules/commander/index.js"(exports) {
     var { Argument: Argument2 } = require_argument();
     var { Command: Command2 } = require_command();
     var { CommanderError: CommanderError2, InvalidArgumentError: InvalidArgumentError2 } = require_error();
@@ -9062,6 +9062,8 @@ __name(isOperationID, "isOperationID");
 var DEFAULT_BASE_URL = "https://app.itpay.ai";
 var DEV_BASE_URL = "https://dev.itpay.ai";
 var SANDBOX_BASE_URL = "https://sandbox.itpay.ai";
+var TEST_BASE_URL = "https://app-test.itpay.ai";
+var OFFICIAL_BACKEND_URLS = [DEFAULT_BASE_URL, SANDBOX_BASE_URL, DEV_BASE_URL, TEST_BASE_URL];
 var CART_SESSION_DEFAULT_DIR = ".itpay-v3";
 var CART_SESSION_FILENAME = "cart.json";
 var OPERATION_JOURNAL_FILENAME = "operations.json";
@@ -9078,15 +9080,15 @@ var BackendOverrideError = class extends Error {
   }
   code = "backend_override_forbidden";
   constructor() {
-    super(`ITPAY_BACKEND_URL only supports ${DEFAULT_BASE_URL}, ${SANDBOX_BASE_URL}, or ${DEV_BASE_URL}`);
+    super(`ITPAY_BACKEND_URL only supports ${OFFICIAL_BACKEND_URLS.join(", ")}`);
     this.name = "BackendOverrideError";
   }
 };
 function resolveBackendURL(env = process.env) {
   const requested = env.ITPAY_BACKEND_URL?.trim();
-  if (!requested || requested === DEFAULT_BASE_URL || requested === `${DEFAULT_BASE_URL}/`) return DEFAULT_BASE_URL;
-  if (requested === SANDBOX_BASE_URL || requested === `${SANDBOX_BASE_URL}/`) return SANDBOX_BASE_URL;
-  if (requested === DEV_BASE_URL || requested === `${DEV_BASE_URL}/`) return DEV_BASE_URL;
+  if (!requested) return DEFAULT_BASE_URL;
+  const official = OFFICIAL_BACKEND_URLS.find((origin) => requested === origin || requested === `${origin}/`);
+  if (official) return official;
   if (env.ITPAY_CLI_DEV === "1" && /^http:\/\/(localhost|127\.0\.0\.1):\d+\/?$/.test(requested)) return requested.replace(/\/$/, "");
   throw new BackendOverrideError();
 }
@@ -9535,7 +9537,7 @@ function hostCapabilities(host) {
 }
 __name(hostCapabilities, "hostCapabilities");
 
-// ../../../../Documents/itpay_cli/node_modules/zod/v3/external.js
+// node_modules/zod/v3/external.js
 var external_exports = {};
 __export(external_exports, {
   BRAND: () => BRAND,
@@ -9647,7 +9649,7 @@ __export(external_exports, {
   void: () => voidType
 });
 
-// ../../../../Documents/itpay_cli/node_modules/zod/v3/helpers/util.js
+// node_modules/zod/v3/helpers/util.js
 var util;
 (function(util2) {
   util2.assertEqual = (_) => {
@@ -9784,7 +9786,7 @@ var getParsedType = /* @__PURE__ */ __name((data) => {
   }
 }, "getParsedType");
 
-// ../../../../Documents/itpay_cli/node_modules/zod/v3/ZodError.js
+// node_modules/zod/v3/ZodError.js
 var ZodIssueCode = util.arrayToEnum([
   "invalid_type",
   "invalid_literal",
@@ -9905,7 +9907,7 @@ ZodError.create = (issues) => {
   return error;
 };
 
-// ../../../../Documents/itpay_cli/node_modules/zod/v3/locales/en.js
+// node_modules/zod/v3/locales/en.js
 var errorMap = /* @__PURE__ */ __name((issue, _ctx) => {
   let message;
   switch (issue.code) {
@@ -10008,7 +10010,7 @@ var errorMap = /* @__PURE__ */ __name((issue, _ctx) => {
 }, "errorMap");
 var en_default = errorMap;
 
-// ../../../../Documents/itpay_cli/node_modules/zod/v3/errors.js
+// node_modules/zod/v3/errors.js
 var overrideErrorMap = en_default;
 function setErrorMap(map) {
   overrideErrorMap = map;
@@ -10019,7 +10021,7 @@ function getErrorMap() {
 }
 __name(getErrorMap, "getErrorMap");
 
-// ../../../../Documents/itpay_cli/node_modules/zod/v3/helpers/parseUtil.js
+// node_modules/zod/v3/helpers/parseUtil.js
 var makeIssue = /* @__PURE__ */ __name((params) => {
   const { data, path: path3, errorMaps, issueData } = params;
   const fullPath = [...path3, ...issueData.path || []];
@@ -10133,14 +10135,14 @@ var isDirty = /* @__PURE__ */ __name((x) => x.status === "dirty", "isDirty");
 var isValid = /* @__PURE__ */ __name((x) => x.status === "valid", "isValid");
 var isAsync = /* @__PURE__ */ __name((x) => typeof Promise !== "undefined" && x instanceof Promise, "isAsync");
 
-// ../../../../Documents/itpay_cli/node_modules/zod/v3/helpers/errorUtil.js
+// node_modules/zod/v3/helpers/errorUtil.js
 var errorUtil;
 (function(errorUtil2) {
   errorUtil2.errToObj = (message) => typeof message === "string" ? { message } : message || {};
   errorUtil2.toString = (message) => typeof message === "string" ? message : message?.message;
 })(errorUtil || (errorUtil = {}));
 
-// ../../../../Documents/itpay_cli/node_modules/zod/v3/types.js
+// node_modules/zod/v3/types.js
 var ParseInputLazyPath = class {
   static {
     __name(this, "ParseInputLazyPath");
@@ -16600,6 +16602,63 @@ function projectCheckoutPresentation(presentation, model) {
 }
 __name(projectCheckoutPresentation, "projectCheckoutPresentation");
 
+// src/render/browser.ts
+import { spawn } from "node:child_process";
+import { platform } from "node:os";
+function isPresentableURL(raw, baseURL, env = process.env) {
+  let url;
+  try {
+    url = new URL(raw);
+  } catch {
+    return false;
+  }
+  if (url.username || url.password) return false;
+  if (env.ITPAY_CLI_DEV === "1" && /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(url.origin)) return true;
+  if (url.protocol !== "https:") return false;
+  const allowedOrigins = new Set(OFFICIAL_BACKEND_URLS);
+  if (baseURL) {
+    try {
+      allowedOrigins.add(new URL(baseURL).origin);
+    } catch {
+    }
+  }
+  return allowedOrigins.has(url.origin);
+}
+__name(isPresentableURL, "isPresentableURL");
+function openInSystemBrowser(raw, baseURL, env = process.env) {
+  if (!isPresentableURL(raw, baseURL, env)) {
+    return Promise.resolve({ status: "failed", reason: "url_rejected" });
+  }
+  const [command, args] = openerArgv(raw);
+  if (!command) {
+    return Promise.resolve({ status: "unavailable", reason: "no system opener on this platform" });
+  }
+  return new Promise((resolvePromise) => {
+    const child = spawn(command, args, { detached: true, stdio: "ignore" });
+    child.once("error", (error) => resolvePromise({ status: "failed", reason: error.message }));
+    child.once("spawn", () => {
+      child.unref();
+      resolvePromise({ status: "dispatch_accepted", argv: [command, ...args] });
+    });
+  });
+}
+__name(openInSystemBrowser, "openInSystemBrowser");
+function openerArgv(url) {
+  switch (platform()) {
+    case "darwin":
+      return ["open", [url]];
+    case "win32":
+      return ["cmd.exe", ["/c", "start", "", url]];
+    case "linux":
+    case "freebsd":
+    case "openbsd":
+      return ["xdg-open", [url]];
+    default:
+      return [void 0, []];
+  }
+}
+__name(openerArgv, "openerArgv");
+
 // src/render/qr.ts
 var import_qrcode = __toESM(require_lib(), 1);
 import fs from "node:fs/promises";
@@ -17475,12 +17534,12 @@ async function presentServiceCheckout(backend, config, serviceExecutionID, respo
     } catch {
     }
     const readOriginal = { command: `itpay --agent-type ${agentType} services get ${serviceExecutionID} --json`, reason: "\u7528\u6237\u5B8C\u6210\u9875\u9762\u64CD\u4F5C\u540E\u8BFB\u53D6\u539F\u4EFB\u52A1\u4E8B\u5B9E" };
-    if (!entry || entry.access !== "account_session" || entry.url !== checkout.checkout_url || !url || url.protocol !== "https:" || url.username || url.password || url.search || url.hash || url.pathname !== `/checkout/${encodeURIComponent(checkoutID)}`) {
+    if (!entry || entry.access !== "account_session" || entry.url !== checkout.checkout_url || !url || !isPresentableURL(entry.url, config.baseURL) || url.protocol !== "https:" || url.username || url.password || url.search || url.hash || url.pathname !== `/checkout/${encodeURIComponent(checkoutID)}`) {
       throw new CommandContractError("secure_handoff_unavailable", "original purchase has no verified account-session entry", "\u4FDD\u7559\u539F\u8D2D\u4E70\uFF1B\u5F53\u524D\u8D26\u53F7\u5B89\u5168\u5165\u53E3\u4E0D\u53EF\u7528\uFF0C\u4E0D\u5C55\u793A\u6216\u62FC\u63A5 bearer \u94FE\u63A5\uFF0C\u4E0D\u6362\u8EAB\u4EFD\u6216\u91CD\u5EFA\u8D2D\u4E70\u3002", [readOriginal], void 0, { service_execution_id: serviceExecutionID, checkout_id: checkoutID });
     }
     const { itinerary: itinerary2 } = authoritative ? projectCheckoutPresentation(authoritative, currentModel) : {};
     const effects = { page_created: !response.handoff_reissued, page_reused: response.handoff_reissued === true, payment_requested: false, charged: false, human_page_action_required: true };
-    writeCommandEnvelope({ status: "human_checkout_required", result: { service_execution_id: serviceExecutionID, checkout_id: checkoutID, amount: formatMoney(checkout.checkout.amount_minor, checkout.checkout.currency), effects, ...itinerary2 ? { itinerary: itinerary2 } : {}, agent_facts: presentAgent({ service_execution_id: serviceExecutionID, checkout_id: checkoutID, status: "human_checkout_required", checkout: { official_entry: entry }, effects }, { allowedOrigins: [url.origin] }) }, handoff: { url: entry.url, purpose: entry.purpose, access: entry.access, ...entry.expires_at ? { expires_at: entry.expires_at } : {} }, instruction: "\u7ACB\u5373\u5C55\u793A\u5B98\u65B9\u94FE\u63A5\u53CA\u91D1\u989D\uFF1B\u7528\u6237\u767B\u5F55\u53D1\u8D77\u8FDE\u63A5\u7684\u8D26\u53F7\u5B8C\u6210\u5F53\u524D\u6B65\u9AA4\u3002\u4E8C\u7EF4\u7801\u4E0D\u662F\u524D\u7F6E\u6761\u4EF6\uFF0C\u6253\u5F00\u94FE\u63A5\u4E0D\u4EE3\u8868\u4ED8\u6B3E\u6216\u51FA\u7968\u3002\u7528\u6237\u8868\u793A\u5B8C\u6210\u540E\u8BFB\u53D6\u539F\u4EFB\u52A1\u4E8B\u5B9E\uFF0C\u4E0D\u91CD\u590D\u786E\u8BA4\u3001\u6362\u5355\u6216\u81EA\u52A8\u4ED8\u6B3E\u3002", next: readOriginal, recovery: [] }, { ...options.jsonOutput !== void 0 ? { jsonOutput: options.jsonOutput } : {}, ...options.output ? { output: options.output } : {} });
+    writeCommandEnvelope({ status: "human_checkout_required", result: { service_execution_id: serviceExecutionID, checkout_id: checkoutID, amount: formatMoney(checkout.checkout.amount_minor, checkout.checkout.currency), effects, ...itinerary2 ? { itinerary: itinerary2 } : {}, agent_facts: presentAgent({ service_execution_id: serviceExecutionID, checkout_id: checkoutID, status: "human_checkout_required", checkout: { official_entry: entry }, effects }, { allowedOrigins: OFFICIAL_BACKEND_URLS }) }, handoff: { url: entry.url, purpose: entry.purpose, access: entry.access, ...entry.expires_at ? { expires_at: entry.expires_at } : {} }, instruction: "\u7ACB\u5373\u5C55\u793A\u5B98\u65B9\u94FE\u63A5\u53CA\u91D1\u989D\uFF1B\u7528\u6237\u767B\u5F55\u53D1\u8D77\u8FDE\u63A5\u7684\u8D26\u53F7\u5B8C\u6210\u5F53\u524D\u6B65\u9AA4\u3002\u4E8C\u7EF4\u7801\u4E0D\u662F\u524D\u7F6E\u6761\u4EF6\uFF0C\u6253\u5F00\u94FE\u63A5\u4E0D\u4EE3\u8868\u4ED8\u6B3E\u6216\u51FA\u7968\u3002\u7528\u6237\u8868\u793A\u5B8C\u6210\u540E\u8BFB\u53D6\u539F\u4EFB\u52A1\u4E8B\u5B9E\uFF0C\u4E0D\u91CD\u590D\u786E\u8BA4\u3001\u6362\u5355\u6216\u81EA\u52A8\u4ED8\u6B3E\u3002", next: readOriginal, recovery: [] }, { ...options.jsonOutput !== void 0 ? { jsonOutput: options.jsonOutput } : {}, ...options.output ? { output: options.output } : {} });
     return;
   }
   const displayToken = checkout.display_token;
@@ -19064,7 +19123,7 @@ async function runServicesEvents(backend, serviceExecutionID, options = {}) {
 }
 __name(runServicesEvents, "runServicesEvents");
 
-// ../../../../Documents/itpay_cli/node_modules/commander/esm.mjs
+// node_modules/commander/esm.mjs
 var import_index = __toESM(require_commander(), 1);
 var {
   program,
@@ -19953,63 +20012,6 @@ function formatProductMoney(amountMinor, currency) {
   }).format(amountMinor / 100);
 }
 __name(formatProductMoney, "formatProductMoney");
-
-// src/render/browser.ts
-import { spawn } from "node:child_process";
-import { platform } from "node:os";
-function isPresentableURL(raw, baseURL, env = process.env) {
-  let url;
-  try {
-    url = new URL(raw);
-  } catch {
-    return false;
-  }
-  if (url.username || url.password) return false;
-  if (env.ITPAY_CLI_DEV === "1" && /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(url.origin)) return true;
-  if (url.protocol !== "https:") return false;
-  const allowedOrigins = /* @__PURE__ */ new Set(["https://app.itpay.ai", "https://sandbox.itpay.ai", "https://dev.itpay.ai"]);
-  if (baseURL) {
-    try {
-      allowedOrigins.add(new URL(baseURL).origin);
-    } catch {
-    }
-  }
-  return allowedOrigins.has(url.origin);
-}
-__name(isPresentableURL, "isPresentableURL");
-function openInSystemBrowser(raw, baseURL, env = process.env) {
-  if (!isPresentableURL(raw, baseURL, env)) {
-    return Promise.resolve({ status: "failed", reason: "url_rejected" });
-  }
-  const [command, args] = openerArgv(raw);
-  if (!command) {
-    return Promise.resolve({ status: "unavailable", reason: "no system opener on this platform" });
-  }
-  return new Promise((resolvePromise) => {
-    const child = spawn(command, args, { detached: true, stdio: "ignore" });
-    child.once("error", (error) => resolvePromise({ status: "failed", reason: error.message }));
-    child.once("spawn", () => {
-      child.unref();
-      resolvePromise({ status: "dispatch_accepted", argv: [command, ...args] });
-    });
-  });
-}
-__name(openInSystemBrowser, "openInSystemBrowser");
-function openerArgv(url) {
-  switch (platform()) {
-    case "darwin":
-      return ["open", [url]];
-    case "win32":
-      return ["cmd.exe", ["/c", "start", "", url]];
-    case "linux":
-    case "freebsd":
-    case "openbsd":
-      return ["xdg-open", [url]];
-    default:
-      return [void 0, []];
-  }
-}
-__name(openerArgv, "openerArgv");
 
 // src/commands/presentation.ts
 var yes = /* @__PURE__ */ __name((value) => value === "yes", "yes");
