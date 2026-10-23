@@ -141,5 +141,5 @@
     "url": "git+https://github.com/itpay-ai/cli.git"
   },
   "itpayBundleFormat": "buyer-esm-v1",
-  "gitHead": "6f5450a6c4244985ddb997dba497d004b68b4ccd"
+  "gitHead": "e9b6854af17c7fcc5ef0fa809f8c661f05121d50"
 }

@@ -14724,6 +14724,8 @@ var RAIL_SERVICE_GUIDANCE = {
       { name: "origin_location", description: "\u5DF2\u77E5\u5750\u6807\u5BF9\u8C61\uFF08\u9AD8\u5FB7 GCJ-02\uFF09" },
       { name: "destination_location", description: "\u76EE\u7684\u5730\u5750\u6807\u5BF9\u8C61" },
       { name: "depart_after", description: "\u4E0D\u65E9\u4E8E\u8BE5\u65F6\u95F4\u51FA\u53D1" },
+      { name: "depart_before", description: "\u4E0D\u665A\u4E8E\u8BE5\u65F6\u95F4\u51FA\u53D1\uFF1B\u4FDD\u7559\u7528\u6237\u660E\u786E\u4E0A\u9650" },
+      { name: "arrive_after", description: "\u4E0D\u65E9\u4E8E\u8BE5\u65F6\u95F4\u5230\u8FBE\uFF1B\u4E0E\u6700\u665A\u5230\u8FBE\u4E00\u8D77\u4F5C\u4E3A\u8D44\u683C\u6761\u4EF6\uFF0C\u4E0D\u53EA\u4F5C\u6392\u5E8F" },
       { name: "depart_before", description: "\u4E0D\u665A\u4E8E\u8BE5\u65F6\u95F4\u51FA\u53D1" },
       { name: "arrive_before", description: "\u4E0D\u665A\u4E8E\u8BE5\u65F6\u95F4\u5230\u8FBE" },
       { name: "user_query", description: "\u65C5\u884C\u9700\u6C42\u539F\u8BDD\uFF0C\u6700\u591A4096 UTF-8\u5B57\u8282\uFF1B\u65F6\u95F4\u7B49\u660E\u786E\u6761\u4EF6\u4ECD\u586B\u5199\u5BF9\u5E94\u7ED3\u6784\u5316\u5B57\u6BB5" },
@@ -16572,7 +16574,7 @@ function serviceAdapterKey(execution) {
   const binding = execution.public_binding;
   if (binding) {
     if (binding.adapter_key === "schema.v1") return "schema.v1";
-    if (binding.adapter_key === "rail.v1" && ["scv_itpay_rail_public_v1", "scv_itpay_rail_public_v1_capacity_20261015"].includes(binding.service_definition_version)) return "rail.v1";
+    if (binding.adapter_key === "rail.v1" && ["scv_itpay_rail_public_v1", "scv_itpay_rail_public_v1_capacity_20261015", "scv_itpay_rail_public_v5"].includes(binding.service_definition_version)) return "rail.v1";
     return "unsupported";
   }
   const versions = legacyRailContracts.get(execution.service_id);
