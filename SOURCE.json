@@ -1,9 +1,9 @@
 {
   "source": "itpay-ai/cli",
-  "cli_commit": "624352683dc701d13f377863f2b0630b979b4591",
+  "cli_commit": "6f5450a6c4244985ddb997dba497d004b68b4ccd",
   "cli_version": "2.1.51",
   "format": "buyer-esm-v1",
-  "cli_tarball_sha256": "6e5f49e8f04bf5f479247a165626a1350dbbacdb34812323eb2c5c233c897cde",
+  "cli_tarball_sha256": "1aa25a9029c072179afe120ce9206fbb2ead214b0c5690fefb23689043663411",
   "skill_sha256": "9e36b56ef726cd1c7db603474fb977fa3cc5b84ef6b005d007e9f322ac534ce7",
   "canonical_skill_in_root": true,
   "omitted_packaged_paths": {
@@ -15,7 +15,7 @@
     "README.md": "b2737970f17d3969ffb61596bce3f4017d2aa40758c42e4bc2f8ecbbe6fbecef",
     "THIRD-PARTY-NOTICES.txt": "83c6e72949cc1672a88d737d871ccea27616cf9bd4797afadbc25394516677b5",
     "bin/itp.mjs": "d588a3da46497c1b13795c79a09154aaf83d0134137a70a2fd0cd6cfed372b43",
-    "dist/src/main.js": "eaa9629335a10073d86e08553b944dec081767644bdc6c4efbcf1c39d9a83621",
+    "dist/src/main.js": "e2b26a652b035b4d853d2492e5a0483464ef3557e3944eeb5b64c41e819a6414",
     "dist/src/state/config.js": "0cfd85ef79fc720fe9c49b5a8f07d293d732ba8053874ab9034ade67c2d25990",
     "docs/agent/buyer/cart-checkout.json": "7ab9e0a0f39e08455ddb0fc12d51fd825f4be28a5cc8556415e601ed4bbd24ad",
     "docs/agent/buyer/catalog-list.json": "22c1a4f6a7ef90b350e9f6e9abf474fc781b73995e76e163315f333dbf2031c3",
@@ -82,6 +82,6 @@
     "docs/cli-reference/commands/vault/read.md": "6b5098b2eb885b5894c99a6c30954e694974a0ce61291d5ffb3d8989ab338f6e",
     "docs/cli-reference/conventions.md": "8d5511cbb454fb62cfcfd8cf72f7f06fab5f17b597a349da5eb10cadce3c649e",
     "docs/cli-reference/index.md": "2f92d1ba62306b15260455addf6a6fd1bf48ba3a410b0303d99a99e29dd0bb67",
-    "package.json": "7e9d1dfb97dd786f4fc3b941d1dfd790bdf6c6e4f5a654b9957bdb463e008558"
+    "package.json": "46cc4d291e121b4ff7423d11a23af780f66490d45b40a6ea948a1344a9456695"
   }
 }

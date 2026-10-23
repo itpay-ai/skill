@@ -13731,6 +13731,7 @@ var agentDisplaySchema = external_exports.object({
   actions: external_exports.array(external_exports.object({ purpose: external_exports.string(), tool: external_exports.string(), arguments: external_exports.record(external_exports.unknown()), requires_confirmation: external_exports.boolean() }).strict()),
   acceptance: external_exports.enum(["accepted", "not_accepted", "unknown"]),
   references: external_exports.record(external_exports.string()),
+  request_sent: external_exports.boolean().optional(),
   effects: external_exports.object({ persistent_task_created: truth, order_created: truth, inventory_held: truth, price_held: truth, payment_requested: truth, charged: truth, fulfilled: truth }).strict(),
   cost: external_exports.object({ classification: external_exports.enum(["public_free", "platform_subsidized", "included_entitlement", "user_paid", "unknown"]), settlement_state: external_exports.string(), actual_charge: external_exports.record(external_exports.unknown()).nullable(), wallet_debited: truth }).strict(),
   coverage: external_exports.record(external_exports.unknown()),
@@ -13785,6 +13786,7 @@ function presentAgent(value, options) {
   const applied = Object.keys(object(appliedRoot.original_result)).length ? object(appliedRoot.original_result) : appliedRoot;
   const checkout = Object.keys(object(service.checkout)).length ? object(service.checkout) : object(raw.checkout), handoff = applied.checkout_id ? applied : object(service.handoff);
   const purchase = object(raw.review), sourceEffects = object(raw.effects);
+  const purchaseProgress = raw.completed_stage !== void 0 || raw.poll_after_ms !== void 0 || raw.auto_wait_remaining_ms !== void 0 ? { status: raw.status ?? null, completed_stage: raw.completed_stage ?? null, poll_after_ms: raw.poll_after_ms ?? null, auto_wait_remaining_ms: raw.auto_wait_remaining_ms ?? null } : void 0;
   const refs = { ...options.originalReferences };
   const refKeys = ["run_id", "intent_id", "operation_id", "publication_id", "request_ref", "service_execution_id", "source_service_execution_id", "checkout_id", "order_id", "case_id", "result_ref"];
   for (const source of [raw, service, applied, handoff, checkout, object(object(raw.result).case)]) for (const key of refKeys) {
@@ -13813,7 +13815,7 @@ function presentAgent(value, options) {
   const classification = costClass === "public_free" || costClass === "platform_subsidized" || costClass === "included_entitlement" || costClass === "user_paid" ? costClass : "unknown";
   const code = text(error.code) ?? text(summary.error_code) ?? text(applied.reason_code);
   const reason = code && /^[a-zA-Z0-9_.:-]{1,128}$/.test(code) ? code : null;
-  const result = object(publicData({ ...Object.keys(purchase).length ? { purchase_review: purchase } : {}, ...Object.keys(error).length ? { error } : {}, ...service.summary !== void 0 ? { summary: service.summary } : {}, ...service.actions !== void 0 ? { available_choices: service.actions } : {}, ...service.result !== void 0 ? { service_result: service.result } : {}, ...raw.result !== void 0 ? { content: raw.result } : {}, ...Object.keys(checkout).length ? { checkout } : {}, ...raw.effects !== void 0 ? { preparation_effects: raw.effects } : {} }));
+  const result = object(publicData({ ...purchaseProgress ? { purchase_progress: purchaseProgress } : {}, ...Object.keys(purchase).length ? { purchase_review: purchase } : {}, ...Object.keys(error).length ? { error } : {}, ...service.summary !== void 0 ? { summary: service.summary } : {}, ...service.actions !== void 0 ? { available_choices: service.actions } : {}, ...service.result !== void 0 ? { service_result: service.result } : {}, ...raw.result !== void 0 ? { content: raw.result } : {}, ...Object.keys(checkout).length ? { checkout } : {}, ...raw.effects !== void 0 ? { preparation_effects: raw.effects } : {} }));
   return agentDisplaySchema.parse({
     version: "itpay.agent.v1",
     kind,
@@ -13822,6 +13824,7 @@ function presentAgent(value, options) {
     actions: [],
     acceptance,
     references: refs,
+    ...typeof raw.request_sent === "boolean" ? { request_sent: raw.request_sent } : {},
     effects: { persistent_task_created: fact(sourceEffects.persistent_task_created), order_created: fact(sourceEffects.order_created), inventory_held: fact(sourceEffects.inventory_held), price_held: fact(sourceEffects.price_held), payment_requested: fact(sourceEffects.payment_requested), charged: paymentReceived ? true : fact(sourceEffects.charged), fulfilled: fact(sourceEffects.fulfilled) },
     cost: { classification, settlement_state: settlement, actual_charge: raw.actual_charge === void 0 ? null : object(publicData(raw.actual_charge)), wallet_debited: ["captured", "partially_refunded", "refunded"].includes(settlement) ? true : ["free", "reserved", "released"].includes(settlement) ? false : "unknown" },
     coverage: object(publicData(applied.coverage ?? summary.coverage ?? raw.coverage)),
