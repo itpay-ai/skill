@@ -1,9 +1,9 @@
 {
   "source": "itpay-ai/cli",
-  "cli_commit": "463d0cb9c500b03579d3c2d3901625d77bd300d0",
-  "cli_version": "2.1.52",
+  "cli_commit": "c43b2eab1fccd95e5ab577db4b91ecc91350591d",
+  "cli_version": "2.1.53",
   "format": "buyer-esm-v1",
-  "cli_tarball_sha256": "2c5bc982b8f10f5f326299722d40b7d01318a9e6eaa22ccb14907880c382c691",
+  "cli_tarball_sha256": "c152c28fd8d90f9d42e01abc4b0992bc5f47a35ea13927d026c3ac13bf271c7d",
   "skill_sha256": "9e36b56ef726cd1c7db603474fb977fa3cc5b84ef6b005d007e9f322ac534ce7",
   "canonical_skill_in_root": true,
   "omitted_packaged_paths": {
@@ -15,8 +15,8 @@
     "README.md": "b2737970f17d3969ffb61596bce3f4017d2aa40758c42e4bc2f8ecbbe6fbecef",
     "THIRD-PARTY-NOTICES.txt": "83c6e72949cc1672a88d737d871ccea27616cf9bd4797afadbc25394516677b5",
     "bin/itp.mjs": "d588a3da46497c1b13795c79a09154aaf83d0134137a70a2fd0cd6cfed372b43",
-    "dist/src/main.js": "bb65a769616f4fe07336c2dc19ce61ecc8d4439d53875e5b17678ae625e8a274",
-    "dist/src/state/config.js": "cf74ba255ccb05a8b59c77abb2738d7447eaff53dac10c5d92485f96b7bf7abd",
+    "dist/src/main.js": "24f7bcf792f30e98351a4b02a5bf2a41c14d996486d88d43ae2e4d2df14303e6",
+    "dist/src/state/config.js": "e7bdac54440bf2b52d84d8222b06b62e19c1a1f14502ed898a0b2a6f245d4366",
     "docs/agent/buyer/cart-checkout.json": "7ab9e0a0f39e08455ddb0fc12d51fd825f4be28a5cc8556415e601ed4bbd24ad",
     "docs/agent/buyer/catalog-list.json": "22c1a4f6a7ef90b350e9f6e9abf474fc781b73995e76e163315f333dbf2031c3",
     "docs/agent/buyer/identity-and-sessions.json": "fa658a4ef57d94b50ba18ed7b771c913b6908734d20bd2bf0840d3f2c33ddf82",
@@ -82,6 +82,6 @@
     "docs/cli-reference/commands/vault/read.md": "6b5098b2eb885b5894c99a6c30954e694974a0ce61291d5ffb3d8989ab338f6e",
     "docs/cli-reference/conventions.md": "8d5511cbb454fb62cfcfd8cf72f7f06fab5f17b597a349da5eb10cadce3c649e",
     "docs/cli-reference/index.md": "2f92d1ba62306b15260455addf6a6fd1bf48ba3a410b0303d99a99e29dd0bb67",
-    "package.json": "c06e0a655147d39ce1fa58181a6abce815c75afb5f5476c5eb8337ee0d962ca6"
+    "package.json": "fd3f2e1fa849088592cf07c529962f79135814afe358e795c964f9cd3c6287e9"
   }
 }
