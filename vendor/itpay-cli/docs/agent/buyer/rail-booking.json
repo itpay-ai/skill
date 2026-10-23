@@ -1,0 +1,51 @@
+{
+  "schema_version": "itp.agent_doc.v1",
+  "role": "buyer",
+  "product_scope": "itpay is the single public Buyer CLI entry point, and $itpay is its user-facing Skill invocation. It covers services, railway planning and booking, orders, authorized purchased content and refunds.",
+  "topic": "rail-booking",
+  "title": "Railway Query, Planning, and Ticket Booking",
+  "purpose": "Understand the route, query current railway facts, choose one complete plan and prepare its official purchase page.",
+  "when_to_use": [
+    "Any railway schedule, planning or ticket request; read this topic once before the first railway action."
+  ],
+  "search_terms": [
+    "rail",
+    "railway",
+    "train",
+    "ticket",
+    "火车",
+    "火车票",
+    "高铁",
+    "车票",
+    "车次",
+    "seat",
+    "booking",
+    "rail-booking"
+  ],
+  "route_understanding": [
+    "Preserve full administrative names, original endpoint meaning, date, party size, deadlines and station locks. Ask only for a missing date or genuine ambiguity changing the destination/constraints; no preference means do not pre-ask station, seat or departure time.",
+    "Before the first railway query, leave one 2–4 line conclusion brief in conversation or existing route-brief.txt (choose one, no Backend upload or private reasoning): Origin: full original meaning; station/area/place; evidence from user/context/reliable knowledge/actual lookup; unknown facts. Destination: the same. Journey: date, given party size/deadlines; credible station pair or transfer direction and evidence; Exact/Smart choice and one-sentence reason. Never replace this with “understood”, or write it after querying as pre-query evidence. Reuse it while waiting, reading, quoting or buying; update only changed endpoints/scope/date. With existing results, serve the facts rather than restart for a missing ceremony; missing prior evidence remains unobserved.",
+    "Only clear reliable route knowledge can directly support a candidate. A merely possible/probable transfer or “a long trip should transfer” is unknown: first make one targeted lookup on 12306 or 同程, with 携程 only if needed. Stop once a credible direct station pair or transfer direction is established; do not collect complete external timetables, prices or inventory. Remembered trains still require ItPay to verify the actual date and stock.",
+    "12306 https://kyfw.12306.cn/ is the official date/station/train reference; claim a date verified only after reading that date result. 同程 https://www.ly.com/mergeTrain/huochepiao helps identify station pairs and transfer directions. 携程 https://trains.ctrip.com/ is an optional supplement for transfer routes. Knowledge, search snippets and historical timetables do not prove current operation, inventory, price or purchase credentials.",
+    "If login, captcha or network blocks the short lookup, stop without repeated troubleshooting or browser installation and state the facts still unknown. Clear double-station endpoints can use Exact to verify direct trains; do not choose Smart merely because a transfer seems probable. A known transfer requirement or supported multi-station/place comparison can use Smart; genuinely unclear place meaning needs human clarification.",
+    "Date verification is required; the ItPay query for the actual date can perform it. A 12306 visit is not a mandatory extra call for every order. Valid Smart journeys and credentials do not require routine Exact rechecks of each leg.",
+    "Each side independently means area, place or station, giving all nine combinations. An area is not a same-name station; a specific station stays locked until the human consents to changing it. Smart also supports two locked stations when transfers are needed.",
+    "Distance alone does not establish a transfer requirement. One observed route through a station does not make it mandatory; a failed short lookup or incomplete search cannot establish that all direct trains are absent.",
+    "Unclear meaning that changes region/scope needs one key question, using known context first. Clear meaning with unknown coordinates can use the complete name and mark location verification pending. Use maps/browser for place identity; 12306/同程 for rail directions, 携程 as needed. Do not require a residential location to be researched on 12306. No fabricated coordinates or passenger/payment data in notes."
+  ],
+  "search": {
+    "exact": "Known or credible resolved station pair, direct trains for one station pair and date only. A zero result does not mean the whole city has no train. An area delegation may permit checking another evidence-based pair within that original area; a human-specified station stays locked until they consent to changing that endpoint.",
+    "smart": "Use Smart for a reliably established transfer direction or explicit transfer need, broad station comparison, or a precise place needing nearby stations and ground evidence. Preserve each endpoint as area/place/station; a probable transfer alone is not a basis for Smart. Fastest does not automatically mean max_transfers=0.",
+    "scope": "Exact cannot claim a citywide or all-transfer optimum. Smart gives its observed scope and missing evidence; its first useful options may be shown before expansion finishes."
+  },
+  "current_flow": [
+    "Read itpay services start itpay-rail --json once for the current operation and complete input template. Copy file_content verbatim to a JSON file; fill only declared missing fields. Preserve every original endpoint, station lock, date, party size and deadline.",
+    "Run the returned Exact/Smart operation. Read complete saved results using its returned directory/detail/page commands; normal text or JSON is directly readable. Compare within the stated scope; first page alone does not establish the optimum. Read more only when the stated goal requires it.",
+    "Select under the human’s delegation. Use one eligible complete ticket plan; use the returned seat_type code and seat_name together. Do not default to second class, invent tokens, combine snapshots or compose separate per-leg purchases. Preserve user constraints on no-seat, overnight travel and missing comparison coverage; disclose these current facts before missing consent.",
+    "Use the detail’s complete prepare_purchase template with its original continuation. One booking, quote, checkout, order and payment covers the whole plan; each leg issues separately, without connection or adjacent-seat guarantees.",
+    "The current purchase summary includes every leg, actual seat class, party, price policy and terms. Follow the formal Skill consent rule and flat confirmation template. Technical code spelling corrections that do not change these facts reuse matching real consent.",
+    "Show the single official entry and payment deadline. The human enters passengers and contact details there; verified account email may be reused and edited for this order. Do not collect traveler identity in chat.",
+    "Read the original order for per-leg issuance. For railway refund/change, use itpay aftercare list --order <order_id> --json and its complete target/template. Use only the human’s requested legs/passengers. Request acceptance, supplier completion and money returned are distinct; concrete change revision/fees require actual consent."
+  ],
+  "formal_rules": "The same-package ItPay Skill owns envelope reading, necessary consent, bounded waiting and human handoff. A capacity queue is not a no-direct result or permission to widen endpoints; follow the original task and its bounded next. Errors supply their current action or stop; no extra recovery tutorial is required."
+}

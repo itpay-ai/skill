@@ -1,0 +1,3 @@
+# Preserve CommonMark hard line breaks in the exact upstream payload.
+# SOURCE.json hashes guard these bytes; do not normalize vendored documents.
+vendor/itpay-cli/docs/**/*.md whitespace=-blank-at-eol
