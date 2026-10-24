@@ -1,118 +1,22 @@
-import test from "node:test";
-import assert from "node:assert/strict";
-import { execFile } from "node:child_process";
-import { mkdtemp, readFile } from "node:fs/promises";
-import { tmpdir } from "node:os";
-import { join } from "node:path";
-import { promisify } from "node:util";
-import { fileURLToPath } from "node:url";
-
-const execFileAsync = promisify(execFile);
-const wrapper = fileURLToPath(new URL("../bin/itpay", import.meta.url));
-const vendorPackage = JSON.parse(
-  await readFile(new URL("../vendor/itpay-cli/package.json", import.meta.url), "utf8"),
-);
-
-async function run(args) {
-  const home = await mkdtemp(join(tmpdir(), "itpay-skill-test-"));
-  return execFileAsync("sh", [wrapper, ...args], {
-    cwd: tmpdir(),
-    env: { ...process.env, HOME: home },
-    encoding: "utf8",
-    timeout: 10_000,
-    maxBuffer: 1024 * 1024,
-  });
-}
-
-test("shell wrapper runs the pinned CLI from outside the Skill directory", async () => {
-  const { stdout, stderr } = await run(["--version"]);
-  assert.equal(stdout.trim(), vendorPackage.version);
-  assert.equal(stderr, "");
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {execFile} from 'node:child_process';
+import {mkdtemp,rm,readFile} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {promisify} from 'node:util';
+import {fileURLToPath} from 'node:url';
+const exec=promisify(execFile),wrapper=fileURLToPath(new URL('../bin/itpay',import.meta.url));
+async function run(args){const state=await mkdtemp(join(tmpdir(),'itpay-skill-fixture-'));try{return await exec('sh',[wrapper,...args],{cwd:tmpdir(),env:{...process.env,ITPAY_STATE_DIR:state},timeout:10000,maxBuffer:1024*1024});}finally{await rm(state,{recursive:true,force:true});}}
+test('Pinned wrapper works from another directory and canonical/legacy Skill reader retains the same instructions',async()=>{
+ assert.equal((await run(['--version'])).stdout.trim(),'2.1.54');
+ for(const name of ['itpay','itpay-buyer']){const out=JSON.parse((await run(['--agent-type','dot','skill','show',name,'--json'])).stdout);assert.equal(out.status,'shown');assert.equal(out.result.skill,'itpay');assert.equal(out.result.content,await readFile(new URL('../SKILL.md',import.meta.url),'utf8'));assert.equal(out.next,null);}
 });
-
-test("vendored CLI exposes discovery, checkout, and refund command families", async () => {
-  const { stdout } = await run(["--help"]);
-  assert.match(stdout, /catalog\s+Browse V3 service catalog/);
-  assert.match(stdout, /services\s+Generic V3 Service Execution commands/);
-  assert.match(stdout, /checkout.*canonical V3 checkout presentation/);
-  assert.match(stdout, /refund \[options\]\s+Create a V3 refund request/);
+test('Bundled current purchase docs are discoverable directly, without retired tutorials',async()=>{
+ const list=JSON.parse((await run(['docs','list','--json'])).stdout);const topics=list.result.topics.map(t=>t.topic);assert(topics.includes('purchase'));assert(topics.includes('rail-booking'));assert(!topics.includes('quickstart'));assert(!topics.includes('rail-fast-checkout'));
+ const search=JSON.parse((await run(['docs','search','price_policy','--json'])).stdout);assert.equal(search.status,'matched');assert.equal(search.result.topics[0].topic,'purchase');assert.equal(search.next.command,'itpay docs show purchase --json');
 });
-
-test("canonical root Skill is available offline and keeps Agent Type", async () => {
-  const { stdout } = await run([
-    "--agent-type",
-    "codex-desktop",
-    "skill",
-    "show",
-    "itpay",
-    "--json",
-  ]);
-  const envelope = JSON.parse(stdout);
-  assert.equal(envelope.status, "shown");
-  assert.equal(envelope.result.skill, "itpay");
-  assert.match(envelope.result.content, /# ItPay Buyer/);
-  assert.equal(envelope.next, null);
-});
-
-test("historical itpay-buyer skill name remains a compatible alias", async () => {
-  const { stdout } = await run(["skill", "show", "itpay-buyer", "--json"]);
-  const envelope = JSON.parse(stdout);
-  assert.equal(envelope.status, "shown");
-  assert.equal(envelope.result.skill, "itpay");
-  assert.match(envelope.result.content, /# ItPay Buyer/);
-});
-
-test("onboarding exposes all Backend-supported Agent Types", async () => {
-  const { stdout } = await run(["install", "--json"]);
-  const envelope = JSON.parse(stdout);
-  assert.deepEqual(
-    envelope.result.agent_types.map((item) => item.agent_type),
-    [
-      "codex-desktop",
-      "codex-cli",
-      "claude-code-desktop",
-      "claude-code-cli",
-      "workbuddy",
-      "kimi-code",
-      "openclaw",
-      "hermes",
-    ],
-  );
-
-  const { stdout: targetStdout } = await run(["install", "kimi-code", "--json"]);
-  const targetEnvelope = JSON.parse(targetStdout);
-  assert.equal(targetEnvelope.result.agent_type, "kimi-code");
-  assert.equal(targetEnvelope.result.default_api, "https://app.itpay.ai");
-  assert.equal(targetEnvelope.result.install_command, undefined);
-  assert.equal(
-    targetEnvelope.next.command,
-    "itpay --agent-type kimi-code readyz --json",
-  );
-});
-
-test("newly exposed Agent Types can load the canonical root Skill", async () => {
-  for (const agentType of ["kimi-code", "openclaw", "hermes"]) {
-    const { stdout } = await run([
-      "--agent-type",
-      agentType,
-      "skill",
-      "show",
-      "itpay",
-      "--json",
-    ]);
-    const envelope = JSON.parse(stdout);
-    assert.equal(envelope.status, "shown");
-    assert.equal(envelope.next, null);
-    assert.match(envelope.result.content, /version: 2\.2\.2/);
-  }
-});
-
-test("offline progressive docs are bundled", async () => {
-  const { stdout } = await run(["docs", "list", "--json"]);
-  const envelope = JSON.parse(stdout);
-  const topics = envelope.result.topics.map((topic) => topic.topic);
-  assert.equal(envelope.status, "listed");
-  assert.ok(topics.includes("quickstart"));
-  assert.ok(topics.includes("payment-flow"));
-  assert.ok(topics.includes("orders-refunds"));
+test('Real cloud types remain distinct and onboarding does not promise account or cross-session readiness',async()=>{
+ const types=JSON.parse((await run(['install','--json'])).stdout).result.agent_types.map(t=>t.agent_type);for(const type of ['dot','muse','codex-desktop','workbuddy','openclaw'])assert(types.includes(type));
+ for(const type of ['dot','muse']){const out=JSON.parse((await run(['install',type,'--json'])).stdout);assert.equal(out.status,'instructions_ready');assert.equal(out.result.agent_type,type);assert.equal(out.result.default_host,'plain-chat');assert.equal(out.next.command,`itpay --agent-type ${type} setup --json`);}
 });

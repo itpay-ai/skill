@@ -32,13 +32,14 @@ Choose these once and preserve them across every continuation and recovery comma
 - the exact bundled wrapper;
 - one real `--agent-type` or one stable `ITPAY_AGENT_TYPE`;
 - the default Backend URL or one deliberate fixed `ITPAY_BACKEND_URL`;
-- the Host and Host permission context.
+- the Host and Host permission context;
+- the selected private `ITPAY_STATE_DIR`, if configured (never return to a different default directory).
 
 Never mix local Device state across launchers or change Backend/Agent Type to recover quota or an uncertain payment.
 
-## Parse JSON Envelopes
+## Read JSON Envelopes
 
-Pass `--json` for Agent-run commands. On exit code 0, parse stdout as one JSON envelope. On a nonzero exit, parse the JSON envelope from stderr when present.
+Pass `--json` for Agent-run commands. Read the text or JSON directly. On a nonzero exit, read the JSON envelope from stderr when present. Do not write Python, Node, regex or jq parsers for ordinary decisions.
 
 Use fields as follows:
 
@@ -53,10 +54,10 @@ Do not scrape terminal prose when JSON is available. Never print a complete enve
 
 ## Handle Failure
 
-- Validation or missing-input error: correct only the named input, or ask the human for it.
+- Validation or missing-input error: correct the named technical field from the current schema/template; ask only for a missing real business decision.
 - Compatibility or Backend contract error: stop business commands and surface the message. Update this Skill only when the CLI supplies an exact required version; verify the bundled wrapper version before typed `readyz`. Do not install or search for another CLI.
 - Network timeout during a state-changing operation: treat state as unknown and use the returned or documented read/resume path before retrying.
 - Device/session error after the CLI's one renewal attempt: stop. Do not switch Agent Type, delete local state, or rotate identity.
 - Bundled asset error: report that the Skill installation is incomplete or damaged.
 
-Run no payment, purchase, protected-read, or refund transition unless the current Skill rules and the human's explicit approval allow it.
+Use current account/resource permissions for protected reads. Effectful purchase, payment and aftercare steps require their actual contract, host permission and genuine scoped consent; retain unchanged valid consent after technical corrections.

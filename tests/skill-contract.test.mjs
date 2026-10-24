@@ -1,116 +1,22 @@
-import test from "node:test";
-import assert from "node:assert/strict";
-import { access, readFile, readdir } from "node:fs/promises";
-import { dirname, join, relative } from "node:path";
-import { fileURLToPath } from "node:url";
-
-const skill = await readFile(new URL("../SKILL.md", import.meta.url), "utf8");
-const openai = await readFile(new URL("../agents/openai.yaml", import.meta.url), "utf8");
-const invocation = await readFile(
-  new URL("../references/itpay-cli-invocation.md", import.meta.url),
-  "utf8",
-);
-const wrapper = await readFile(new URL("../bin/itpay", import.meta.url), "utf8");
-const packageJson = JSON.parse(
-  await readFile(new URL("../package.json", import.meta.url), "utf8"),
-);
-const vendorPackage = JSON.parse(
-  await readFile(new URL("../vendor/itpay-cli/package.json", import.meta.url), "utf8"),
-);
-const skillRoot = dirname(fileURLToPath(new URL("../SKILL.md", import.meta.url)));
-
-async function findSkillFiles(directory) {
-  const entries = await readdir(directory, { withFileTypes: true });
-  const nested = await Promise.all(entries
-    .filter((entry) => entry.name !== ".git")
-    .map(async (entry) => {
-      const path = join(directory, entry.name);
-      if (entry.isDirectory()) return findSkillFiles(path);
-      return entry.isFile() && entry.name === "SKILL.md" ? [path] : [];
-    }));
-  return nested.flat();
-}
-
-test("Skill frontmatter supports Agent discovery and SkillHub publishing", () => {
-  const frontmatter = skill.match(/^---\n([\s\S]*?)\n---\n/)?.[1] ?? "";
-  assert.match(frontmatter, /^name: itpay-buyer$/m);
-  assert.match(frontmatter, /^description: /m);
-  assert.match(frontmatter, /^metadata:$/m);
-  assert.match(frontmatter, /^  slug: itpay-buyer$/m);
-  assert.match(frontmatter, /^license: MIT$/m);
-  assert.match(frontmatter, /^  version: 2\.2\.2$/m);
-  assert.match(frontmatter, /^  displayName: ItPay Buyer$/m);
-  assert.match(frontmatter, /ItPay/);
-  assert.match(frontmatter, /company lookup|企业查询/);
-  assert.match(frontmatter, /Checkout|payment QR/);
-  assert.match(frontmatter, /refund/);
-  assert.match(frontmatter, /another skill/);
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+const root=new URL('../',import.meta.url);
+const read=path=>readFile(new URL(path,root),'utf8');
+const skill=await read('SKILL.md'),source=JSON.parse(await read('SOURCE.json'));
+const wrapper=await read('bin/itpay'),invocation=await read('references/itpay-cli-invocation.md');
+test('The independent Skill uses the exact canonical Buyer business instructions, not a divergent tutorial',()=>{
+ assert.equal(source.canonical_skill_in_root,true);assert.equal(createHash('sha256').update(skill).digest('hex'),source.skill_sha256);assert.match(skill,/^name: itpay$/m);assert.match(skill,/references\/itpay-cli-invocation\.md/);assert.match(skill,/real `dot` or `muse`/);assert.match(skill,/Do not write Python, Node, regex or jq parsers/);assert.match(skill,/missing genuine consent/);
 });
-
-test("implicit invocation and default prompt advertise the Skill", () => {
-  assert.match(openai, /allow_implicit_invocation: true/);
-  assert.match(openai, /default_prompt: "Use \$itpay-buyer /);
+test('Wrapper stays on the pinned dependency-free ESM payload and preserves permitted state',()=>{
+ assert.match(wrapper,/vendor\/itpay-cli\/dist\/src\/main\.js/);assert.match(wrapper,/ITPAY_CLI_DOCS_DIR/);assert.match(wrapper,/ITPAY_CLI_SKILLS_DIR/);assert.doesNotMatch(wrapper,/npm|resolve-itpay-cli/);assert.match(invocation,/Replace only the leading launcher/);assert.match(invocation,/archive-based installer.*executable bit/);assert.match(invocation,/ITPAY_STATE_DIR/);assert.match(invocation,/never infer one from prose or substitute `latest`/i);assert.match(invocation,/Do not write Python, Node, regex or jq parsers/);
 });
-
-test("bundled command is the only normal control surface", () => {
-  assert.match(skill, /references\/itpay-cli-invocation\.md/);
-  assert.match(skill, /sh <skill-root>\/bin\/itpay/);
-  assert.match(skill, /no global CLI install or MCP connection is required/i);
-  assert.match(invocation, /Replace only the leading launcher/);
-  assert.match(invocation, /archive-based installer.*executable bit/);
-  assert.match(invocation, /Do not choose the launcher with `command -v`/);
+test('Version, original payload files and full dependency notices match the fixed CLI',async()=>{
+ const pkg=JSON.parse(await read('vendor/itpay-cli/package.json'));assert.equal(pkg.version,'2.1.54');assert.equal(pkg.version,source.cli_version);assert.equal(pkg.itpayBundleFormat,'buyer-esm-v1');assert.deepEqual(source.payload_patches,[]);assert.match(source.cli_commit,/^[a-f0-9]{40}$/);assert.match(source.cli_tarball_sha256,/^[a-f0-9]{64}$/);
+ for(const [path,digest]of Object.entries(source.files))assert.equal(createHash('sha256').update(await readFile(new URL('vendor/itpay-cli/'+path,root))).digest('hex'),digest,path);
+ const notice=await read('vendor/itpay-cli/THIRD-PARTY-NOTICES.txt');for(const name of ['commander','qrcode','dijkstrajs','pngjs','zod'])assert(notice.includes(name));
 });
-
-test("the repository exposes exactly one canonical SKILL.md", async () => {
-  const files = await findSkillFiles(skillRoot);
-  assert.deepEqual(files.map((file) => relative(skillRoot, file)), ["SKILL.md"]);
-});
-
-test("runtime metadata pins compatible Node and CLI versions", () => {
-  assert.equal(packageJson.version, "2.2.2");
-  assert.equal(packageJson.engines.node, ">=18");
-  assert.equal(vendorPackage.version, "2.0.32");
-  assert.equal(
-    vendorPackage.itpaySource.commit,
-    "dd825acea8507e1d3ad7c0ec1807ef90b6b2cb2f",
-  );
-  assert.equal(vendorPackage.itpaySkillPatches.length, 2);
-});
-
-test("bundled compatibility recovery updates the Skill instead of a global CLI", () => {
-  assert.match(skill, /backend_contract_incompatible/);
-  assert.match(skill, /result\.required_cli_version/);
-  assert.match(skill, /do \*\*not\*\* execute the returned global npm recovery/i);
-  assert.match(skill, /result\.current_cli_version/);
-  assert.match(skill, /sh <skill-root>\/bin\/itpay --version/);
-  assert.match(invocation, /global `npm install` cannot change the CLI used by this wrapper/);
-  assert.match(invocation, /never infer one from prose or substitute `latest`/i);
-  assert.doesNotMatch(wrapper, /npm|resolve-itpay-cli/);
-});
-
-test("Skill maps every Backend-supported Agent Type without impersonation", () => {
-  for (const agentType of [
-    "codex-desktop",
-    "codex-cli",
-    "claude-code-desktop",
-    "claude-code-cli",
-    "workbuddy",
-    "kimi-code",
-    "openclaw",
-    "hermes",
-  ]) {
-    assert.ok(skill.includes("`" + agentType + "`"));
-  }
-  assert.match(skill, /never impersonate another runtime/);
-});
-
-test("bundled third-party dependencies retain their license notices", async () => {
-  for (const notice of [
-    "commander-LICENSE",
-    "qrcode-LICENSE",
-    "dijkstrajs-LICENSE.md",
-    "pngjs-LICENSE",
-  ]) {
-    await access(new URL(`../vendor/itpay-cli/licenses/${notice}`, import.meta.url));
-  }
+test('Host metadata names the actual canonical Skill',async()=>{
+ const meta=await read('agents/openai.yaml');assert.match(meta,/allow_implicit_invocation: true/);assert.match(meta,/Use \$itpay /);assert.doesNotMatch(meta,/Use \$itpay-buyer /);
 });

@@ -1,0 +1,34 @@
+{
+  "schema_version": "itp.agent_doc.v1",
+  "role": "buyer",
+  "product_scope": "itpay is the single public Buyer CLI entry point, and $itpay is its user-facing Skill invocation. It covers services, railway planning and booking, orders, authorized purchased content and refunds.",
+  "topic": "service-feedback",
+  "title": "Record A Completed Service Postmortem",
+  "purpose": "Record optional safe feedback after explaining the original order outcome.",
+  "when_to_use": [
+    "The human asks to rate a service, leave feedback, report a blocker, or says how many stars the experience deserves.",
+    "A paid result has actually been delivered and the CLI instruction offers an optional safe Agent postmortem.",
+    "A paid service failed and its order, delivery, and refund path have already been explained or recovered."
+  ],
+  "search_terms": [
+    "feedback",
+    "rating",
+    "review",
+    "stars",
+    "complaint",
+    "blocker",
+    "反馈",
+    "评价",
+    "建议",
+    "体验",
+    "卡住",
+    "投诉",
+    "几分",
+    "五星"
+  ],
+  "current_flow": [
+    "Use itpay feedback submit --order <known_order_id> --json only for the original Local Agent’s completed outcome. A read-only account grant does not confer write ownership.",
+    "Include --rating and --note only when the human actually supplied them. Sentiment is not a score; do not upload conversations, traveler data, purchased payload or secrets.",
+    "Optional Agent postmortem never delays result or handoff. Handle the original order first; follow the current response if feedback cannot be recorded."
+  ]
+}
