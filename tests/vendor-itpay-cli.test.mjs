@@ -9,7 +9,7 @@ import {fileURLToPath} from 'node:url';
 const exec=promisify(execFile),wrapper=fileURLToPath(new URL('../bin/itpay',import.meta.url));
 async function run(args){const state=await mkdtemp(join(tmpdir(),'itpay-skill-fixture-'));try{return await exec('sh',[wrapper,...args],{cwd:tmpdir(),env:{...process.env,ITPAY_STATE_DIR:state},timeout:10000,maxBuffer:1024*1024});}finally{await rm(state,{recursive:true,force:true});}}
 test('Pinned wrapper works from another directory and canonical/legacy Skill reader retains the same instructions',async()=>{
- assert.equal((await run(['--version'])).stdout.trim(),'2.1.53');
+ assert.equal((await run(['--version'])).stdout.trim(),'2.1.54');
  for(const name of ['itpay','itpay-buyer']){const out=JSON.parse((await run(['--agent-type','dot','skill','show',name,'--json'])).stdout);assert.equal(out.status,'shown');assert.equal(out.result.skill,'itpay');assert.equal(out.result.content,await readFile(new URL('../SKILL.md',import.meta.url),'utf8'));assert.equal(out.next,null);}
 });
 test('Bundled current purchase docs are discoverable directly, without retired tutorials',async()=>{
